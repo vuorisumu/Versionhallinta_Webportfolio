@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  color: #719eff;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES *//*# sourceMappingURL=style.css.map */
