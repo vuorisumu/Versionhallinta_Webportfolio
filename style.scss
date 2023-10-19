@@ -1,0 +1,30 @@
+@import "variables";
+
+body {
+    text-align: center;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    color: $primary-color;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+/* MEDIA QUERIES */
+
+@media screen and (min-width: $mobile) {
+}
+@media screen and (min-width: $tablet) {
+}
+@media screen and (min-width: $desktop) {
+}
