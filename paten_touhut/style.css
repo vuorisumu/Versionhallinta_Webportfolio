@@ -9,8 +9,15 @@ header {
 }
 
 section {
-  background-color: aqua;
+  padding: 20px;
+  background-color: antiquewhite;
+  align-items: center;
+  height: 500px;
+}
+
+footer {
+  background-color: crimson;
+  text-align: center;
   padding: 10px;
-  width: 100%;
-  height: auto;
+  float: bottom;
 }
