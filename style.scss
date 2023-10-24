@@ -29,6 +29,13 @@ nav {
     text-decoration: none;
   }
 }
+
+.container {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: $mobile) {
