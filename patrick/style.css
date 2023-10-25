@@ -14,3 +14,17 @@ section {
   align-items: center;
   height: 500px;
 }
+
+footer {
+  background-color: crimson;
+  text-align: center;
+  padding: 10px;
+  float: bottom;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    margin: auto;
+    width: 60%;
+  }
+}
