@@ -1,0 +1,30 @@
+%fullwidth {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  @extend %fullwidth;
+}
+
+main {
+  @extend %fullwidth;
+  display: flex;
+  flex-wrap: wrap;
+
+  .hublink {
+    flex: 100%;
+  }
+}
+
+footer {
+  @extend %fullwidth;
+}
+
+@media only screen and (min-width: 700px) {
+  main .hublink {
+    flex: 33%;
+  }
+}
