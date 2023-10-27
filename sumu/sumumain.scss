@@ -7,3 +7,12 @@ $accent: #f59319;
   $primary-color: #1b1918;
   $text-color: #e8e4e3;
 }
+
+body {
+  background-color: $primary-color;
+}
+
+p,
+h1 {
+  color: $text-color;
+}
