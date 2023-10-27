@@ -1,3 +1,5 @@
+@use "theme";
+
 $ham-height: 50px;
 $nav-height: $ham-height + 10px;
 $bar-height: 5px;
@@ -15,6 +17,10 @@ header {
 
 .nav {
   @extend %fixedfullwidth;
+
+  ul {
+    list-style-type: none;
+  }
 }
 
 #hamburger {
@@ -28,7 +34,7 @@ header {
   .ham {
     width: 80%;
     height: $bar-height;
-    background-color: black;
+    background-color: theme.$accent;
     border-radius: 25%;
     position: absolute;
     top: 50%;

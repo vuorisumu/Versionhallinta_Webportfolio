@@ -1,20 +1,11 @@
 @use "navigation";
-
-$dark-theme: false !default;
-$primary-color: #ffffff !default;
-$text-color: #5f5c5b !default;
-$accent: #f59319;
-
-@if $dark-theme {
-  $primary-color: #1b1918;
-  $text-color: #e8e4e3;
-}
+@use "theme";
 
 body {
-  background-color: $primary-color;
+  background-color: theme.$primary-color;
 }
 
 p,
 h1 {
-  color: $text-color;
+  color: theme.$text-color;
 }
