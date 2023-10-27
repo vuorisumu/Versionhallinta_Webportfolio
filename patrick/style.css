@@ -15,6 +15,11 @@ section {
   height: 500px;
 }
 
+nav {
+  background-color: crimson;
+  padding: 10px;
+}
+
 footer {
   background-color: crimson;
   text-align: center;
