@@ -1,0 +1,11 @@
+@use "navigation";
+@use "theme";
+
+body {
+  background-color: theme.$primary-color;
+}
+
+p,
+h1 {
+  color: theme.$text-color;
+}

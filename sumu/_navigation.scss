@@ -1,0 +1,52 @@
+@use "theme";
+
+$ham-height: 50px;
+$nav-height: $ham-height + 10px;
+$bar-height: 5px;
+
+%fixedfullwidth {
+  position: fixed;
+  width: 100%;
+}
+
+header {
+  @extend %fixedfullwidth;
+  height: $nav-height;
+  top: 0;
+}
+
+.nav {
+  @extend %fixedfullwidth;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+#hamburger {
+  width: $ham-height;
+  height: $ham-height;
+  position: absolute;
+  float: right;
+  right: 10px;
+  top: 10px;
+
+  .ham {
+    width: 80%;
+    height: $bar-height;
+    background-color: theme.$accent;
+    border-radius: 25%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    margin-top: -($bar-height / 2);
+  }
+
+  .bar-top {
+    top: 25%;
+  }
+
+  .bar-bot {
+    top: 75%;
+  }
+}
