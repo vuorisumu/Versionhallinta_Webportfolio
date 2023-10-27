@@ -1,3 +1,10 @@
-Portfolio web projekti
-Hutera Readme tehty tarkoituksella, take those free commits
+# Title, description
 
+Portfolio web project
+Basic Readme made on purpose, take those free commits
+
+# Authors
+
+Anni Peura
+
+# Tech/Framework
