@@ -1,0 +1,20 @@
+footer, main, header {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .hublink {
+  flex: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  main .hublink {
+    flex: 33%;
+  }
+}/*# sourceMappingURL=main.css.map */
