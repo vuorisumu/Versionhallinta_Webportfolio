@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -20,8 +21,8 @@ section {
 }
 
 nav {
-  background-color: crimson;
-  padding: 10px;
+  background-color: #1a1423;
+  padding: 20px;
 }
 
 footer {
