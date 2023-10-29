@@ -15,6 +15,9 @@ body {
 h1 {
   color: aqua;
 }
+h2 {
+  color: $secondary-color;
+}
 nav {
   ul {
     margin: 0;
