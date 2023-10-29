@@ -8,6 +8,12 @@ header {
   top: 0;
 }
 
+.nav {
+  top: -100%;
+}
+.nav.active {
+  top: 0;
+}
 .nav ul {
   list-style-type: none;
 }

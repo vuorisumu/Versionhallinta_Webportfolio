@@ -17,6 +17,11 @@ header {
 
 .nav {
   @extend %fixedfullwidth;
+  top: -100%;
+
+  &.active {
+    top: 0;
+  }
 
   ul {
     list-style-type: none;
