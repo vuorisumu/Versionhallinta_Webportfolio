@@ -1,4 +1,4 @@
-.nav, header {
+#nav, header {
   position: fixed;
   width: 100%;
 }
@@ -8,13 +8,13 @@ header {
   top: 0;
 }
 
-.nav {
+#nav {
   top: -100%;
 }
-.nav.active {
+#nav.active {
   top: 0;
 }
-.nav ul {
+#nav ul {
   list-style-type: none;
 }
 
