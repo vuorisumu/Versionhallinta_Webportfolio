@@ -25,6 +25,7 @@ header {
   float: right;
   right: 10px;
   top: 10px;
+  cursor: pointer;
 }
 #hamburger .ham {
   width: 80%;
@@ -35,12 +36,25 @@ header {
   top: 50%;
   left: 10%;
   margin-top: -2.5px;
+  transition: 0.3s;
 }
 #hamburger .bar-top {
   top: 25%;
 }
 #hamburger .bar-bot {
   top: 75%;
+}
+
+#hamburger.active .bar-top {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+#hamburger.active .bar-mid {
+  opacity: 0%;
+}
+#hamburger.active .bar-bot {
+  transform: rotate(45deg);
+  top: 50%;
 }
 
 body {
