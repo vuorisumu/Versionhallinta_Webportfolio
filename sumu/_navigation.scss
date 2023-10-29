@@ -18,6 +18,7 @@ header {
 #nav {
   @extend %fixedfullwidth;
   top: -100%;
+  transition: 0.2s;
 
   &.active {
     top: 0;
@@ -36,6 +37,7 @@ header {
   right: 10px;
   top: 10px;
   cursor: pointer;
+  z-index: 1;
 
   .ham {
     width: 80%;

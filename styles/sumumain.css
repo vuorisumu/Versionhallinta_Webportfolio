@@ -10,6 +10,7 @@ header {
 
 #nav {
   top: -100%;
+  transition: 0.2s;
 }
 #nav.active {
   top: 0;
@@ -26,6 +27,7 @@ header {
   right: 10px;
   top: 10px;
   cursor: pointer;
+  z-index: 1;
 }
 #hamburger .ham {
   width: 80%;
