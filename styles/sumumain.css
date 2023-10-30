@@ -1,17 +1,22 @@
+/* Fixed full width elements */
 #nav, header {
   position: fixed;
   width: 100%;
 }
 
+/* header bar */
 header {
   height: 60px;
   top: 0;
 }
 
+/* navigation container */
 #nav {
   top: -100%;
   transition: 0.3s;
   background-color: #efe5e5;
+  /* slide into view when active */
+  /* link list in navigation */
 }
 #nav.active {
   top: 0;
@@ -20,6 +25,7 @@ header {
   list-style-type: none;
 }
 
+/* menu button */
 #hamburger {
   width: 50px;
   height: 50px;
@@ -29,6 +35,9 @@ header {
   top: 5px;
   cursor: pointer;
   z-index: 1;
+  /* all bars in the menu hamburger */
+  /* top bar */
+  /* bottom bar */
 }
 #hamburger .ham {
   width: 80%;
@@ -48,6 +57,13 @@ header {
   top: 75%;
 }
 
+/* menu button when active */
+#hamburger.active {
+  /* reverse animation */
+  /* animate top bar */
+  /* animate middle bar */
+  /* animate bottom bar */
+}
 #hamburger.active .ham {
   transition: top 0.2s, transform 0.2s 0.3s, opacity 0.2s;
 }
