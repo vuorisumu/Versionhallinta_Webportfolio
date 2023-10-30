@@ -1,6 +1,8 @@
-@import "templatesass.scss";
-
-%fullwidth {
+/* Variables */
+/* Extends */
+/* Mixins */
+/* SCSS */
+footer, main, header {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -8,29 +10,19 @@
 }
 
 h1 {
-  color: $primary-color;
-}
-
-header {
-  @extend %fullwidth;
+  color: rgb(75, 75, 120);
 }
 
 main {
-  @extend %fullwidth;
   display: flex;
   flex-wrap: wrap;
-
-  .hublink {
-    flex: 100%;
-  }
 }
-
-footer {
-  @extend %fullwidth;
+main .hublink {
+  flex: 100%;
 }
 
 @media only screen and (min-width: 700px) {
   main .hublink {
     flex: 33%;
   }
-}
+}/*# sourceMappingURL=main.css.map */
