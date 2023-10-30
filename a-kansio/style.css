@@ -11,6 +11,18 @@ body {
   background: var(--background);
 }
 
+h1 {
+  color: #719eff;
+}
+
+h2 {
+  color: rgb(97, 104, 191);
+}
+
+p {
+  padding: 6px;
+}
+
 nav ul {
   margin: 0;
   padding: 0;
