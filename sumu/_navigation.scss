@@ -18,7 +18,8 @@ header {
 #nav {
   @extend %fixedfullwidth;
   top: -100%;
-  transition: 0.2s;
+  transition: 0.3s;
+  background-color: theme.$secondary-color;
 
   &.active {
     top: 0;
