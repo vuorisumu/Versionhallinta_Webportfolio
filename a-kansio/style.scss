@@ -1,5 +1,9 @@
 @import "variables.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
   color: white;
@@ -40,10 +44,10 @@ nav {
   }
 }
 
+
 img {
   height: 4rem;
-  width: 4rem;
-}
+  width: 4rem;}
 
 .container {
   font-size: 1.5rem;
