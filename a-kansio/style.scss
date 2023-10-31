@@ -22,7 +22,6 @@ h1 {
 h2 {
   color: $secondary-color;
 }
-
 p {
   padding: 6px;
   line-height: 1.65;
@@ -43,6 +42,14 @@ nav {
     padding: 6px 12px;
     text-decoration: none;
   }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 img {
