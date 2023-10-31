@@ -1,5 +1,10 @@
 /* Structure */
 
+.section {
+  display: grid;
+  background-color: aliceblue;
+}
+
 /* Text */
 
 /* Images */
