@@ -1,6 +1,6 @@
 /* Structure */
 
-.section {
+section {
   display: grid;
   background-color: aliceblue;
 }
