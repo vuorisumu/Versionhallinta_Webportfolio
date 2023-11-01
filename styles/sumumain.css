@@ -50,7 +50,7 @@ header {
   top: 50%;
   left: 10%;
   margin-top: -2.5px;
-  transition: top 0.2s 0.3s, transform 0.2s, opacity 0.2s;
+  transition: top 0.2s 0.15s, transform 0.2s, opacity 0.2s;
 }
 #hamburger .bar-top {
   top: 25%;
@@ -67,7 +67,7 @@ header {
   /* animate bottom bar */
 }
 #hamburger.active .ham {
-  transition: top 0.2s, transform 0.2s 0.3s, opacity 0.2s;
+  transition: top 0.2s, transform 0.2s 0.15s, opacity 0.2s;
 }
 #hamburger.active .bar-top {
   transform: rotate(-45deg);

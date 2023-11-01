@@ -56,7 +56,7 @@ header {
     top: 50%;
     left: 10%;
     margin-top: -($bar-height / 2);
-    transition: top 0.2s 0.3s, transform 0.2s, opacity 0.2s;
+    transition: top 0.2s 0.15s, transform 0.2s, opacity 0.2s;
   }
 
   /* top bar */
@@ -74,7 +74,7 @@ header {
 #hamburger.active {
   /* reverse animation */
   .ham {
-    transition: top 0.2s, transform 0.2s 0.3s, opacity 0.2s;
+    transition: top 0.2s, transform 0.2s 0.15s, opacity 0.2s;
   }
 
   /* animate top bar */
