@@ -7,7 +7,6 @@ $text-color: #eacdc2;
 @mixin sectionStyle {
   padding: 20px;
   align-items: center;
-  height: 500px;
 
   h2 {
     margin-bottom: 20px;
@@ -15,8 +14,9 @@ $text-color: #eacdc2;
 
   p {
     background-color: $lighter-red-color;
+    padding: 10px;
     padding-bottom: 30px;
-    margin-left: 20px;
+    box-shadow: 0px 5px 10px $darkbase-color;
   }
 }
 
