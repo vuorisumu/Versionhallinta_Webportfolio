@@ -14,7 +14,15 @@ $bar-height: 5px;
 header {
   @extend %fixedfullwidth;
   height: $nav-height;
+  background-color: theme.$primary-color;
   top: 0;
+}
+
+/* logo in the header */
+#logo h1 {
+  margin: 0;
+  padding-left: 10px;
+  line-height: $nav-height;
 }
 
 /* navigation container */

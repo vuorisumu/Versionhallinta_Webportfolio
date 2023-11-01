@@ -9,7 +9,15 @@
 /* header bar */
 header {
   height: 60px;
+  background-color: #ffffff;
   top: 0;
+}
+
+/* logo in the header */
+#logo h1 {
+  margin: 0;
+  padding-left: 10px;
+  line-height: 60px;
 }
 
 /* navigation container */
