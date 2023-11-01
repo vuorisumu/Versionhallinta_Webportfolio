@@ -6,6 +6,12 @@
   background-color: aliceblue;
 }
 
+section {
+  background-color: aquamarine;
+  margin: 20px;
+  padding: 5px;
+}
+
 /* Text */
 
 /* Images */
