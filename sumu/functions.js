@@ -10,18 +10,21 @@ menubutton.addEventListener("click", () => {
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");
 const originalHeight = header.style.getPropertyValue("height");
+const shrinkHeight = "50px";
 const sections = document.querySelectorAll("section[id]");
 window.onscroll = function () {
   scrollFunction();
 };
+
 function scrollFunction() {
   // shrink header when scrolling
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    header.style.height = "20px";
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    header.classList.add("shrink");
   } else {
-    header.style.height = originalHeight;
+    header.classList.remove("shrink");
   }
 
+  // highlight current section link
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
