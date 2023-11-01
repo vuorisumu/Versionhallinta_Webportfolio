@@ -30,13 +30,6 @@ body {
   color: $text-color;
 }
 
-header {
-  background-color: $darkbase-color;
-  color: $darker-red-color;
-  text-align: center;
-  padding: 50px;
-}
-
 .leftSection {
   @include sectionStyle;
 }
@@ -44,6 +37,14 @@ header {
 nav {
   background-color: $darkbase-color;
   padding: 20px;
+}
+
+header {
+  background-color: $darkbase-color;
+  color: $darker-red-color;
+  text-align: center;
+  padding: 50px;
+  box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
 }
 
 footer {
