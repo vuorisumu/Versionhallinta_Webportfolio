@@ -3,9 +3,15 @@
 
 body {
   background-color: theme.$primary-color;
+  margin: 0;
+  padding: 0;
 }
 
 p,
 h1 {
   color: theme.$text-color;
+}
+
+main section:first-child {
+  margin-top: navigation.$nav-height + 20px;
 }
