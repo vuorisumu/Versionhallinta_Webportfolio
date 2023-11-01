@@ -21,15 +21,20 @@ header {
   padding: 50px;
 }
 
-section {
+.leftSection {
   padding: 20px;
-  background-color: $lighter-red-color;
   align-items: center;
   height: 500px;
-}
 
-h2 {
-  margin-bottom: 20px;
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    background-color: $lighter-red-color;
+    padding-bottom: 30px;
+    margin-left: 20px;
+  }
 }
 
 nav {

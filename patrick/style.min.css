@@ -15,15 +15,18 @@ header {
   padding: 50px;
 }
 
-section {
+.leftSection {
   padding: 20px;
-  background-color: #774c60;
   align-items: center;
   height: 500px;
 }
-
-h2 {
+.leftSection h2 {
   margin-bottom: 20px;
+}
+.leftSection p {
+  background-color: #774c60;
+  padding-bottom: 30px;
+  margin-left: 20px;
 }
 
 nav {
