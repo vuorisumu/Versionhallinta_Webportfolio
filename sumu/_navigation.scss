@@ -20,13 +20,16 @@ header {
   top: 0;
   transition: $header-shrink-time;
 
+  /* header properties when the header is shrunk */
   &.shrink {
     height: $shrink-height;
 
+    /* re-center hamburger position */
     #hamburger {
       top: -($shrink-height/2 + $ham-height/2);
     }
 
+    /* adjust logo height */
     #logo h1 {
       line-height: $shrink-height;
     }

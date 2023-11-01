@@ -12,9 +12,12 @@ header {
   background-color: #efe5e5;
   top: 0;
   transition: 0.5s;
+  /* header properties when the header is shrunk */
 }
 header.shrink {
   height: 60px;
+  /* re-center hamburger position */
+  /* adjust logo height */
 }
 header.shrink #hamburger {
   top: -55px;
@@ -110,4 +113,8 @@ body {
 p,
 h1 {
   color: #5f5c5b;
+}
+
+main section:first-child {
+  margin-top: 120px;
 }/*# sourceMappingURL=sumumain.css.map */

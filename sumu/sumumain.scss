@@ -11,3 +11,7 @@ p,
 h1 {
   color: theme.$text-color;
 }
+
+main section:first-child {
+  margin-top: navigation.$nav-height + 20px;
+}
