@@ -1,24 +1,68 @@
-.nav, header {
+/* light theme colors */
+/* dark theme colors */
+/* Fixed full width elements */
+#nav, header {
   position: fixed;
   width: 100%;
 }
 
+/* header bar */
 header {
-  height: 60px;
+  height: 100px;
+  background-color: #efe5e5;
   top: 0;
+  transition: 0.5s;
+  /* header properties when the header is shrunk */
+}
+header.shrink {
+  height: 60px;
+  /* re-center hamburger position */
+  /* adjust logo height */
+}
+header.shrink #hamburger {
+  top: -55px;
+}
+header.shrink #logo h1 {
+  line-height: 60px;
 }
 
-.nav ul {
+/* logo in the header */
+#logo h1 {
+  margin: 0;
+  padding-left: 10px;
+  line-height: 100px;
+  transition: 0.5s;
+}
+
+/* navigation container */
+#nav {
+  top: -100%;
+  transition: 0.3s;
+  background-color: #efe5e5;
+  /* slide into view when active */
+  /* link list in navigation */
+}
+#nav.active {
+  top: 0;
+}
+#nav ul {
   list-style-type: none;
 }
 
+/* menu button */
 #hamburger {
   width: 50px;
   height: 50px;
-  position: absolute;
+  position: relative;
   float: right;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: -75px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s;
+  /* all bars in the menu hamburger */
+  /* top bar */
+  /* bottom bar */
 }
 #hamburger .ham {
   width: 80%;
@@ -29,6 +73,7 @@ header {
   top: 50%;
   left: 10%;
   margin-top: -2.5px;
+  transition: top 0.2s 0.15s, transform 0.2s, opacity 0.2s;
 }
 #hamburger .bar-top {
   top: 25%;
@@ -37,11 +82,39 @@ header {
   top: 75%;
 }
 
+/* menu button when active */
+#hamburger.active {
+  /* reverse animation */
+  /* animate top bar */
+  /* animate middle bar */
+  /* animate bottom bar */
+}
+#hamburger.active .ham {
+  transition: top 0.2s, transform 0.2s 0.15s, opacity 0.2s;
+}
+#hamburger.active .bar-top {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+#hamburger.active .bar-mid {
+  opacity: 0%;
+}
+#hamburger.active .bar-bot {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
 body {
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 p,
 h1 {
   color: #5f5c5b;
+}
+
+main section:first-child {
+  margin-top: 120px;
 }/*# sourceMappingURL=sumumain.css.map */

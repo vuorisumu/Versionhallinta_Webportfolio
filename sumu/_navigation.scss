@@ -1,36 +1,80 @@
 @use "theme";
 
 $ham-height: 50px;
-$nav-height: $ham-height + 10px;
+$nav-height: 100px;
+$shrink-height: $ham-height + 10px;
 $bar-height: 5px;
+$header-shrink-time: 0.5s;
 
+/* Fixed full width elements */
 %fixedfullwidth {
   position: fixed;
   width: 100%;
 }
 
+/* header bar */
 header {
   @extend %fixedfullwidth;
   height: $nav-height;
+  background-color: theme.$secondary-color;
   top: 0;
+  transition: $header-shrink-time;
+
+  /* header properties when the header is shrunk */
+  &.shrink {
+    height: $shrink-height;
+
+    /* re-center hamburger position */
+    #hamburger {
+      top: -($shrink-height/2 + $ham-height/2);
+    }
+
+    /* adjust logo height */
+    #logo h1 {
+      line-height: $shrink-height;
+    }
+  }
 }
 
-.nav {
-  @extend %fixedfullwidth;
+/* logo in the header */
+#logo h1 {
+  margin: 0;
+  padding-left: 10px;
+  line-height: $nav-height;
+  transition: $header-shrink-time;
+}
 
+/* navigation container */
+#nav {
+  @extend %fixedfullwidth;
+  top: -100%;
+  transition: 0.3s;
+  background-color: theme.$secondary-color;
+
+  /* slide into view when active */
+  &.active {
+    top: 0;
+  }
+
+  /* link list in navigation */
   ul {
     list-style-type: none;
   }
 }
 
+/* menu button */
 #hamburger {
   width: $ham-height;
   height: $ham-height;
-  position: absolute;
+  position: relative;
   float: right;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: -($nav-height/2 + $ham-height/2);
+  cursor: pointer;
+  z-index: 1;
+  transition: $header-shrink-time;
 
+  /* all bars in the menu hamburger */
   .ham {
     width: 80%;
     height: $bar-height;
@@ -40,13 +84,41 @@ header {
     top: 50%;
     left: 10%;
     margin-top: -($bar-height / 2);
+    transition: top 0.2s 0.15s, transform 0.2s, opacity 0.2s;
   }
 
+  /* top bar */
   .bar-top {
     top: 25%;
   }
 
+  /* bottom bar */
   .bar-bot {
     top: 75%;
+  }
+}
+
+/* menu button when active */
+#hamburger.active {
+  /* reverse animation */
+  .ham {
+    transition: top 0.2s, transform 0.2s 0.15s, opacity 0.2s;
+  }
+
+  /* animate top bar */
+  .bar-top {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  /* animate middle bar */
+  .bar-mid {
+    opacity: 0%;
+  }
+
+  /* animate bottom bar */
+  .bar-bot {
+    transform: rotate(45deg);
+    top: 50%;
   }
 }
