@@ -63,7 +63,10 @@ nav {
   }
 
   .hero_title {
-    //
+    color: white;
+    z-index: 2;
+    text-align: center;
+    transform: translateZ(-2px) scale(1.2);
   }
 }
 
