@@ -8,27 +8,31 @@ body {
   color: #eacdc2;
 }
 
-header {
-  background-color: #1a1423;
-  color: #b75d69;
-  text-align: center;
-  padding: 50px;
-}
-
-section {
+.leftSection {
   padding: 20px;
-  background-color: #774c60;
   align-items: center;
-  height: 500px;
 }
-
-h2 {
+.leftSection h2 {
   margin-bottom: 20px;
+}
+.leftSection p {
+  background-color: #774c60;
+  padding: 10px;
+  padding-bottom: 30px;
+  box-shadow: 0px 5px 10px #1a1423;
 }
 
 nav {
   background-color: #1a1423;
   padding: 20px;
+}
+
+header {
+  background-color: #1a1423;
+  color: #b75d69;
+  text-align: center;
+  padding: 50px;
+  box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
 }
 
 footer {

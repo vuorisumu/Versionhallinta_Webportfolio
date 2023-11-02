@@ -4,6 +4,22 @@ $darker-red-color: #b75d69;
 $lighter-red-color: #774c60;
 $text-color: #eacdc2;
 
+@mixin sectionStyle {
+  padding: 20px;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    background-color: $lighter-red-color;
+    padding: 10px;
+    padding-bottom: 30px;
+    box-shadow: 0px 5px 10px $darkbase-color;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,27 +30,21 @@ body {
   color: $text-color;
 }
 
-header {
-  background-color: $darkbase-color;
-  color: $darker-red-color;
-  text-align: center;
-  padding: 50px;
-}
-
-section {
-  padding: 20px;
-  background-color: $lighter-red-color;
-  align-items: center;
-  height: 500px;
-}
-
-h2 {
-  margin-bottom: 20px;
+.leftSection {
+  @include sectionStyle;
 }
 
 nav {
   background-color: $darkbase-color;
   padding: 20px;
+}
+
+header {
+  background-color: $darkbase-color;
+  color: $darker-red-color;
+  text-align: center;
+  padding: 50px;
+  box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
 }
 
 footer {
