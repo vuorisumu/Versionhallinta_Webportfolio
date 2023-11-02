@@ -104,6 +104,10 @@ header.shrink #logo h1 {
   top: 50%;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: #ffffff;
   margin: 0;
@@ -117,4 +121,14 @@ h1 {
 
 main section:first-child {
   margin-top: 120px;
+}
+
+/* anchors for sections */
+.anchor {
+  position: relative;
+  top: -60px;
+  /* first section needs bigger anchor */
+}
+.anchor:first-of-type {
+  top: -100px;
 }/*# sourceMappingURL=sumumain.css.map */
