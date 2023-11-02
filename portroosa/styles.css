@@ -7,9 +7,12 @@
 }
 
 section {
+  border-radius: 10px;
   background-color: aquamarine;
-  margin: 5px;
+  margin: 15px;
   padding: 20px;
+  width: 200px;
+  height: 150px;
 }
 
 div {
