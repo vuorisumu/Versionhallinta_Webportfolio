@@ -2,7 +2,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   background-color: aliceblue;
 }
 
@@ -24,5 +24,20 @@ div {
 /* Images */
 
 /* Different screensizes */
+
+.profile {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 2;
+}
 
 /* Other */
