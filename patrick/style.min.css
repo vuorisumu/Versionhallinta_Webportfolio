@@ -32,6 +32,7 @@ header {
   color: #b75d69;
   text-align: center;
   padding: 50px;
+  padding-top: 20px;
   box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
 }
 header img {
