@@ -39,7 +39,10 @@ footer {
   background-color: #1a1423;
   text-align: center;
   padding: 10px;
-  float: bottom;
+}
+
+section:last-of-type p {
+  margin-bottom: 130px;
 }
 
 @media only screen and (min-width: 768px) {
