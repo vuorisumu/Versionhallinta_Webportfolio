@@ -44,14 +44,22 @@ header {
   color: $darker-red-color;
   text-align: center;
   padding: 50px;
+  padding-top: 20px;
   box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
+
+  img {
+    padding-bottom: 20px;
+  }
 }
 
 footer {
   background-color: $darkbase-color;
   text-align: center;
   padding: 10px;
-  float: bottom;
+}
+
+section:last-of-type p {
+  margin-bottom: 130px;
 }
 
 @media only screen and (min-width: 768px) {
