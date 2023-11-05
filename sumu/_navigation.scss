@@ -60,10 +60,20 @@ header {
   ul {
     list-style-type: none;
 
-    /* link styles in navigation */
-    li a {
-      color: theme.$accent;
-      text-decoration: none;
+    /* elements in navigation list */
+    li {
+      padding: 6px;
+
+      /* links in navigation */
+      a {
+        color: theme.$accent;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+
+      a.active {
+        color: theme.$text-color;
+      }
     }
   }
 }
