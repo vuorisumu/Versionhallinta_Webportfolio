@@ -4,7 +4,7 @@ $secondary-color: var(--secondary-color);
 $text-color: var(--text-color);
 $accent: var(--accent);
 
-[data-theme="light"] {
+:root {
   --primary-color: #ffffff;
   --secondary-color: #efe5e5;
   --text-color: #5f5c5b;
