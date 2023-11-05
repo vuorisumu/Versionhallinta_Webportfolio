@@ -24,7 +24,7 @@ const header = document.getElementById("header");
 const logo = document.getElementById("logo");
 const originalHeight = header.style.getPropertyValue("height");
 const shrinkHeight = "50px";
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll(".anchor");
 window.onscroll = function () {
   scrollFunction();
 };
@@ -39,8 +39,8 @@ function scrollFunction() {
 
   // highlight current section link
   sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
+    const sectionHeight = current.parentElement.offsetHeight;
+    const sectionTop = current.parentElement.offsetTop - 50;
     sectionId = current.getAttribute("id");
     if (
       window.scrollY > sectionTop &&
