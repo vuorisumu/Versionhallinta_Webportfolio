@@ -77,7 +77,7 @@ img {
   }
 
   .hero_title {
-    //position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -86,7 +86,7 @@ img {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
     text-align: center;
-    transform: translateZ(-2px) scale(1.2);
+    //transform: translateZ(-2px) scale(1.2);
   }
 }
 
