@@ -59,6 +59,12 @@ header {
   /* link list in navigation */
   ul {
     list-style-type: none;
+
+    /* link styles in navigation */
+    li a {
+      color: theme.$accent;
+      text-decoration: none;
+    }
   }
 }
 

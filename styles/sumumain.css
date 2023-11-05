@@ -61,6 +61,11 @@ header.shrink #logo h1 {
 }
 #nav ul {
   list-style-type: none;
+  /* link styles in navigation */
+}
+#nav ul li a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
 /* menu button */
