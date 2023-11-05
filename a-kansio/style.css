@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0; /* Add margin: 0; to remove default margin */
+  padding: 0; /* Add padding: 0; to remove default padding */
 }
 
 body {
@@ -54,14 +56,14 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: opacity 0.5s;
+  height: 100vh; /* Set the height to 100% of the viewport height */
 }
 .hero .hero_img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 110%;
+  height: 100%;
   z-index: 1;
   background-image: url("illustration1-.png");
   background-position: center;
