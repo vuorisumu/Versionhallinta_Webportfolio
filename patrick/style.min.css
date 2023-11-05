@@ -40,6 +40,9 @@ header img {
   width: 150px;
   height: auto;
 }
+header h3 {
+  text-align: left;
+}
 
 footer {
   background-color: #1a1423;
