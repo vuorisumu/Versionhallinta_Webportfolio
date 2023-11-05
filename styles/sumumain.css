@@ -1,5 +1,17 @@
 /* light theme colors */
-/* dark theme colors */
+[data-theme=light] {
+  --primary-color: #ffffff;
+  --secondary-color: #efe5e5;
+  --text-color: #5f5c5b;
+  --accent: #f59319;
+}
+
+[data-theme=dark] {
+  --primary-color: #1b1918;
+  --secondary-color: #272423;
+  --text-color: #e8e4e3;
+}
+
 /* Fixed full width elements */
 #nav, header {
   position: fixed;
@@ -9,7 +21,7 @@
 /* header bar */
 header {
   height: 100px;
-  background-color: #efe5e5;
+  background-color: var(--secondary-color);
   top: 0;
   transition: 0.5s;
   /* header properties when the header is shrunk */
@@ -38,7 +50,7 @@ header.shrink #logo h1 {
 #nav {
   top: -100%;
   transition: 0.3s;
-  background-color: #efe5e5;
+  background-color: var(--secondary-color);
   /* slide into view when active */
   /* link list in navigation */
 }
@@ -67,7 +79,7 @@ header.shrink #logo h1 {
 #hamburger .ham {
   width: 80%;
   height: 5px;
-  background-color: #f59319;
+  background-color: var(--accent);
   border-radius: 25%;
   position: absolute;
   top: 50%;
@@ -109,16 +121,17 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--primary-color);
   margin: 0;
   padding: 0;
 }
 
 p,
 h1 {
-  color: #5f5c5b;
+  color: var(--text-color);
 }
 
+/* first section */
 main section:first-child {
   margin-top: 120px;
 }

@@ -6,6 +6,19 @@ menubutton.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+const themebutton = document.getElementById("themebutton");
+let darkTheme = false;
+themebutton.addEventListener("click", () => {
+  if (!darkTheme) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    darkTheme = true;
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    darkTheme = false;
+  }
+});
+
 // scroll functionality
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");

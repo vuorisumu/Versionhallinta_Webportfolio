@@ -1,13 +1,18 @@
 /* light theme colors */
-$dark-theme: false !default;
-$primary-color: #ffffff !default;
-$secondary-color: #efe5e5 !default;
-$text-color: #5f5c5b !default;
-$accent: #f59319;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$text-color: var(--text-color);
+$accent: var(--accent);
 
-/* dark theme colors */
-@if $dark-theme {
-  $primary-color: #1b1918;
-  $secondary-color: #272423;
-  $text-color: #e8e4e3;
+[data-theme="light"] {
+  --primary-color: #ffffff;
+  --secondary-color: #efe5e5;
+  --text-color: #5f5c5b;
+  --accent: #f59319;
+}
+
+[data-theme="dark"] {
+  --primary-color: #1b1918;
+  --secondary-color: #272423;
+  --text-color: #e8e4e3;
 }
