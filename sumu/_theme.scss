@@ -1,9 +1,10 @@
-/* light theme colors */
+/* scss variables */
 $primary-color: var(--primary-color);
 $secondary-color: var(--secondary-color);
 $text-color: var(--text-color);
 $accent: var(--accent);
 
+/* default colors */
 :root {
   --primary-color: #ffffff;
   --secondary-color: #efe5e5;
@@ -11,6 +12,7 @@ $accent: var(--accent);
   --accent: #f59319;
 }
 
+/* dark theme variables */
 [data-theme="dark"] {
   --primary-color: #1b1918;
   --secondary-color: #272423;
