@@ -37,6 +37,11 @@ header {
 }
 header img {
   padding-bottom: 20px;
+  width: 150px;
+  height: auto;
+}
+header h3 {
+  text-align: left;
 }
 
 footer {
