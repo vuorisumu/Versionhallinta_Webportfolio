@@ -33,10 +33,14 @@ p {
 nav ul {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   list-style: none;
 }
 nav li {
-  display: inline-block;
+  float: left;
+}
+nav li a:hover {
+  background-color: #111;
 }
 nav a {
   color: #719eff;
