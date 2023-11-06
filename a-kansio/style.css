@@ -37,7 +37,7 @@ nav ul {
   list-style: none;
 }
 nav li {
-  float: left;
+  float: right;
 }
 nav li a:hover {
   background-color: #111;

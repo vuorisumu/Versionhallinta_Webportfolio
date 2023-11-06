@@ -35,11 +35,11 @@ nav {
     padding: 0;
     overflow: hidden;
     list-style: none;
+
   }
   li {
     //display: inline-block;
-    float: left;
-
+    float: right; 
     a:hover {
       background-color: #111;
     }
