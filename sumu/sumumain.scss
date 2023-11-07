@@ -1,5 +1,6 @@
 @use "navigation";
 @use "theme";
+@use "sections";
 
 /* transition time for the theme change */
 * {
@@ -24,15 +25,6 @@ p {
 
 h1 {
   @include theme.monospacetitle;
-}
-
-/* first section */
-section:first-child {
-  margin-top: navigation.$nav-height + 20px;
-}
-
-section:nth-child(even) {
-  background-color: theme.$secondary-color;
 }
 
 /* anchors for sections */

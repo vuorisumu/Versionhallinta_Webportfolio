@@ -139,6 +139,15 @@ header.shrink #logo h1 {
   top: 50%;
 }
 
+/* first section */
+section:first-child {
+  margin-top: 120px;
+}
+
+section:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
 /* transition time for the theme change */
 * {
   transition: background-color 0.5s, color 0.5s;
@@ -166,15 +175,6 @@ h1 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
   font-weight: 700;
-}
-
-/* first section */
-section:first-child {
-  margin-top: 120px;
-}
-
-section:nth-child(even) {
-  background-color: var(--secondary-color);
 }
 
 /* anchors for sections */
