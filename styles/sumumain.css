@@ -1,5 +1,26 @@
-/* light theme colors */
-/* dark theme colors */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=Courier+Prime:wght@400;700&display=swap");
+/* scss variables */
+/* default colors */
+:root {
+  --primary-color: #fffcfa;
+  --secondary-color: #f2ebe6;
+  --text-color: #5f5c5b;
+  --accent: #f59319;
+  --secondary-accent: #cb4e3b;
+}
+
+/* dark theme variables */
+[data-theme=dark] {
+  --primary-color: #262224;
+  --secondary-color: #322d2f;
+  --text-color: #fff;
+  --accent: #cb4e3b;
+  --secondary-accent: #f59319;
+}
+
+/* default styles for titles */
+/* default style for text */
 /* Fixed full width elements */
 #nav, header {
   position: fixed;
@@ -9,7 +30,8 @@
 /* header bar */
 header {
   height: 100px;
-  background-color: #efe5e5;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
   top: 0;
   transition: 0.5s;
   /* header properties when the header is shrunk */
@@ -38,7 +60,7 @@ header.shrink #logo h1 {
 #nav {
   top: -100%;
   transition: 0.3s;
-  background-color: #efe5e5;
+  background-color: var(--secondary-color);
   /* slide into view when active */
   /* link list in navigation */
 }
@@ -47,6 +69,24 @@ header.shrink #logo h1 {
 }
 #nav ul {
   list-style-type: none;
+  /* elements in navigation list */
+}
+#nav ul li {
+  padding: 6px;
+  /* links in navigation */
+}
+#nav ul li a {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-weight: 400;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+#nav ul li a.active {
+  font-weight: 700;
+  color: var(--secondary-accent);
 }
 
 /* menu button */
@@ -67,7 +107,7 @@ header.shrink #logo h1 {
 #hamburger .ham {
   width: 80%;
   height: 5px;
-  background-color: #f59319;
+  background-color: var(--accent);
   border-radius: 25%;
   position: absolute;
   top: 50%;
@@ -104,17 +144,95 @@ header.shrink #logo h1 {
   top: 50%;
 }
 
+section {
+  padding: 5px 20px;
+}
+
+/* first section */
+section:first-child {
+  margin-top: 100px;
+}
+
+/* every other section */
+section:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+/* skillset column */
+.skillset {
+  /* short list */
+  /* lists with custom bullet */
+}
+.skillset ul {
+  list-style: none;
+}
+.skillset .short-list {
+  /* list element */
+}
+.skillset .short-list li {
+  font-family: "Chakra Petch", sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
+  display: inline-block;
+}
+.skillset .short-list li:not(:last-child)::after {
+  content: "•";
+  padding: 0 5px;
+}
+.skillset .custom-bullet {
+  padding-left: 5px;
+}
+.skillset .custom-bullet li {
+  background: url("../sumu/img/bullet-placeholder.png") no-repeat;
+  padding-left: 30px;
+}
+.skillset .custom-bullet li h3 {
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.skillset .custom-bullet li p {
+  padding: 0;
+  margin: 0;
+}
+
+/* transition time for the theme change */
+* {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* default background color and reset margins */
 body {
-  background-color: #ffffff;
+  background-color: var(--primary-color);
   margin: 0;
   padding: 0;
 }
 
-p,
-h1 {
-  color: #5f5c5b;
+p {
+  font-family: "Chakra Petch", sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
 }
 
-main section:first-child {
-  margin-top: 120px;
+h1,
+h2,
+h3 {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+}
+
+/* anchors for sections */
+.anchor {
+  position: relative;
+  top: -60px;
+  /* first section needs bigger anchor */
+}
+.anchor:first-of-type {
+  top: -100px;
 }/*# sourceMappingURL=sumumain.css.map */
