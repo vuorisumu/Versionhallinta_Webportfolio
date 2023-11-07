@@ -131,14 +131,17 @@ header.shrink #logo h1 {
   top: 50%;
 }
 
+/* transition time for the theme change */
 * {
   transition: background-color 0.5s, color 0.5s;
 }
 
+/* smooth scrolling */
 html {
   scroll-behavior: smooth !important;
 }
 
+/* default background color and reset margins */
 body {
   background-color: var(--primary-color);
   margin: 0;
