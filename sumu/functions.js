@@ -6,12 +6,25 @@ menubutton.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+const themebutton = document.getElementById("themebutton");
+let darkTheme = false;
+themebutton.addEventListener("click", () => {
+  if (!darkTheme) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    darkTheme = true;
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    darkTheme = false;
+  }
+});
+
 // scroll functionality
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");
 const originalHeight = header.style.getPropertyValue("height");
 const shrinkHeight = "50px";
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll(".anchor");
 window.onscroll = function () {
   scrollFunction();
 };
@@ -25,9 +38,9 @@ function scrollFunction() {
   }
 
   // highlight current section link
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
+  sections.forEach((current, i) => {
+    const sectionHeight = current.parentElement.offsetHeight;
+    const sectionTop = current.parentElement.offsetTop - (i === 0 ? 150 : 50);
     sectionId = current.getAttribute("id");
     if (
       window.scrollY > sectionTop &&

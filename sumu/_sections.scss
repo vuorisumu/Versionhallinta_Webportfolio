@@ -1,0 +1,57 @@
+@use "navigation";
+@use "theme";
+
+section {
+  padding: 5px 20px;
+}
+
+/* first section */
+section:first-child {
+  margin-top: navigation.$nav-height;
+}
+
+/* every other section */
+section:nth-child(even) {
+  background-color: theme.$secondary-color;
+}
+
+/* skillset column */
+.skillset {
+  ul {
+    list-style: none;
+  }
+
+  /* short list */
+  .short-list {
+    /* list element */
+    li {
+      @include theme.normaltext;
+      display: inline-block;
+
+      &:not(:last-child)::after {
+        content: "•";
+        padding: 0 5px;
+      }
+    }
+  }
+
+  /* lists with custom bullet */
+  .custom-bullet {
+    padding-left: 5px;
+
+    li {
+      background: url("../sumu/img/bullet-placeholder.png") no-repeat;
+      padding-left: 30px;
+      h3 {
+        line-height: 30px;
+        padding: 0;
+        margin: 0;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
