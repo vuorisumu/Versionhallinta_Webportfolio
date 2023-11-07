@@ -38,9 +38,9 @@ function scrollFunction() {
   }
 
   // highlight current section link
-  sections.forEach((current) => {
+  sections.forEach((current, i) => {
     const sectionHeight = current.parentElement.offsetHeight;
-    const sectionTop = current.parentElement.offsetTop - 50;
+    const sectionTop = current.parentElement.offsetTop - (i === 0 ? 150 : 50);
     sectionId = current.getAttribute("id");
     if (
       window.scrollY > sectionTop &&
