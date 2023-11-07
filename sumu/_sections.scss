@@ -1,11 +1,16 @@
 @use "navigation";
 @use "theme";
 
-/* first section */
-section:first-child {
-  margin-top: navigation.$nav-height + 20px;
+section {
+  padding: 5px 20px;
 }
 
+/* first section */
+section:first-child {
+  margin-top: navigation.$nav-height;
+}
+
+/* every other section */
 section:nth-child(even) {
   background-color: theme.$secondary-color;
 }

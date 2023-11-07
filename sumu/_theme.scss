@@ -21,14 +21,18 @@ $secondary-accent: var(--secondary-accent);
   --primary-color: #262224;
   --secondary-color: #322d2f;
   --text-color: #fff;
+  --accent: #cb4e3b;
+  --secondary-accent: #f59319;
 }
 
+/* default styles for titles */
 @mixin monospacetitle {
   font-family: "Courier Prime", monospace;
   color: $secondary-accent;
   font-weight: 700;
 }
 
+/* default style for text */
 @mixin normaltext {
   font-family: "Chakra Petch", sans-serif;
   color: $text-color;
