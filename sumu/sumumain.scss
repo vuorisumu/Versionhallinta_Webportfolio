@@ -23,7 +23,7 @@ p {
 }
 
 h1 {
-  color: theme.$secondary-accent;
+  @include theme.monospacetitle;
 }
 
 /* first section */

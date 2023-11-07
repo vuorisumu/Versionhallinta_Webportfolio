@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+
 /* scss variables */
 $primary-color: var(--primary-color);
 $secondary-color: var(--secondary-color);
@@ -19,4 +21,10 @@ $secondary-accent: var(--secondary-accent);
   --primary-color: #262224;
   --secondary-color: #322d2f;
   --text-color: #fff;
+}
+
+@mixin monospacetitle {
+  font-family: "Courier Prime", monospace;
+  color: $secondary-accent;
+  font-weight: 700;
 }
