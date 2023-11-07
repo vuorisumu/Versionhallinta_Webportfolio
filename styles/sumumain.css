@@ -157,6 +157,7 @@ section:nth-child(even) {
   background-color: var(--secondary-color);
 }
 
+/* skillset column */
 /* transition time for the theme change */
 * {
   transition: background-color 0.5s, color 0.5s;
@@ -180,7 +181,9 @@ p {
   font-weight: 400;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
   font-weight: 700;

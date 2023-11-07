@@ -23,7 +23,9 @@ p {
   @include theme.normaltext;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   @include theme.monospacetitle;
 }
 
