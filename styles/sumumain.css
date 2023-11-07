@@ -1,17 +1,18 @@
 /* scss variables */
 /* default colors */
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #efe5e5;
+  --primary-color: #fffcfa;
+  --secondary-color: #f2ebe6;
   --text-color: #5f5c5b;
   --accent: #f59319;
+  --secondary-accent: #cb4e3b;
 }
 
 /* dark theme variables */
 [data-theme=dark] {
-  --primary-color: #1b1918;
-  --secondary-color: #272423;
-  --text-color: #e8e4e3;
+  --primary-color: #262224;
+  --secondary-color: #322d2f;
+  --text-color: #fff;
 }
 
 /* Fixed full width elements */
@@ -23,7 +24,8 @@
 /* header bar */
 header {
   height: 100px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
   top: 0;
   transition: 0.5s;
   /* header properties when the header is shrunk */
@@ -148,14 +150,21 @@ body {
   padding: 0;
 }
 
-p,
-h1 {
+p {
   color: var(--text-color);
 }
 
+h1 {
+  color: var(--secondary-accent);
+}
+
 /* first section */
-main section:first-child {
+section:first-child {
   margin-top: 120px;
+}
+
+section:nth-child(even) {
+  background-color: var(--secondary-color);
 }
 
 /* anchors for sections */

@@ -16,7 +16,8 @@ $header-shrink-time: 0.5s;
 header {
   @extend %fixedfullwidth;
   height: $nav-height;
-  background-color: theme.$secondary-color;
+  background-color: theme.$primary-color;
+  border-bottom: 1px solid theme.$secondary-color;
   top: 0;
   transition: $header-shrink-time;
 

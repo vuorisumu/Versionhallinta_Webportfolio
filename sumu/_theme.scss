@@ -3,18 +3,20 @@ $primary-color: var(--primary-color);
 $secondary-color: var(--secondary-color);
 $text-color: var(--text-color);
 $accent: var(--accent);
+$secondary-accent: var(--secondary-accent);
 
 /* default colors */
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #efe5e5;
+  --primary-color: #fffcfa;
+  --secondary-color: #f2ebe6;
   --text-color: #5f5c5b;
   --accent: #f59319;
+  --secondary-accent: #cb4e3b;
 }
 
 /* dark theme variables */
 [data-theme="dark"] {
-  --primary-color: #1b1918;
-  --secondary-color: #272423;
-  --text-color: #e8e4e3;
+  --primary-color: #262224;
+  --secondary-color: #322d2f;
+  --text-color: #fff;
 }

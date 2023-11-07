@@ -18,14 +18,21 @@ body {
   padding: 0;
 }
 
-p,
-h1 {
+p {
   color: theme.$text-color;
 }
 
+h1 {
+  color: theme.$secondary-accent;
+}
+
 /* first section */
-main section:first-child {
+section:first-child {
   margin-top: navigation.$nav-height + 20px;
+}
+
+section:nth-child(even) {
+  background-color: theme.$secondary-color;
 }
 
 /* anchors for sections */
