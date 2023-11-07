@@ -67,13 +67,16 @@ header {
 
       /* links in navigation */
       a {
+        @include theme.monospacetitle;
+        font-weight: 400;
         color: theme.$accent;
         text-decoration: none;
         font-size: 1.2em;
       }
 
       a.active {
-        color: theme.$text-color;
+        font-weight: 700;
+        color: theme.$secondary-accent;
       }
     }
   }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=Courier+Prime:wght@400;700&display=swap");
 /* scss variables */
 /* default colors */
 :root {
@@ -71,12 +71,17 @@ header.shrink #logo h1 {
   /* links in navigation */
 }
 #nav ul li a {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-weight: 400;
   color: var(--accent);
   text-decoration: none;
   font-size: 1.2em;
 }
 #nav ul li a.active {
-  color: var(--text-color);
+  font-weight: 700;
+  color: var(--secondary-accent);
 }
 
 /* menu button */
@@ -152,7 +157,9 @@ body {
 }
 
 p {
+  font-family: "Chakra Petch", sans-serif;
   color: var(--text-color);
+  font-weight: 400;
 }
 
 h1 {

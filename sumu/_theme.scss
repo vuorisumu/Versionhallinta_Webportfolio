@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=Courier+Prime:wght@400;700&display=swap");
 
 /* scss variables */
 $primary-color: var(--primary-color);
@@ -27,4 +27,10 @@ $secondary-accent: var(--secondary-accent);
   font-family: "Courier Prime", monospace;
   color: $secondary-accent;
   font-weight: 700;
+}
+
+@mixin normaltext {
+  font-family: "Chakra Petch", sans-serif;
+  color: $text-color;
+  font-weight: 400;
 }

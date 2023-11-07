@@ -19,7 +19,7 @@ body {
 }
 
 p {
-  color: theme.$text-color;
+  @include theme.normaltext;
 }
 
 h1 {
