@@ -24,17 +24,44 @@
       </div>
     </div>
     <div class="container">
-    
-    <h1>Title1 is here.</h1>
-    <p>Here is text telling something about myself? What I do?</p>
-    <h2>Projects, examples?</h2>
-    <p>
-      Projects, examples? Projects, examples? Projects, examples? Projects,
-      examples? Projects, examples? Projects, examples? Projects, examples?
-      Projects, examples? Projects, examples? Projects, examples? Projects,
-      examples?
-    </p></div>
-    <script></script>
+      <h1>Title1 is here.</h1>
+      <p>Here is text telling something about myself? What I do?</p>
+      <h2>Projects, examples?</h2>
+      <p>
+        Projects, examples? Projects, examples? Projects, examples? Projects,
+        examples? Projects, examples? Projects, examples? Projects, examples?
+        Projects, examples? Projects, examples? Projects, examples? Projects,
+        examples?
+      </p>
+    </div>
+    <script>
+      // Function to add the fade-out class to .hero_img
+      function addFadeOutClass() {
+        const heroImage = document.querySelector(".hero_img");
+
+        if (heroImage) {
+          const scrollPosition = window.scrollY;
+          const triggerPosition = document
+            .querySelector(".hero")
+            .getBoundingClientRect().bottom;
+
+          if (scrollPosition > triggerPosition) {
+            // Introduce a delay of 1000 milliseconds (1 second) before applying the fade-out effect
+            setTimeout(function () {
+              heroImage.classList.add("fade-out");
+            }, 500); // Adjust the delay duration as needed
+          } else {
+            heroImage.classList.remove("fade-out");
+          }
+        }
+      }
+
+      // Attach the scroll event listener
+      window.addEventListener("scroll", addFadeOutClass);
+
+      // Call the function once to handle the initial state
+      addFadeOutClass();
+    </script>
   </body>
 </html>
 

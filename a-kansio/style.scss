@@ -33,11 +33,10 @@ nav {
   ul {
     overflow: hidden;
     list-style: none;
-
   }
   li {
     //display: inline-block;
-    float: right; 
+    float: right;
     a:hover {
       background-color: #111;
     }
@@ -79,6 +78,13 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background-color: #888; /* Grey background color */
+
+    &.fade-out {
+      opacity: 0;
+      background-image: transparent; /* Transition background color to transparent */
+      transition: opacity 1s, background-color 1s; /* Apply transition to both opacity and background-color */
+    }
   }
 
   .hero_title {
