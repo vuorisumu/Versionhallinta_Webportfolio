@@ -10,13 +10,13 @@ menubutton.addEventListener("click", () => {
 const themebutton = document.getElementById("themebutton");
 let darkTheme = false;
 themebutton.addEventListener("click", () => {
-  let themeName = darkTheme ? "dark" : "light";
+  let themeName = darkTheme ? "light" : "dark";
   setTheme(themeName);
 });
 
 // theme change function
 function setTheme(themeName) {
-  document.documentElement.setAttribute("data-them", themeName);
+  document.documentElement.setAttribute("data-theme", themeName);
   localStorage.setItem("theme", themeName);
   darkTheme = themeName === "dark";
 }
