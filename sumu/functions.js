@@ -6,18 +6,20 @@ menubutton.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+// theme change button
 const themebutton = document.getElementById("themebutton");
 let darkTheme = false;
 themebutton.addEventListener("click", () => {
-  if (!darkTheme) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    darkTheme = true;
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    darkTheme = false;
-  }
+  let themeName = darkTheme ? "dark" : "light";
+  setTheme(themeName);
 });
+
+// theme change function
+function setTheme(themeName) {
+  document.documentElement.setAttribute("data-them", themeName);
+  localStorage.setItem("theme", themeName);
+  darkTheme = themeName === "dark";
+}
 
 // scroll functionality
 const header = document.getElementById("header");
