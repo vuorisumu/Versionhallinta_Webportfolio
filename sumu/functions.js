@@ -45,7 +45,6 @@ function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
   darkTheme = themeName === "dark";
 }
-
 // scroll functionality
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");

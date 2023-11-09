@@ -1,9 +1,15 @@
-@import "variables";
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0; /* Add margin: 0; to remove default margin */
+  padding: 0; /* Add padding: 0; to remove default padding */
+}
 
 body {
   text-align: center;
-  color: white;
-  --background: #060608;
+  color: rgb(115, 95, 95);
+  --background: #fafaff;
   width: 100%;
   height: 100%;
   font-family: Arial;
@@ -12,20 +18,35 @@ body {
   align-items: center;
   background: var(--background);
 }
+h1 {
+  color: $primary-color;
+}
+h2 {
+  color: $secondary-color;
+}
+p {
+  padding: 6px;
+  line-height: 1.65;
+}
 
 nav {
   ul {
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
     list-style: none;
+
   }
   li {
-    display: inline-block;
+    //display: inline-block;
+    float: right; 
+    a:hover {
+      background-color: #111;
+    }
   }
   a {
     color: $primary-color;
+    font-size: large;
     display: block;
-    padding: 6px 12px;
+    padding: 10px 20px;
     text-decoration: none;
   }
 }
@@ -33,9 +54,49 @@ nav {
 img {
   height: 4rem;
   width: 4rem;
- }
- 
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  //transition: opacity 0.5s;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
+  .hero_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //object-fit: cover;
+    z-index: 1;
+    background-image: url("test-tom.jpg");
+    //transform: translateZ(1px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .hero_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    text-align: center;
+    //transform: translateZ(-2px) scale(1.2);
+  }
+}
+
 .container {
+  padding: 5rem;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -43,8 +104,6 @@ img {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: $mobile) {
-}
 @media screen and (min-width: $tablet) {
 }
 @media screen and (min-width: $desktop) {
