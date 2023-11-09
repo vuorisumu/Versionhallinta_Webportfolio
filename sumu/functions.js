@@ -1,3 +1,8 @@
+// call theme check on page load
+window.onload = function () {
+  checkTheme();
+};
+
 // open and close navigation menu
 const menubutton = document.getElementById("hamburger");
 const menu = document.getElementById("nav");
@@ -5,6 +10,26 @@ menubutton.addEventListener("click", () => {
   menubutton.classList.toggle("active");
   menu.classList.toggle("active");
 });
+
+// check if theme preference has already been set
+function checkTheme() {
+  // if this is not the first time on this site
+  const prevTheme = localStorage.getItem("theme");
+  if (prevTheme) {
+    setTheme(prevTheme);
+    return;
+  }
+
+  // first time on site but prefers dark theme
+  const darkThemePreference = window.matchMedia("(prefers-color-scheme: dark)");
+  if (darkThemePreference.matches) {
+    setTheme("dark");
+    return;
+  }
+
+  // set default theme
+  setTheme("light");
+}
 
 // theme change button
 const themebutton = document.getElementById("themebutton");
