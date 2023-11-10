@@ -44,6 +44,10 @@ div {
     grid-column: 1;
     grid-row: 2;
   }
+
+  .container {
+    grid-template-columns: auto auto;
+  }
 }
 
 /* Other */
