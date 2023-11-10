@@ -47,6 +47,10 @@ div {
 }
 
 @media screen and (max-width: 500px) {
+  .profile {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 /* Other */
