@@ -51,6 +51,11 @@ div {
     grid-column: 1;
     grid-row: 1;
   }
+
+  .sidebar {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 /* Other */
