@@ -3,7 +3,6 @@
 .container {
   display: grid;
   grid-template-columns: 25% 40% auto;
-  background-color: aliceblue;
 }
 
 section {
