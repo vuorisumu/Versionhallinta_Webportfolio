@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let node = document.querySelector(".no-transitions");
+
+  setTimeout(function () {
+    node.classList.remove("no-transitions");
+  }, 1000);
+});
+
 // call theme check on page load
 window.onload = function () {
   checkTheme();

@@ -7,6 +7,18 @@ $text-color: var(--text-color);
 $accent: var(--accent);
 $secondary-accent: var(--secondary-accent);
 
+@mixin transition {
+  transition: 0.5s;
+}
+
+.no-transitions * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 /* default colors */
 :root {
   --primary-color: #fffcfa;

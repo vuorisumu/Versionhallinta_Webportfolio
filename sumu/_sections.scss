@@ -2,6 +2,7 @@
 @use "theme";
 
 section {
+  @include theme.transition;
   padding: 5px 20px;
 }
 
