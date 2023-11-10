@@ -6,17 +6,10 @@ $secondary-color: var(--secondary-color);
 $text-color: var(--text-color);
 $accent: var(--accent);
 $secondary-accent: var(--secondary-accent);
+$transition-time: var(--transition-time);
 
 @mixin transition {
-  transition: 0.5s;
-}
-
-.no-transitions * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
+  transition: $transition-time;
 }
 
 /* default colors */
@@ -26,6 +19,7 @@ $secondary-accent: var(--secondary-accent);
   --text-color: #5f5c5b;
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
+  --transition-time: none;
 }
 
 /* dark theme variables */

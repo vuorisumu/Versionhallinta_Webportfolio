@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let node = document.querySelector(".no-transitions");
+  let root = document.querySelector(":root");
 
   setTimeout(function () {
-    node.classList.remove("no-transitions");
+    root.style.setProperty("--transition-time", "0.5s");
   }, 1000);
 });
 

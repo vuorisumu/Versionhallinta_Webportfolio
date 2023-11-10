@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=Courier+Prime:wght@400;700&display=swap");
 /* scss variables */
-.no-transitions * {
-  transition: none !important;
-}
-
 /* default colors */
 :root {
   --primary-color: #fffcfa;
@@ -12,6 +8,7 @@
   --text-color: #5f5c5b;
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
+  --transition-time: none;
 }
 
 /* dark theme variables */
@@ -33,11 +30,11 @@
 
 /* header bar */
 header {
+  transition: var(--transition-time);
   height: 100px;
   background-color: var(--primary-color);
   border-bottom: 1px solid var(--secondary-color);
   top: 0;
-  transition: 0.5s;
   /* header properties when the header is shrunk */
 }
 header.shrink {
@@ -149,7 +146,7 @@ header.shrink #logo h1 {
 }
 
 section {
-  transition: 0.5s;
+  transition: var(--transition-time);
   padding: 5px 20px;
 }
 
@@ -214,7 +211,7 @@ html {
 
 /* default background color and reset margins */
 body {
-  transition: 0.5s;
+  transition: var(--transition-time);
   background-color: var(--primary-color);
   margin: 0;
   padding: 0;
