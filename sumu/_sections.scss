@@ -58,6 +58,10 @@ section:nth-child(even) {
 }
 
 .project-container {
+  .img-container {
+    padding: 10px;
+  }
+
   img {
     width: 100%;
     margin: auto;

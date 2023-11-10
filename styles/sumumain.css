@@ -198,6 +198,9 @@ section:nth-child(even) {
   margin: 0;
 }
 
+.project-container .img-container {
+  padding: 10px;
+}
 .project-container img {
   width: 100%;
   margin: auto;
