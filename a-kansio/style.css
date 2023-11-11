@@ -66,13 +66,12 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   z-index: 1;
   background-image: url("test-tom.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   background-color: #888; /* Grey background color */
 }
 .hero .hero_img.fade-out {
