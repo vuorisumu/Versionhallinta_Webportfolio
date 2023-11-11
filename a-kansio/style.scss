@@ -115,6 +115,22 @@ img {
   height: auto;
   margin: 10 auto; /* Center horizontally */
   box-shadow: 1px 1px 5px rgb(78, 75, 70);
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 /* MEDIA QUERIES */
