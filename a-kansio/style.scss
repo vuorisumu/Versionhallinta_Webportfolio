@@ -107,6 +107,16 @@ img {
   flex-direction: column;
 }
 
+.project {
+  border-radius: 25px;
+  background: #f6f8f4;
+  padding: 50px;
+  box-sizing: border-box;
+  height: auto;
+  margin: 10 auto; /* Center horizontally */
+  box-shadow: 1px 1px 5px rgb(78, 75, 70);
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: $tablet) {
