@@ -196,6 +196,12 @@ section:nth-child(even) {
   margin: 0;
 }
 
+.project-container img {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
 /* transition time for the theme change */
 * {
   transition: background-color 0.5s, color 0.5s;
