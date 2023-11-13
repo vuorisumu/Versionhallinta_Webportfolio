@@ -200,6 +200,7 @@ section:nth-child(even) {
 
 .project-container .img-container {
   padding: 10px;
+  background-color: var(--primary-color);
 }
 .project-container .img-container p {
   margin: 8px 0;

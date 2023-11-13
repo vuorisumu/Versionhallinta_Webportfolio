@@ -60,6 +60,7 @@ section:nth-child(even) {
 .project-container {
   .img-container {
     padding: 10px;
+    background-color: theme.$primary-color;
 
     p {
       margin: 8px 0;
