@@ -15,7 +15,7 @@ body {
 .leftSection h2 {
   margin-bottom: 20px;
 }
-.leftSection p {
+.leftSection :not(h2, dt, dd) {
   background-color: #774c60;
   padding: 10px;
   padding-bottom: 30px;

@@ -12,7 +12,7 @@ $text-color: #eacdc2;
     margin-bottom: 20px;
   }
 
-  p {
+  :not(h2, dt, dd) {
     background-color: $lighter-red-color;
     padding: 10px;
     padding-bottom: 30px;
