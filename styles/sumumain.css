@@ -198,6 +198,9 @@ section:nth-child(even) {
   margin: 0;
 }
 
+.project-container {
+  padding-top: 10px;
+}
 .project-container .img-container {
   padding: 10px;
   background-color: var(--primary-color);
