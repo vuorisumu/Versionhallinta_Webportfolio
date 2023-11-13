@@ -201,6 +201,9 @@ section:nth-child(even) {
 .project-container .img-container {
   padding: 10px;
 }
+.project-container .img-container p {
+  margin: 8px 0;
+}
 .project-container img {
   width: 100%;
   margin: auto;
