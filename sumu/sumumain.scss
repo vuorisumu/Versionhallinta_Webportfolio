@@ -2,11 +2,6 @@
 @use "theme";
 @use "sections";
 
-/* transition time for the theme change */
-* {
-  transition: background-color 0.5s, color 0.5s;
-}
-
 /* smooth scrolling */
 html {
   scroll-behavior: smooth !important;
@@ -14,6 +9,7 @@ html {
 
 /* default background color and reset margins */
 body {
+  @include theme.transition;
   background-color: theme.$primary-color;
   margin: 0;
   padding: 0;

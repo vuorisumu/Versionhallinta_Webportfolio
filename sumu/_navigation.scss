@@ -15,11 +15,11 @@ $header-shrink-time: 0.5s;
 /* header bar */
 header {
   @extend %fixedfullwidth;
+  @include theme.transition;
   height: $nav-height;
   background-color: theme.$primary-color;
   border-bottom: 1px solid theme.$secondary-color;
   top: 0;
-  transition: $header-shrink-time;
 
   /* header properties when the header is shrunk */
   &.shrink {

@@ -8,6 +8,7 @@
   --text-color: #5f5c5b;
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
+  --transition-time: none;
 }
 
 /* dark theme variables */
@@ -29,11 +30,11 @@
 
 /* header bar */
 header {
+  transition: var(--transition-time);
   height: 100px;
   background-color: var(--primary-color);
   border-bottom: 1px solid var(--secondary-color);
   top: 0;
-  transition: 0.5s;
   /* header properties when the header is shrunk */
 }
 header.shrink {
@@ -145,6 +146,7 @@ header.shrink #logo h1 {
 }
 
 section {
+  transition: var(--transition-time);
   padding: 5px 20px;
 }
 
@@ -196,9 +198,13 @@ section:nth-child(even) {
   margin: 0;
 }
 
-/* transition time for the theme change */
-* {
-  transition: background-color 0.5s, color 0.5s;
+.project-container .img-container {
+  padding: 10px;
+}
+.project-container img {
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 
 /* smooth scrolling */
@@ -208,6 +214,7 @@ html {
 
 /* default background color and reset margins */
 body {
+  transition: var(--transition-time);
   background-color: var(--primary-color);
   margin: 0;
   padding: 0;

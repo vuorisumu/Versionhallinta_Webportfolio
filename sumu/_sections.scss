@@ -2,6 +2,7 @@
 @use "theme";
 
 section {
+  @include theme.transition;
   padding: 5px 20px;
 }
 
@@ -53,5 +54,17 @@ section:nth-child(even) {
         margin: 0;
       }
     }
+  }
+}
+
+.project-container {
+  .img-container {
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+    text-align: center;
   }
 }
