@@ -120,13 +120,16 @@ img {
   }
   .outset {
     outline-style: outset;
+    background-color: rgb(31, 30, 30);
+    border-radius: 25px;
+    padding: 15px;
   }
   a {
     display: inline-block; /* Display links on the same line */
     margin-right: 40px; /* Add some spacing between links */
     margin-bottom: 5px;
     text-decoration: none;
-    color: #007bff;
+    color: #b3b3b3;
     cursor: pointer;
 
     &:hover {
