@@ -24,7 +24,14 @@ body {
   margin-bottom: 8px;
 }
 .leftSection :not(h2, dt) dd {
-  box-shadow: 0px 5px 10px #2d1f26;
+  box-shadow: 0px 5px 15px #2d1f26;
+}
+.leftSection :not(h2, dt) dt:not(:first-of-type) {
+  margin-top: 20px;
+}
+.leftSection :not(h2, dt) dt {
+  font-size: 17px;
+  font-weight: bold;
 }
 
 nav {
