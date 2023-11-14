@@ -118,10 +118,12 @@ img {
     font-size: 16px;
     margin-bottom: 10px;
   }
-
+  p.outset {
+    outline-style: outset;
+  }
   a {
     display: inline-block; /* Display links on the same line */
-    margin-right: 10px; /* Add some spacing between links */
+    margin-right: 40px; /* Add some spacing between links */
     margin-bottom: 5px;
     text-decoration: none;
     color: #007bff;
