@@ -110,7 +110,7 @@ img {
   font-size: 16px;
   margin-bottom: 10px;
 }
-.project p.outset {
+.project .outset {
   outline-style: outset;
 }
 .project a {
