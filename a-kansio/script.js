@@ -11,17 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add click event listeners to the links
   document.getElementById("link1").addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link behavior (page reload)
-    changeContent("bye bye bye");
+    changeContent(
+      "this is content for link1. <br> .... Demo Java project? <br> include image(s)"
+    );
   });
 
   document.getElementById("link2").addEventListener("click", function (event) {
     event.preventDefault();
-    changeContent("goodbye, farewell, adieu");
+    changeContent("this is content for link2 <br> .... Demo Python project? <br> include image(s)");
   });
 
   document.getElementById("link3").addEventListener("click", function (event) {
     event.preventDefault();
-    changeContent("see you later");
+    changeContent(
+      "this is content for link3 <br> .... Demo Frontend project? <br> include image(s)"
+    );
   });
 
   // Set initial content
