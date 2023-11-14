@@ -7,6 +7,7 @@ $text-color: var(--text-color);
 $accent: var(--accent);
 $secondary-accent: var(--secondary-accent);
 $transition-time: var(--transition-time);
+$themebutton-color: var(--themebutton-color);
 
 @mixin transition {
   transition: $transition-time;
@@ -20,6 +21,7 @@ $transition-time: var(--transition-time);
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
   --transition-time: none;
+  --themebutton-color: #000;
 }
 
 /* dark theme variables */
@@ -29,6 +31,7 @@ $transition-time: var(--transition-time);
   --text-color: #fff;
   --accent: #cb4e3b;
   --secondary-accent: #f59319;
+  --themebutton-color: #fff;
 }
 
 /* default styles for titles */
@@ -43,4 +46,13 @@ $transition-time: var(--transition-time);
   font-family: "Chakra Petch", sans-serif;
   color: $text-color;
   font-weight: 400;
+}
+
+#themebutton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $themebutton-color;
+  transition: $transition-time;
+  cursor: pointer;
 }

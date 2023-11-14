@@ -9,6 +9,7 @@
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
   --transition-time: none;
+  --themebutton-color: #000;
 }
 
 /* dark theme variables */
@@ -18,10 +19,20 @@
   --text-color: #fff;
   --accent: #cb4e3b;
   --secondary-accent: #f59319;
+  --themebutton-color: #fff;
 }
 
 /* default styles for titles */
 /* default style for text */
+#themebutton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--themebutton-color);
+  transition: var(--transition-time);
+  cursor: pointer;
+}
+
 /* Fixed full width elements */
 #nav, header {
   position: fixed;
