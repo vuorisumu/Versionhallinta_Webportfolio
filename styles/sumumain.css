@@ -25,12 +25,14 @@
 /* default styles for titles */
 /* default style for text */
 #themebutton {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: var(--themebutton-color);
   transition: var(--transition-time);
   cursor: pointer;
+  outline: 4px dotted var(--themebutton-color);
+  outline-offset: 3px;
 }
 
 /* Fixed full width elements */

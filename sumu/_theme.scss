@@ -49,10 +49,12 @@ $themebutton-color: var(--themebutton-color);
 }
 
 #themebutton {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: $themebutton-color;
   transition: $transition-time;
   cursor: pointer;
+  outline: 4px dotted $themebutton-color;
+  outline-offset: 3px;
 }
