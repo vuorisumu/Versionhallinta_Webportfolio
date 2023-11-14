@@ -203,7 +203,7 @@ section:nth-child(even) {
 }
 .project-container .img-container {
   padding: 10px;
-  background-color: var(--primary-color);
+  background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
 }
 .project-container .img-container p {
   margin: 8px 0;

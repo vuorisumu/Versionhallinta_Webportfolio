@@ -62,7 +62,9 @@ section:nth-child(even) {
 
   .img-container {
     padding: 10px;
-    background-color: theme.$primary-color;
+
+    // mixes the primary color with 50% transparency
+    background-color: color-mix(in srgb, theme.$primary-color, transparent 50%);
 
     p {
       margin: 8px 0;
