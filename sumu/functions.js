@@ -21,6 +21,15 @@ menubutton.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+// close navigation menu if clicking outside header
+document.addEventListener("click", (e) => {
+  if (!header.contains(e.target) && menu.classList.contains("active")) {
+    menubutton.classList.toggle("active");
+    themebutton.classList.toggle("hide");
+    menu.classList.toggle("active");
+  }
+});
+
 // check if theme preference has already been set
 function checkTheme() {
   // if this is not the first time on this site
