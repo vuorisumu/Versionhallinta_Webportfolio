@@ -55,6 +55,11 @@ section:nth-child(even) {
       }
     }
   }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 .project-container {
@@ -63,7 +68,7 @@ section:nth-child(even) {
   .img-container {
     padding: 10px;
 
-    // mixes the primary color with 50% transparency
+    /* mixes the primary color with 50% transparency */
     background-color: color-mix(in srgb, theme.$primary-color, transparent 50%);
 
     p {
@@ -73,6 +78,7 @@ section:nth-child(even) {
     }
   }
 
+  /* self portrait in skillset section */
   img {
     width: 100%;
     margin: auto;

@@ -241,12 +241,18 @@ section:nth-child(even) {
   padding: 0;
   margin: 0;
 }
+.skillset img {
+  width: 100%;
+  max-width: 400px;
+}
 
 .project-container {
   padding-top: 10px;
+  /* self portrait in skillset section */
 }
 .project-container .img-container {
   padding: 10px;
+  /* mixes the primary color with 50% transparency */
   background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
 }
 .project-container .img-container p {
