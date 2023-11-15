@@ -28,26 +28,21 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    padding: 0 10px;
+    gap: 15px;
 
     /* text in logo banner */
     h1 {
       display: inline-block;
       flex: 1;
-      margin: 0;
+      margin: 7px 0 0 0;
       padding-left: 10px;
-      line-height: $nav-height;
-      transition: $header-shrink-time;
     }
   }
 
   /* header properties when the header is shrunk */
   &.shrink {
     height: $shrink-height;
-
-    /* adjust logo height */
-    #logo h1 {
-      line-height: $shrink-height;
-    }
 
     #nav.active {
       top: $shrink-height;
@@ -98,7 +93,6 @@ header {
 #hamburger {
   width: $ham-height;
   height: $ham-height;
-  margin-top: -10px;
   position: relative;
   cursor: pointer;
   z-index: 1;
