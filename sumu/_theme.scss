@@ -48,33 +48,33 @@ $themebutton-color: var(--themebutton-color);
   font-weight: 400;
 }
 
+/* theme button container */
 #themebutton {
   cursor: pointer;
   width: 30px;
   height: 30px;
 
+  /* graphic in both sun and moon */
   #sun-moon {
-    transition: $transition-time;
+    @include transition();
     border-radius: 50%;
     width: 20px;
     height: 20px;
   }
 
-  &:not(.moon) {
-    #sun-moon {
-      transform: translate(25%, 25%);
-      background-color: $themebutton-color;
-      outline: 4px dotted $themebutton-color;
-      outline-offset: 3px;
-    }
+  /* graphic in sun mode */
+  &:not(.moon) #sun-moon {
+    transform: translate(25%, 25%);
+    background-color: $themebutton-color;
+    outline: 4px dotted $themebutton-color;
+    outline-offset: 3px;
   }
 
-  &.moon {
+  /* graphic in moon mode */
+  &.moon #sun-moon {
     outline: none;
     background-color: transparent;
-    #sun-moon {
-      transform: translate(50%, 0%);
-      box-shadow: -6px 5px 0 5px $themebutton-color;
-    }
+    transform: translate(50%, 0%);
+    box-shadow: -6px 5px 0 5px $themebutton-color;
   }
 }

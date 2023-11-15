@@ -24,10 +24,14 @@
 
 /* default styles for titles */
 /* default style for text */
+/* theme button container */
 #themebutton {
   cursor: pointer;
   width: 30px;
   height: 30px;
+  /* graphic in both sun and moon */
+  /* graphic in sun mode */
+  /* graphic in moon mode */
 }
 #themebutton #sun-moon {
   transition: var(--transition-time);
@@ -41,11 +45,9 @@
   outline: 4px dotted var(--themebutton-color);
   outline-offset: 3px;
 }
-#themebutton.moon {
+#themebutton.moon #sun-moon {
   outline: none;
   background-color: transparent;
-}
-#themebutton.moon #sun-moon {
   transform: translate(50%, 0%);
   box-shadow: -6px 5px 0 5px var(--themebutton-color);
 }
