@@ -84,6 +84,7 @@ $themebutton-color: var(--themebutton-color);
     box-shadow: -6px 5px 0 5px $themebutton-color;
   }
 
+  /* hide theme change button when menu is not active */
   &.hide {
     margin-top: -200px;
   }

@@ -38,6 +38,7 @@
   /* graphic in both sun and moon */
   /* graphic in sun mode */
   /* graphic in moon mode */
+  /* hide theme change button when menu is not active */
 }
 #themebutton #sun-moon {
   transition: var(--transition-time);

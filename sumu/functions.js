@@ -88,11 +88,12 @@ function scrollFunction() {
   // highlight current section link
   sections.forEach((current, i) => {
     const sectionHeight = current.parentElement.offsetHeight;
-    const sectionTop = current.parentElement.offsetTop - (i === 0 ? 150 : 50);
+    const sectionTop = current.parentElement.offsetTop - 100;
     sectionId = current.getAttribute("id");
     if (
-      window.scrollY > sectionTop &&
-      window.scrollY <= sectionTop + sectionHeight
+      (window.scrollY > sectionTop &&
+        window.scrollY <= sectionTop + sectionHeight) ||
+      (window.scrollY < 2 && i === 0)
     ) {
       document
         .querySelector("#nav a[href*=" + sectionId + "]")
