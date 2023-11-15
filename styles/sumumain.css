@@ -26,6 +26,9 @@
 /* default style for text */
 /* theme button container */
 #themebutton {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -10px;
   transition: background-color 0.5s;
   cursor: pointer;
   width: 60px;
@@ -73,11 +76,16 @@ header {
 header #logo {
   background-color: var(--primary-color);
   border-bottom: 1px solid var(--secondary-color);
-  width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   /* text in logo banner */
 }
 header #logo h1 {
+  display: inline-block;
+  flex: 1;
   margin: 0;
   padding-left: 10px;
   line-height: 100px;
@@ -85,11 +93,7 @@ header #logo h1 {
 }
 header.shrink {
   height: 60px;
-  /* re-center hamburger position */
   /* adjust logo height */
-}
-header.shrink #hamburger {
-  top: -55px;
 }
 header.shrink #logo h1 {
   line-height: 60px;
@@ -137,10 +141,8 @@ header.shrink #nav.active {
 #hamburger {
   width: 50px;
   height: 50px;
+  margin-top: -10px;
   position: relative;
-  float: right;
-  right: 15px;
-  top: -75px;
   cursor: pointer;
   z-index: 1;
   transition: 0.5s;

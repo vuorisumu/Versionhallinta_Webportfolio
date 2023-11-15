@@ -50,6 +50,9 @@ $themebutton-color: var(--themebutton-color);
 
 /* theme button container */
 #themebutton {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -10px;
   transition: background-color 0.5s;
   cursor: pointer;
   width: 60px;

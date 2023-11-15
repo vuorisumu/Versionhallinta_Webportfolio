@@ -23,11 +23,16 @@ header {
   #logo {
     background-color: theme.$primary-color;
     border-bottom: 1px solid theme.$secondary-color;
-    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 
     /* text in logo banner */
     h1 {
+      display: inline-block;
+      flex: 1;
       margin: 0;
       padding-left: 10px;
       line-height: $nav-height;
@@ -38,11 +43,6 @@ header {
   /* header properties when the header is shrunk */
   &.shrink {
     height: $shrink-height;
-
-    /* re-center hamburger position */
-    #hamburger {
-      top: -($shrink-height/2 + $ham-height/2);
-    }
 
     /* adjust logo height */
     #logo h1 {
@@ -98,10 +98,8 @@ header {
 #hamburger {
   width: $ham-height;
   height: $ham-height;
+  margin-top: -10px;
   position: relative;
-  float: right;
-  right: 15px;
-  top: -($nav-height/2 + $ham-height/2);
   cursor: pointer;
   z-index: 1;
   transition: $header-shrink-time;
