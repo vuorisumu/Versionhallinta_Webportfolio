@@ -21,7 +21,7 @@ menubutton.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-// close navigation menu if clicking outside header
+// close navigation menu when clicking outside header
 document.addEventListener("click", (e) => {
   if (!header.contains(e.target) && menu.classList.contains("active")) {
     menubutton.classList.toggle("active");
