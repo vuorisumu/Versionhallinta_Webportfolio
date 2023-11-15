@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // call theme check on page load
 window.onload = function () {
   checkTheme();
+  scrollFunction();
 };
 
 // open and close navigation menu
