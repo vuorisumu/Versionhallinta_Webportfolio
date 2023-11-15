@@ -66,10 +66,22 @@
 header {
   transition: var(--transition-time);
   height: 100px;
+  top: 0;
+  /* logo banner */
+  /* header properties when the header is shrunk */
+}
+header #logo {
   background-color: var(--primary-color);
   border-bottom: 1px solid var(--secondary-color);
-  top: 0;
-  /* header properties when the header is shrunk */
+  width: 100%;
+  height: 100%;
+  /* text in logo banner */
+}
+header #logo h1 {
+  margin: 0;
+  padding-left: 10px;
+  line-height: 100px;
+  transition: 0.5s;
 }
 header.shrink {
   height: 60px;
@@ -82,25 +94,22 @@ header.shrink #hamburger {
 header.shrink #logo h1 {
   line-height: 60px;
 }
-
-/* logo in the header */
-#logo h1 {
-  margin: 0;
-  padding-left: 10px;
-  line-height: 100px;
-  transition: 0.5s;
+header.shrink #nav.active {
+  top: 60px;
 }
 
 /* navigation container */
 #nav {
   top: -100%;
-  transition: 0.3s;
+  z-index: -1;
+  transition: 0.5s;
   background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--primary-color);
   /* slide into view when active */
   /* link list in navigation */
 }
 #nav.active {
-  top: 0;
+  top: 100px;
 }
 #nav ul {
   list-style-type: none;
