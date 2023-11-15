@@ -9,7 +9,7 @@
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
   --transition-time: none;
-  --themebutton-color: #000;
+  --themebutton-color: #cb4e3b;
 }
 
 /* dark theme variables */
@@ -19,7 +19,7 @@
   --text-color: #fff;
   --accent: #cb4e3b;
   --secondary-accent: #f59319;
-  --themebutton-color: #fff;
+  --themebutton-color: #f59319;
 }
 
 /* default styles for titles */
