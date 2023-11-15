@@ -50,9 +50,9 @@ $themebutton-color: var(--themebutton-color);
 
 /* theme button container */
 #themebutton {
+  @include transition();
   display: inline-block;
   vertical-align: middle;
-  transition: background-color 0.5s;
   cursor: pointer;
   width: 60px;
   height: 30px;
@@ -82,5 +82,9 @@ $themebutton-color: var(--themebutton-color);
     background-color: transparent;
     transform: translate(50%, 0%);
     box-shadow: -6px 5px 0 5px $themebutton-color;
+  }
+
+  &.hide {
+    margin-top: -200px;
   }
 }

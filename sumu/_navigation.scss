@@ -40,10 +40,11 @@ header {
     }
   }
 
-  /* header properties when the header is shrunk */
+  /* header properties when the header is shrunken */
   &.shrink {
     height: $shrink-height;
 
+    /* active navigation while header is shrunken */
     #nav.active {
       top: $shrink-height;
     }

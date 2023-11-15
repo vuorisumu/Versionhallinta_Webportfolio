@@ -26,9 +26,9 @@
 /* default style for text */
 /* theme button container */
 #themebutton {
+  transition: var(--transition-time);
   display: inline-block;
   vertical-align: middle;
-  transition: background-color 0.5s;
   cursor: pointer;
   width: 60px;
   height: 30px;
@@ -57,6 +57,9 @@
   transform: translate(50%, 0%);
   box-shadow: -6px 5px 0 5px var(--themebutton-color);
 }
+#themebutton.hide {
+  margin-top: -200px;
+}
 
 /* Fixed full width elements */
 #nav, header {
@@ -70,7 +73,7 @@ header {
   height: 100px;
   top: 0;
   /* logo banner */
-  /* header properties when the header is shrunk */
+  /* header properties when the header is shrunken */
 }
 header #logo {
   background-color: var(--primary-color);
@@ -92,6 +95,7 @@ header #logo h1 {
 }
 header.shrink {
   height: 60px;
+  /* active navigation while header is shrunken */
 }
 header.shrink #nav.active {
   top: 60px;

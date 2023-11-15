@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(function () {
     root.style.setProperty("--transition-time", "0.5s");
-  }, 1000);
+  }, 500);
 });
 
 // call theme check on page load
@@ -17,6 +17,7 @@ const menubutton = document.getElementById("hamburger");
 const menu = document.getElementById("nav");
 menubutton.addEventListener("click", () => {
   menubutton.classList.toggle("active");
+  themebutton.classList.toggle("hide");
   menu.classList.toggle("active");
 });
 
