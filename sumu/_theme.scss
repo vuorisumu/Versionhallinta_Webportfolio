@@ -49,12 +49,32 @@ $themebutton-color: var(--themebutton-color);
 }
 
 #themebutton {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: $themebutton-color;
-  transition: $transition-time;
   cursor: pointer;
-  outline: 4px dotted $themebutton-color;
-  outline-offset: 3px;
+  width: 30px;
+  height: 30px;
+
+  #sun-moon {
+    transition: $transition-time;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:not(.moon) {
+    #sun-moon {
+      transform: translate(25%, 25%);
+      background-color: $themebutton-color;
+      outline: 4px dotted $themebutton-color;
+      outline-offset: 3px;
+    }
+  }
+
+  &.moon {
+    outline: none;
+    background-color: transparent;
+    #sun-moon {
+      transform: translate(50%, 0%);
+      box-shadow: -6px 5px 0 5px $themebutton-color;
+    }
+  }
 }

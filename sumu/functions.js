@@ -52,6 +52,9 @@ function setTheme(themeName) {
   document.documentElement.setAttribute("data-theme", themeName);
   localStorage.setItem("theme", themeName);
   darkTheme = themeName === "dark";
+  darkTheme
+    ? themebutton.classList.remove("moon")
+    : themebutton.classList.add("moon");
 }
 // scroll functionality
 const header = document.getElementById("header");

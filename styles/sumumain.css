@@ -25,14 +25,29 @@
 /* default styles for titles */
 /* default style for text */
 #themebutton {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+#themebutton #sun-moon {
+  transition: var(--transition-time);
+  border-radius: 50%;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+}
+#themebutton:not(.moon) #sun-moon {
+  transform: translate(25%, 25%);
   background-color: var(--themebutton-color);
-  transition: var(--transition-time);
-  cursor: pointer;
   outline: 4px dotted var(--themebutton-color);
   outline-offset: 3px;
+}
+#themebutton.moon {
+  outline: none;
+  background-color: transparent;
+}
+#themebutton.moon #sun-moon {
+  transform: translate(50%, 0%);
+  box-shadow: -6px 5px 0 5px var(--themebutton-color);
 }
 
 /* Fixed full width elements */
