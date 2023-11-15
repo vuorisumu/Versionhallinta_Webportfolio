@@ -50,9 +50,13 @@ $themebutton-color: var(--themebutton-color);
 
 /* theme button container */
 #themebutton {
+  transition: background-color 0.5s;
   cursor: pointer;
-  width: 30px;
+  width: 60px;
   height: 30px;
+  background-color: color-mix(in srgb, $accent, transparent 70%);
+  border-radius: 15px;
+  border: inset 2px $primary-color;
 
   /* graphic in both sun and moon */
   #sun-moon {
@@ -63,15 +67,15 @@ $themebutton-color: var(--themebutton-color);
   }
 
   /* graphic in sun mode */
-  &:not(.moon) #sun-moon {
-    transform: translate(25%, 25%);
+  &.moon #sun-moon {
+    transform: translate(180%, 25%);
     background-color: $themebutton-color;
     outline: 4px dotted $themebutton-color;
-    outline-offset: 3px;
+    outline-offset: 2px;
   }
 
   /* graphic in moon mode */
-  &.moon #sun-moon {
+  &:not(.moon) #sun-moon {
     outline: none;
     background-color: transparent;
     transform: translate(50%, 0%);

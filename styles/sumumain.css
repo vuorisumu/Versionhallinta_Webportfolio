@@ -26,9 +26,13 @@
 /* default style for text */
 /* theme button container */
 #themebutton {
+  transition: background-color 0.5s;
   cursor: pointer;
-  width: 30px;
+  width: 60px;
   height: 30px;
+  background-color: color-mix(in srgb, var(--accent), transparent 70%);
+  border-radius: 15px;
+  border: inset 2px var(--primary-color);
   /* graphic in both sun and moon */
   /* graphic in sun mode */
   /* graphic in moon mode */
@@ -39,13 +43,13 @@
   width: 20px;
   height: 20px;
 }
-#themebutton:not(.moon) #sun-moon {
-  transform: translate(25%, 25%);
+#themebutton.moon #sun-moon {
+  transform: translate(180%, 25%);
   background-color: var(--themebutton-color);
   outline: 4px dotted var(--themebutton-color);
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
-#themebutton.moon #sun-moon {
+#themebutton:not(.moon) #sun-moon {
   outline: none;
   background-color: transparent;
   transform: translate(50%, 0%);
