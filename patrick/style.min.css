@@ -1,3 +1,9 @@
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +22,7 @@ body {
 .leftSection h2 {
   margin-bottom: 20px;
 }
-.leftSection :not(h2, dt) {
+.leftSection :not(h2, dt, img) {
   background-color: #774c60;
   padding: 10px;
   padding-bottom: 30px;
@@ -24,15 +30,20 @@ body {
   margin-top: 5px;
   margin-bottom: 8px;
 }
-.leftSection :not(h2, dt) dd {
+.leftSection :not(h2, dt, img) dd {
   box-shadow: 0px 8px 10px #2d1f26;
 }
-.leftSection :not(h2, dt) dt:not(:first-of-type) {
+.leftSection :not(h2, dt, img) dt:not(:first-of-type) {
   margin-top: 20px;
 }
-.leftSection :not(h2, dt) dt {
+.leftSection :not(h2, dt, img) dt {
   font-size: 18px;
   font-weight: bold;
+}
+.leftSection :not(h2, dt, img) img {
+  width: auto;
+  height: 60px;
+  padding-right: 20px;
 }
 
 nav {

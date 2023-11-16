@@ -5,6 +5,12 @@ $lighter-red-color: #774c60;
 $lighter-red-color-shadow: #2d1f26;
 $text-color: #eacdc2;
 
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 @mixin sectionStyle {
   padding: 20px;
   align-items: center;
@@ -13,14 +19,13 @@ $text-color: #eacdc2;
     margin-bottom: 20px;
   }
 
-  :not(h2, dt) {
+  :not(h2, dt, img) {
     background-color: $lighter-red-color;
     padding: 10px;
     padding-bottom: 30px;
     box-shadow: 0px 5px 10px $darkbase-color;
     margin-top: 5px;
     margin-bottom: 8px;
-
     dd {
       box-shadow: 0px 8px 10px $lighter-red-color-shadow;
     }
@@ -31,6 +36,11 @@ $text-color: #eacdc2;
     dt {
       font-size: 18px;
       font-weight: bold;
+    }
+    img {
+      width: auto;
+      height: 60px;
+      padding-right: 20px;
     }
   }
 }
