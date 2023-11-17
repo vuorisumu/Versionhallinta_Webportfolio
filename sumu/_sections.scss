@@ -76,6 +76,20 @@ section:nth-child(even) {
       margin: 5px 0 0 0;
       font-size: 14px;
     }
+
+    /* three screenshots side by side */
+    &.mobile-screenshots {
+      display: flex;
+      flex-wrap: wrap;
+
+      picture {
+        flex: 33%;
+      }
+
+      p {
+        flex: 100%;
+      }
+    }
   }
 
   /* self portrait in skillset section */

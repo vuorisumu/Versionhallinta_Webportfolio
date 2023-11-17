@@ -255,11 +255,22 @@ section:nth-child(even) {
   padding: 10px;
   /* mixes the primary color with 50% transparency */
   background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+  /* three screenshots side by side */
 }
 .project-container .img-container p {
   text-align: center;
   margin: 5px 0 0 0;
   font-size: 14px;
+}
+.project-container .img-container.mobile-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-container .img-container.mobile-screenshots picture {
+  flex: 33%;
+}
+.project-container .img-container.mobile-screenshots p {
+  flex: 100%;
 }
 .project-container img {
   width: 100%;
