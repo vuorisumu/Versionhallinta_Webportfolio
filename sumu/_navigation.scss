@@ -21,6 +21,7 @@ header {
 
   /* logo banner */
   #logo {
+    @include theme.transition;
     background-color: theme.$primary-color;
     border-bottom: 1px solid theme.$secondary-color;
     height: 100%;
