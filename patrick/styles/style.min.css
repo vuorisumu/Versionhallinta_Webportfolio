@@ -23,7 +23,7 @@ body {
 .leftSection h2 {
   margin-bottom: 20px;
 }
-.leftSection :not(h2, dt, img, li, em) {
+.leftSection :not(h2, dt, img) {
   background-color: #774c60;
   padding: 10px;
   padding-bottom: 30px;
@@ -31,29 +31,20 @@ body {
   margin-top: 5px;
   margin-bottom: 8px;
 }
-.leftSection :not(h2, dt, img, li, em) dd {
+.leftSection :not(h2, dt, img) dd {
   box-shadow: 0px 8px 10px #3d2833;
 }
-.leftSection :not(h2, dt, img, li, em) dt:not(:first-of-type) {
+.leftSection :not(h2, dt, img) dt:not(:first-of-type) {
   margin-top: 20px;
 }
-.leftSection :not(h2, dt, img, li, em) dt {
+.leftSection :not(h2, dt, img) dt {
   font-size: 18px;
   font-weight: bold;
 }
-.leftSection :not(h2, dt, img, li, em) img {
+.leftSection :not(h2, dt, img) img {
   width: auto;
   height: 60px;
   padding-right: 20px;
-}
-.leftSection ul {
-  padding-left: 30px;
-}
-.leftSection ul li {
-  padding-top: 10px;
-}
-.leftSection ul em {
-  padding-left: 15px;
 }
 
 nav {
