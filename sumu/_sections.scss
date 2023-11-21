@@ -2,6 +2,7 @@
 @use "theme";
 
 section {
+  @include theme.transition;
   padding: 5px 20px;
 }
 
@@ -54,9 +55,44 @@ section:nth-child(even) {
       }
     }
   }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 .project-container {
+  padding-top: 10px;
+
+  .img-container {
+    padding: 10px;
+
+    /* mixes the primary color with 50% transparency */
+    background-color: color-mix(in srgb, theme.$primary-color, transparent 50%);
+
+    p {
+      text-align: center;
+      margin: 5px 0 0 0;
+      font-size: 14px;
+    }
+
+    /* three screenshots side by side */
+    &.mobile-screenshots {
+      display: flex;
+      flex-wrap: wrap;
+
+      picture {
+        flex: 33%;
+      }
+
+      p {
+        flex: 100%;
+      }
+    }
+  }
+
+  /* self portrait in skillset section */
   img {
     width: 100%;
     margin: auto;

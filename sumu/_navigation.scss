@@ -15,46 +15,55 @@ $header-shrink-time: 0.5s;
 /* header bar */
 header {
   @extend %fixedfullwidth;
+  @include theme.transition;
   height: $nav-height;
-  background-color: theme.$primary-color;
-  border-bottom: 1px solid theme.$secondary-color;
   top: 0;
-  transition: $header-shrink-time;
 
-  /* header properties when the header is shrunk */
+  /* logo banner */
+  #logo {
+    @include theme.transition;
+    background-color: theme.$primary-color;
+    border-bottom: 1px solid theme.$secondary-color;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    gap: 15px;
+
+    /* text in logo banner */
+    h1 {
+      display: inline-block;
+      flex: 1;
+      margin: 7px 0 0 0;
+      padding-left: 10px;
+    }
+  }
+
+  /* header properties when the header is shrunken */
   &.shrink {
     height: $shrink-height;
 
-    /* re-center hamburger position */
-    #hamburger {
-      top: -($shrink-height/2 + $ham-height/2);
-    }
-
-    /* adjust logo height */
-    #logo h1 {
-      line-height: $shrink-height;
+    /* active navigation while header is shrunken */
+    #nav.active {
+      top: $shrink-height;
     }
   }
-}
-
-/* logo in the header */
-#logo h1 {
-  margin: 0;
-  padding-left: 10px;
-  line-height: $nav-height;
-  transition: $header-shrink-time;
 }
 
 /* navigation container */
 #nav {
   @extend %fixedfullwidth;
   top: -100%;
-  transition: 0.3s;
+  z-index: -1;
+  transition: 0.5s;
   background-color: theme.$secondary-color;
+  border-bottom: 1px solid theme.$primary-color;
 
   /* slide into view when active */
   &.active {
-    top: 0;
+    top: $nav-height;
   }
 
   /* link list in navigation */
@@ -87,9 +96,6 @@ header {
   width: $ham-height;
   height: $ham-height;
   position: relative;
-  float: right;
-  right: 15px;
-  top: -($nav-height/2 + $ham-height/2);
   cursor: pointer;
   z-index: 1;
   transition: $header-shrink-time;

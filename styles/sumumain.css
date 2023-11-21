@@ -8,6 +8,8 @@
   --text-color: #5f5c5b;
   --accent: #f59319;
   --secondary-accent: #cb4e3b;
+  --transition-time: none;
+  --themebutton-color: #cb4e3b;
 }
 
 /* dark theme variables */
@@ -17,10 +19,49 @@
   --text-color: #fff;
   --accent: #cb4e3b;
   --secondary-accent: #f59319;
+  --themebutton-color: #f59319;
 }
 
 /* default styles for titles */
 /* default style for text */
+/* theme button container */
+#themebutton {
+  transition: var(--transition-time);
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background-color: color-mix(in srgb, var(--accent), transparent 70%);
+  border-radius: 15px;
+  border: inset 2px var(--primary-color);
+  /* graphic in both sun and moon */
+  /* graphic in sun mode */
+  /* graphic in moon mode */
+  /* hide theme change button when menu is not active */
+}
+#themebutton #sun-moon {
+  transition: var(--transition-time);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+#themebutton.moon #sun-moon {
+  transform: translate(180%, 25%);
+  background-color: var(--themebutton-color);
+  outline: 4px dotted var(--themebutton-color);
+  outline-offset: 2px;
+}
+#themebutton:not(.moon) #sun-moon {
+  outline: none;
+  background-color: transparent;
+  transform: translate(50%, 0%);
+  box-shadow: -6px 5px 0 5px var(--themebutton-color);
+}
+#themebutton.hide {
+  margin-top: -200px;
+}
+
 /* Fixed full width elements */
 #nav, header {
   position: fixed;
@@ -29,43 +70,51 @@
 
 /* header bar */
 header {
+  transition: var(--transition-time);
   height: 100px;
+  top: 0;
+  /* logo banner */
+  /* header properties when the header is shrunken */
+}
+header #logo {
+  transition: var(--transition-time);
   background-color: var(--primary-color);
   border-bottom: 1px solid var(--secondary-color);
-  top: 0;
-  transition: 0.5s;
-  /* header properties when the header is shrunk */
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  gap: 15px;
+  /* text in logo banner */
+}
+header #logo h1 {
+  display: inline-block;
+  flex: 1;
+  margin: 7px 0 0 0;
+  padding-left: 10px;
 }
 header.shrink {
   height: 60px;
-  /* re-center hamburger position */
-  /* adjust logo height */
+  /* active navigation while header is shrunken */
 }
-header.shrink #hamburger {
-  top: -55px;
-}
-header.shrink #logo h1 {
-  line-height: 60px;
-}
-
-/* logo in the header */
-#logo h1 {
-  margin: 0;
-  padding-left: 10px;
-  line-height: 100px;
-  transition: 0.5s;
+header.shrink #nav.active {
+  top: 60px;
 }
 
 /* navigation container */
 #nav {
   top: -100%;
-  transition: 0.3s;
+  z-index: -1;
+  transition: 0.5s;
   background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--primary-color);
   /* slide into view when active */
   /* link list in navigation */
 }
 #nav.active {
-  top: 0;
+  top: 100px;
 }
 #nav ul {
   list-style-type: none;
@@ -94,9 +143,6 @@ header.shrink #logo h1 {
   width: 50px;
   height: 50px;
   position: relative;
-  float: right;
-  right: 15px;
-  top: -75px;
   cursor: pointer;
   z-index: 1;
   transition: 0.5s;
@@ -145,6 +191,7 @@ header.shrink #logo h1 {
 }
 
 section {
+  transition: var(--transition-time);
   padding: 5px 20px;
 }
 
@@ -195,16 +242,40 @@ section:nth-child(even) {
   padding: 0;
   margin: 0;
 }
+.skillset img {
+  width: 100%;
+  max-width: 400px;
+}
 
+.project-container {
+  padding-top: 10px;
+  /* self portrait in skillset section */
+}
+.project-container .img-container {
+  padding: 10px;
+  /* mixes the primary color with 50% transparency */
+  background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+  /* three screenshots side by side */
+}
+.project-container .img-container p {
+  text-align: center;
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+.project-container .img-container.mobile-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-container .img-container.mobile-screenshots picture {
+  flex: 33%;
+}
+.project-container .img-container.mobile-screenshots p {
+  flex: 100%;
+}
 .project-container img {
   width: 100%;
   margin: auto;
   text-align: center;
-}
-
-/* transition time for the theme change */
-* {
-  transition: background-color 0.5s, color 0.5s;
 }
 
 /* smooth scrolling */
@@ -214,6 +285,7 @@ html {
 
 /* default background color and reset margins */
 body {
+  transition: var(--transition-time);
   background-color: var(--primary-color);
   margin: 0;
   padding: 0;

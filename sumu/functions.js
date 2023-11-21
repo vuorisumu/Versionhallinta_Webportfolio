@@ -1,6 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let root = document.querySelector(":root");
+
+  setTimeout(function () {
+    root.style.setProperty("--transition-time", "0.5s");
+  }, 500);
+});
+
 // call theme check on page load
 window.onload = function () {
   checkTheme();
+  scrollFunction();
 };
 
 // open and close navigation menu
@@ -8,7 +17,17 @@ const menubutton = document.getElementById("hamburger");
 const menu = document.getElementById("nav");
 menubutton.addEventListener("click", () => {
   menubutton.classList.toggle("active");
+  themebutton.classList.toggle("hide");
   menu.classList.toggle("active");
+});
+
+// close navigation menu when clicking outside header
+document.addEventListener("click", (e) => {
+  if (!header.contains(e.target) && menu.classList.contains("active")) {
+    menubutton.classList.toggle("active");
+    themebutton.classList.toggle("hide");
+    menu.classList.toggle("active");
+  }
 });
 
 // check if theme preference has already been set
@@ -44,6 +63,9 @@ function setTheme(themeName) {
   document.documentElement.setAttribute("data-theme", themeName);
   localStorage.setItem("theme", themeName);
   darkTheme = themeName === "dark";
+  darkTheme
+    ? themebutton.classList.remove("moon")
+    : themebutton.classList.add("moon");
 }
 // scroll functionality
 const header = document.getElementById("header");
@@ -66,11 +88,12 @@ function scrollFunction() {
   // highlight current section link
   sections.forEach((current, i) => {
     const sectionHeight = current.parentElement.offsetHeight;
-    const sectionTop = current.parentElement.offsetTop - (i === 0 ? 150 : 50);
+    const sectionTop = current.parentElement.offsetTop - 100;
     sectionId = current.getAttribute("id");
     if (
-      window.scrollY > sectionTop &&
-      window.scrollY <= sectionTop + sectionHeight
+      (window.scrollY > sectionTop &&
+        window.scrollY <= sectionTop + sectionHeight) ||
+      (window.scrollY < 2 && i === 0)
     ) {
       document
         .querySelector("#nav a[href*=" + sectionId + "]")
