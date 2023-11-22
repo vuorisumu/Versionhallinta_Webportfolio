@@ -20,7 +20,7 @@ dl {
     margin-bottom: 20px;
   }
 
-  :not(h2, dt, img) {
+  :not(h2, dt, img, li, em) {
     background-color: $lighter-red-color;
     padding: 10px;
     padding-bottom: 30px;
@@ -42,6 +42,16 @@ dl {
       width: auto;
       height: 60px;
       padding-right: 20px;
+    }
+  }
+
+  ul {
+    padding-left: 30px;
+    li {
+      padding-top: 10px;
+    }
+    em {
+      padding-left: 15px;
     }
   }
 }
