@@ -48,11 +48,11 @@ function addFadeOutClass() {
       setTimeout(function () {
         heroImage.classList.add("fade-out");
       }, 500); // Adjust the delay duration as needed
-    } else if (scrollPosition < triggerPosition) {
+    } /* else if (scrollPosition < triggerPosition) {
       setTimeout(function () {
         heroImage.classList.add("fade-in");
       }, 500);
-    } else {
+    } */ else {
       heroImage.classList.remove("fade-out");
     }
   }
