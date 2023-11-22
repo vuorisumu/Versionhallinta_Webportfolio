@@ -69,6 +69,7 @@ input:checked + .slider:before {
 
   h2 {
     margin-bottom: 20px;
+    color: var(--text-color);
   }
 
   :not(h2, dt, img, li, em) {
@@ -125,15 +126,16 @@ body {
 nav {
   background-color: var(--darkbase-color);
   padding: 20px;
+  color: var(--text-color2);
 }
 
 header {
   background-color: var(--darkbase-color);
-  color: var(--darker-red-color);
+  color: var(--text-color2);
   text-align: center;
   padding: 50px;
   padding-top: 20px;
-  box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
+  box-shadow: -1px 5px 4px var(--almost-black-shadow) inset;
 
   img {
     padding-bottom: 20px;
@@ -148,6 +150,7 @@ header {
 
 footer {
   background-color: var(--darkbase-color);
+  color: var(--text-color2);
   text-align: center;
   padding: 10px;
 }
