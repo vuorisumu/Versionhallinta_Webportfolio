@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("link2").addEventListener("click", function (event) {
     event.preventDefault();
-    changeContent("this is content for link2 <br> .... Demo Python project? <br> include image(s)");
+    changeContent(
+      "this is content for link2 <br> .... Demo Python project? <br> include image(s)"
+    );
   });
 
   document.getElementById("link3").addEventListener("click", function (event) {
@@ -46,6 +48,10 @@ function addFadeOutClass() {
       setTimeout(function () {
         heroImage.classList.add("fade-out");
       }, 500); // Adjust the delay duration as needed
+    } else if (scrollPosition < triggerPosition) {
+      setTimeout(function () {
+        heroImage.classList.add("fade-in");
+      }, 500);
     } else {
       heroImage.classList.remove("fade-out");
     }
