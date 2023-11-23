@@ -1,9 +1,4 @@
-$base-color: #372549;
-$darkbase-color: #1a1423;
-$darker-red-color: #b75d69;
-$lighter-red-color: #774c60;
-$lighter-red-color-shadow: #3d2833;
-$text-color: #eacdc2;
+@import "variables";
 
 dl {
   display: flex;
@@ -12,23 +7,80 @@ dl {
   align-items: center;
 }
 
+.switch {
+  height: 100px;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #2b2b2b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 @mixin sectionStyle {
   padding: 20px;
   align-items: center;
 
   h2 {
     margin-bottom: 20px;
+    color: var(--text-color);
   }
 
   :not(h2, dt, img, li, em) {
-    background-color: $lighter-red-color;
+    background-color: var(--lighter-red-color);
     padding: 10px;
     padding-bottom: 30px;
-    box-shadow: 0px 5px 10px $darkbase-color;
+    box-shadow: 0px 5px 10px var(--darkbase-color);
     margin-top: 5px;
     margin-bottom: 8px;
     dd {
-      box-shadow: 0px 8px 10px $lighter-red-color-shadow;
+      box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
     }
 
     dt:not(:first-of-type) {
@@ -63,8 +115,8 @@ dl {
 }
 
 body {
-  background-color: $base-color;
-  color: $text-color;
+  background-color: var(--base-color);
+  color: var(--text-color);
 }
 
 .leftSection {
@@ -72,17 +124,18 @@ body {
 }
 
 nav {
-  background-color: $darkbase-color;
+  background-color: var(--darkbase-color);
   padding: 20px;
+  color: var(--text-color2);
 }
 
 header {
-  background-color: $darkbase-color;
-  color: $darker-red-color;
+  background-color: var(--darkbase-color);
+  color: var(--text-color2);
   text-align: center;
   padding: 50px;
   padding-top: 20px;
-  box-shadow: -1px 5px 4px rgb(8, 0, 22) inset;
+  box-shadow: -1px 5px 4px var(--almost-black-shadow) inset;
 
   img {
     padding-bottom: 20px;
@@ -96,7 +149,8 @@ header {
 }
 
 footer {
-  background-color: $darkbase-color;
+  background-color: var(--darkbase-color);
+  color: var(--text-color2);
   text-align: center;
   padding: 10px;
 }
