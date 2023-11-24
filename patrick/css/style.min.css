@@ -31,6 +31,10 @@
   text-decoration: none;
   color: inherit;
 }
+#projects h2 {
+  font-size: 35px;
+  padding-bottom: 10px;
+}
 
 #project1 {
   background-image: url("../projects/workitout.png");
@@ -62,6 +66,9 @@
 .project-box h3 {
   padding-bottom: 10px;
   font-size: 30px;
+}
+.project-box p {
+  font-size: 20px;
 }
 .project-box:before {
   content: "";
@@ -386,8 +393,12 @@ body {
   align-items: center;
 }
 .leftSection h2 {
-  margin-bottom: 20px;
+  padding-bottom: 10px;
   color: var(--text-color);
+  font-size: 35px;
+}
+.leftSection p {
+  font-size: 20px;
 }
 .leftSection :not(h2, dt, img, li, em) {
   background-color: var(--lighter-red-color);
@@ -400,6 +411,7 @@ body {
 }
 .leftSection :not(h2, dt, img, li, em) dd {
   box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
+  font-size: 20px;
 }
 .leftSection :not(h2, dt, img, li, em) dt:not(:first-of-type) {
   margin-top: 20px;
@@ -418,25 +430,35 @@ body {
 }
 .leftSection ul li {
   padding-top: 10px;
+  font-size: 20px;
 }
 .leftSection ul em {
   padding-left: 15px;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: var(--darkbase-color);
   color: var(--text-color2);
   text-align: center;
-  padding: 50px;
-  padding-top: 100px;
+  padding: 20px;
+  padding-top: 80px;
   border-radius: 0px 0px 15px 15px;
 }
 header img {
-  padding-bottom: 20px;
   width: 150px;
   height: auto;
+  border-radius: 30px;
+}
+header h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
 }
 header h3 {
+  padding-top: 20px;
   text-align: left;
 }
 

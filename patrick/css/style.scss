@@ -21,8 +21,13 @@ dl {
   align-items: center;
 
   h2 {
-    margin-bottom: 20px;
+    padding-bottom: 10px;
     color: var(--text-color);
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 20px;
   }
 
   :not(h2, dt, img, li, em) {
@@ -35,6 +40,7 @@ dl {
     border-radius: 20px;
     dd {
       box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
+      font-size: 20px;
     }
 
     dt:not(:first-of-type) {
@@ -55,6 +61,7 @@ dl {
     padding-left: 30px;
     li {
       padding-top: 10px;
+      font-size: 20px;
     }
     em {
       padding-left: 15px;
@@ -79,19 +86,29 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: var(--darkbase-color);
   color: var(--text-color2);
   text-align: center;
-  padding: 50px;
-  padding-top: 100px;
+  padding: 20px;
+  padding-top: 80px;
   border-radius: 0px 0px 15px 15px;
   img {
-    padding-bottom: 20px;
     width: 150px;
     height: auto;
+    border-radius: 30px;
+  }
+
+  h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
   }
 
   h3 {
+    padding-top: 20px;
     text-align: left;
   }
 }

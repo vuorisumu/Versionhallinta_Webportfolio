@@ -8,6 +8,10 @@
   text-decoration: none;
   color: inherit;
 }
+#projects h2 {
+  font-size: 35px;
+  padding-bottom: 10px;
+}
 
 #project1 {
   background-image: url("../projects/workitout.png");
@@ -39,6 +43,9 @@
 .project-box h3 {
   padding-bottom: 10px;
   font-size: 30px;
+}
+.project-box p {
+  font-size: 20px;
 }
 .project-box:before {
   content: "";
