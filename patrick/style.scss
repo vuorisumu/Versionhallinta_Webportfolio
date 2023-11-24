@@ -6,6 +6,38 @@ html {
   scroll-padding-top: 70px;
 }
 
+.bubble {
+  transition: all 0.2s ease-in-out;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1;
+  margin-left: 27px;
+  margin-top: 23px;
+  opacity: 0;
+}
+
+.checkbox:hover + .bubble {
+  background-color: var(--base-color);
+  margin-left: 8px;
+  margin-top: 4px;
+  width: 61px;
+  height: 61px;
+  opacity: 1;
+}
+
+.checkbox:hover:checked + .bubble {
+  background-color: var(--darkbase-color);
+  transition: all 0.3s ease-in-out;
+  margin-left: 8px;
+  margin-top: 9px;
+  width: 51px;
+  height: 51px;
+  opacity: 1;
+}
+
+//nav bar
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
