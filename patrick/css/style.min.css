@@ -32,10 +32,21 @@
   color: inherit;
 }
 
+#project1 {
+  background-image: url("../projects/workitout.png");
+}
+
+#project2 {
+  background-image: url("../projects/github.jpg");
+}
+
+#project3 {
+  background-image: url("../projects/itchio.jpg");
+}
+
 .project-box {
   position: relative;
   overflow: hidden;
-  background-image: url("workitout.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
