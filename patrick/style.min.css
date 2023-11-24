@@ -49,11 +49,20 @@ html {
 
 .checkbox:hover:checked + .bubble {
   background-color: var(--darkbase-color);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-left: 8px;
   margin-top: 9px;
   width: 51px;
   height: 51px;
+  opacity: 1;
+}
+
+.slider:hover + .bubble {
+  background-color: var(--base-color);
+  margin-left: 8px;
+  margin-top: 4px;
+  width: 61px;
+  height: 61px;
   opacity: 1;
 }
 
@@ -198,6 +207,7 @@ dl {
   position: absolute;
   right: 33px;
   top: 6px;
+  pointer-events: none;
 }
 
 .featherMoon {
@@ -270,6 +280,23 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.oval {
+  background-color: var(--base-color);
+  border-radius: 30px;
+  transform: translate(4px, 2px);
+  width: 50px;
+  height: 30px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.oval.alt {
+  opacity: 1;
+  transform: translate(-12px, -13px);
+  width: 85px;
+  height: 61px;
 }
 
 * {

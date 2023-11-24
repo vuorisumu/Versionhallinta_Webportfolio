@@ -25,3 +25,17 @@ function switchTheme(e) {
 toggleSwitch.addEventListener("change", switchTheme, false);
 //for feather icons to work
 feather.replace();
+
+// enlarge the highlighter under dark mode slider.
+//implemented because a problem within html hierarchy
+const slider = document.querySelector(".slider");
+
+const oval = document.querySelector(".oval");
+
+slider.addEventListener("mouseover", () => {
+  oval.classList.toggle("alt");
+});
+
+slider.addEventListener("mouseout", () => {
+  oval.classList.toggle("alt");
+});
