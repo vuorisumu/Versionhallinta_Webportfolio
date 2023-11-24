@@ -23,3 +23,5 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener("change", switchTheme, false);
+//for feather icons to work
+feather.replace();
