@@ -34,6 +34,7 @@
 #projects h2 {
   font-size: 35px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 #project1 {
@@ -376,6 +377,14 @@ dl {
   align-items: center;
 }
 
+.leftSection:last-of-type {
+  margin-bottom: 40px;
+}
+
+.leftSection:nth-child(even) h2 {
+  text-align: right;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -426,7 +435,7 @@ body {
   padding-right: 20px;
 }
 .leftSection ul {
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .leftSection ul li {
   padding-top: 10px;
@@ -434,6 +443,10 @@ body {
 }
 .leftSection ul em {
   padding-left: 15px;
+}
+.leftSection h2 {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 header {
@@ -466,11 +479,11 @@ footer {
   background-color: var(--darkbase-color);
   color: var(--text-color2);
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-  body > *:not(nav) {
+  body > *:not(nav, footer, header) {
     margin: auto;
     width: 60%;
   }

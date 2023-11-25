@@ -58,7 +58,7 @@ dl {
   }
 
   ul {
-    padding-left: 30px;
+    padding-left: 40px;
     li {
       padding-top: 10px;
       font-size: 20px;
@@ -66,6 +66,21 @@ dl {
     em {
       padding-left: 15px;
     }
+  }
+
+  h2 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.leftSection:last-of-type {
+  margin-bottom: 40px;
+}
+
+.leftSection:nth-child(even) {
+  h2 {
+    text-align: right;
   }
 }
 
@@ -117,11 +132,11 @@ footer {
   background-color: var(--darkbase-color);
   color: var(--text-color2);
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-  body > *:not(nav) {
+  body > *:not(nav, footer, header) {
     margin: auto;
     width: 60%;
   }
