@@ -79,16 +79,6 @@ img {
     background-size: cover;
     background-color: #888; /* Grey background color */
 
-    &.fade-out {
-      opacity: 0;
-      background-image: transparent; /* Transition background color to transparent */
-      transition: opacity 1s, background-color 1s; /* Apply transition to both opacity and background-color */
-    }
-    &.fade-in {
-      opacity: 100;
-      background-image: url("test-tom.jpg"); 
-      transition: opacity 1s, background-color 1s; /* Apply transition to both opacity and background-color */
-    }
   }
 
   .hero_title {
