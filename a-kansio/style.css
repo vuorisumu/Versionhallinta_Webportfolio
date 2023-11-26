@@ -74,18 +74,13 @@ img {
   background-size: cover;
   background-color: #888; /* Grey background color */
 }
-.hero .hero_img.fade-out {
-  opacity: 0;
-  background-image: transparent; /* Transition background color to transparent */
-  transition: opacity 1s, background-color 1s; /* Apply transition to both opacity and background-color */
-}
 .hero .hero_title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 36px;
-  color: #fff;
+  color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 2;
   text-align: center;
