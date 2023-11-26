@@ -146,6 +146,13 @@
   font-weight: 500;
 }
 
+.siteLang {
+  padding-top: 30px;
+}
+.siteLang a {
+  font-size: 20px;
+}
+
 .navbar-container input[type=checkbox]:checked ~ .menu-items {
   transform: translateX(0);
 }
