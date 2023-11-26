@@ -372,6 +372,23 @@ input:checked + .slider:before {
   transform: rotate(-35deg);
 }
 
+@media only screen and (min-width: 625px) {
+  .navbar {
+    height: 80px;
+  }
+  .navbar .hamburger-lines {
+    left: 30px;
+    top: 26px;
+  }
+  .navbar-container input[type=checkbox] {
+    left: 40px;
+  }
+  .bubble {
+    margin-left: 27px;
+    margin-top: 23px;
+    transform: translateX(10px) translateY(4px);
+  }
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
