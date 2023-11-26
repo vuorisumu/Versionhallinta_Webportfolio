@@ -525,8 +525,12 @@ footer {
     margin: auto;
     width: 60%;
   }
-  .leftSection h2 {
+  #projects h2 {
     padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .leftSection h2 {
+    padding-top: 45px;
     padding-bottom: 20px;
     font-size: 40px;
   }
@@ -538,6 +542,10 @@ footer {
   }
   .leftSection dl dd {
     font-size: 20px;
+  }
+  footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 @media only screen and (min-width: 968px) {
