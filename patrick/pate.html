@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patrick</title>
-    <link rel="stylesheet" type="text/css" href="style.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
@@ -22,9 +22,9 @@
           <li><a href="#profile">Profiili</a></li>
           <li><a href="#workexperience">Työkokemus</a></li>
           <li><a href="#studies">Koulutukset</a></li>
-          <li><a href="#language">Kielitaito</a></li>
-          <li><a href="#skills">IT-Taidot</a></li>
-          <li><a href="#courses">Kurssit</a></li>
+          <li><a href="#projects">Projektit</a></li>
+          <li><a href="#skills">Taidot</a></li>
+          <li class="siteLang"><a href="">Fi</a> | <a href="">En</a></li>
         </ul>
       </div>
       <div class="switch">
@@ -40,8 +40,8 @@
       </div>
     </nav>
     <header id="home">
-      <img src="place_holder_pfp.jpg" alt="profile picture" />
       <h1>Patrick Palmroos</h1>
+      <img src="place_holder_pfp.jpg" alt="profile picture" />
       <h3>
         25.10.2003<br />palmroos.patrick@gmail.com<br />mannakorventie13 A 60<br />36240
         Kangasala
@@ -122,12 +122,51 @@
         <dd>
           Opiskelen tietojenkäsittelyä toista vuotta Ohjelmistotuotannon
           puolelle erikoistuen Tampereen Ammattikorkeakoulussa. Opinnot kestävät
-          noin 3.5v.<br /><br />
-          Linkki githubiini löytyy sivun alaosasta.
+          noin 3.5v.
         </dd>
       </dl>
     </section>
-    <section class="leftSection" id="language">
+    <section class="project" id="projects">
+      <h2>Projektit</h2>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.placbo.workitout"
+        class="project-link"
+      >
+        <div class="project-box" id="project1">
+          <div class="box">
+            <h3 class="project-title">Work It Out!</h3>
+            <p>
+              First year of my studies I worked with my classmates to create a
+              mobile game called "Work It Out!" for a customer. I worked on the
+              game code in this project.
+            </p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="https://github.com/Patrick-Palmroos?tab=repositories"
+        class="project-link"
+      >
+        <div class="project-box" id="project2">
+          <div class="box">
+            <h3 class="project-title">GitHub</h3>
+            <p>My personal github includes school projects and such.</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://itch.io/profile/rostpa" class="project-link">
+        <div class="project-box" id="project3">
+          <div class="box">
+            <h3 class="project-title">itch.io</h3>
+            <p>
+              My itch.io profile has some gamejam projects ive made. These are
+              also the oldest coding projects ive worked on!
+            </p>
+          </div>
+        </div>
+      </a>
+    </section>
+    <section class="leftSection" id="skills">
       <h2>Kielitaito</h2>
       <ul>
         <li>Suomi -<em>Äidinkieli</em></li>
@@ -135,7 +174,7 @@
         <li>ruotsi -<em>heikko</em></li>
       </ul>
     </section>
-    <section class="leftSection" id="skills">
+    <section class="leftSection" id="it-skills">
       <h2>IT-Taidot</h2>
       <ul>
         <li>Microsoft Word -<em>hyvä</em></li>
@@ -148,17 +187,13 @@
       </ul>
     </section>
     <section class="leftSection" id="courses">
-      <h2>Erilliset kurssit</h2>
+      <h2>Kurssit</h2>
       <ul>
         <li>Hygieniapassi -<em>myönnetty</em></li>
       </ul>
     </section>
     <footer>
-      <h2>footer lol</h2>
-      <a href="https://github.com/Patrick-Palmroos?tab=repositories">Github</a>
-      <a href="https://github.com/Patrick-Palmroos?tab=repositories"
-        >LinkedIn</a
-      >
+      <h2>Kiitos!</h2>
     </footer>
     <script src="App.js"></script>
   </body>
