@@ -297,8 +297,31 @@ p {
   font-weight: 400;
 }
 
-h1,
-h2,
+header h1,
+header h1 a {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 26pt;
+  -webkit-text-decoration: 2px underline var(--accent);
+          text-decoration: 2px underline var(--accent);
+}
+
+main h1 {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 22pt;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+}
+
 h3 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);

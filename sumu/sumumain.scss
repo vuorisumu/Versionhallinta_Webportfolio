@@ -19,8 +19,24 @@ p {
   @include theme.normaltext;
 }
 
-h1,
-h2,
+header h1,
+header h1 a {
+  @include theme.monospacetitle;
+  font-size: 26pt;
+  text-decoration: 2px underline theme.$accent;
+}
+
+main h1 {
+  @include theme.monospacetitle;
+  font-size: 22pt;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+h2 {
+  @include theme.monospacetitle;
+}
+
 h3 {
   @include theme.monospacetitle;
 }
