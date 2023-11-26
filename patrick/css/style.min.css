@@ -489,10 +489,62 @@ footer {
   padding: 20px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 625px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+  }
+  header h1,
+  header h3 {
+    padding-left: 220px;
+    margin: auto;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+  header img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    text-align: left;
+    left: 22%;
+    transform: translateX(-40%);
+  }
+  body > *:not(nav, footer, header) {
+    margin: auto;
+    width: 70%;
+  }
+  #projects {
+    margin: auto;
+    width: 60%;
+  }
+  .leftSection h2 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 40px;
+  }
+  .leftSection p {
+    font-size: 22px;
+  }
+  .leftSection dl dt {
+    font-size: 22px;
+  }
+  .leftSection dl dd {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 968px) {
   body > *:not(nav, footer, header) {
     margin: auto;
     width: 60%;
+    color: red;
   }
   #projects {
     margin: auto;

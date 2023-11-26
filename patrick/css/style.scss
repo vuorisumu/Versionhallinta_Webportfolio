@@ -134,11 +134,74 @@ footer {
   text-align: center;
   padding: 20px;
 }
+//tablet sizing
+@media only screen and (min-width: 625px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
 
-@media only screen and (min-width: 768px) {
+    h1,
+    h3 {
+      padding-left: 220px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      position: absolute;
+      text-align: left;
+      left: 22%;
+      transform: translateX(-40%);
+    }
+  }
+
+  body > *:not(nav, footer, header) {
+    margin: auto;
+    width: 70%;
+  }
+
+  #projects {
+    margin: auto;
+    width: 60%;
+  }
+  .leftSection {
+    h2 {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    dl {
+      dt {
+        font-size: 22px;
+      }
+      dd {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 968px) {
   body > *:not(nav, footer, header) {
     margin: auto;
     width: 60%;
+    color: red;
   }
 
   #projects {
