@@ -33,11 +33,10 @@ nav {
   ul {
     overflow: hidden;
     list-style: none;
-
   }
   li {
     //display: inline-block;
-    float: right; 
+    float: right;
     a:hover {
       background-color: #111;
     }
@@ -70,7 +69,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     //object-fit: cover;
     z-index: 1;
     background-image: url("test-tom.jpg");
@@ -78,7 +77,8 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    background-color: #888; /* Grey background color */
+
   }
 
   .hero_title {
@@ -87,7 +87,7 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 36px;
-    color: #fff;
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
     text-align: center;
@@ -100,6 +100,37 @@ img {
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+}
+
+.project {
+  border-radius: 25px;
+  background: #f6f8f4;
+  padding: 50px;
+  box-sizing: border-box;
+  height: 400px;
+  box-shadow: 1px 1px 5px rgb(78, 75, 70);
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .outset {
+    outline-style: outset;
+    background-color: rgb(31, 30, 30);
+    border-radius: 25px;
+    padding: 15px;
+  }
+  a {
+    display: inline-block; /* Display links on the same line */
+    margin-right: 40px; /* Add some spacing between links */
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #b3b3b3;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 /* MEDIA QUERIES */
