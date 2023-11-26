@@ -248,6 +248,7 @@ section:nth-child(even) {
 }
 
 .project-container {
+  padding-bottom: 20px;
   /* self portrait in skillset section */
 }
 .project-container .img-container {
@@ -342,5 +343,10 @@ h3 {
 }
 
 footer {
+  background-color: var(--secondary-color);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }/*# sourceMappingURL=sumumain.css.map */
