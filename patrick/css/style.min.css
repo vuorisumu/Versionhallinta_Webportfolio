@@ -201,6 +201,12 @@ input:checked + .slider:before {
   height: 61px;
 }
 
+@media only screen and (min-width: 625px) {
+  .switch {
+    right: 30px;
+    top: 20px;
+  }
+}
 .bubble {
   transition: all 0.2s ease-in-out;
   width: 20px;
