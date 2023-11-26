@@ -437,7 +437,7 @@ body {
   font-size: 35px;
 }
 .leftSection p {
-  font-size: 20px;
+  font-size: 17px;
 }
 .leftSection :not(h2, dt, img, li, em) {
   background-color: var(--lighter-red-color);
@@ -450,10 +450,10 @@ body {
 }
 .leftSection :not(h2, dt, img, li, em) dd {
   box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
-  font-size: 20px;
+  font-size: 17px;
 }
 .leftSection :not(h2, dt, img, li, em) dt:not(:first-of-type) {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 .leftSection :not(h2, dt, img, li, em) dt {
   font-size: 18px;
@@ -469,7 +469,7 @@ body {
 }
 .leftSection ul li {
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .leftSection ul em {
   padding-left: 15px;
@@ -497,7 +497,7 @@ header img {
   border-radius: 30px;
 }
 header h1 {
-  font-size: 50px;
+  font-size: 45px;
   padding-bottom: 10px;
 }
 header h3 {

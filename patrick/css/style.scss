@@ -27,7 +27,7 @@ dl {
   }
 
   p {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   :not(h2, dt, img, li, em) {
@@ -40,11 +40,11 @@ dl {
     border-radius: 20px;
     dd {
       box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
-      font-size: 20px;
+      font-size: 17px;
     }
 
     dt:not(:first-of-type) {
-      margin-top: 20px;
+      margin-top: 16px;
     }
     dt {
       font-size: 18px;
@@ -61,7 +61,7 @@ dl {
     padding-left: 40px;
     li {
       padding-top: 10px;
-      font-size: 20px;
+      font-size: 18px;
     }
     em {
       padding-left: 15px;
@@ -118,7 +118,7 @@ header {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 45px;
     padding-bottom: 10px;
   }
 
