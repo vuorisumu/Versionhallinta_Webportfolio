@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patrick</title>
     <link rel="stylesheet" type="text/css" href="style.min.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar-container container">
-        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="" id="" class="checkbox" />
+        <div class="bubble"></div>
         <div class="hamburger-lines">
           <span class="line line1"></span>
           <span class="line line2"></span>
@@ -24,12 +26,17 @@
           <li><a href="#skills">IT-Taidot</a></li>
           <li><a href="#courses">Kurssit</a></li>
         </ul>
-        <div class="switch">
-          <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-          </label>
-        </div>
+      </div>
+      <div class="switch">
+        <label class="theme-switch" for="checkbox">
+          <div class="oval"></div>
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+          <div class="switch">
+            <i class="featherSun" data-feather="sun"></i>
+            <i class="featherMoon" data-feather="moon"></i>
+          </div>
+        </label>
       </div>
     </nav>
     <header id="home">
