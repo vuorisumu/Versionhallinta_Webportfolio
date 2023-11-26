@@ -19,6 +19,10 @@ p {
   @include theme.normaltext;
 }
 
+p span {
+  font-weight: 600;
+}
+
 header h1,
 header h1 a {
   @include theme.monospacetitle;

@@ -297,6 +297,10 @@ p {
   font-weight: 400;
 }
 
+p span {
+  font-weight: 600;
+}
+
 header h1,
 header h1 a {
   font-family: "Courier Prime", monospace;
