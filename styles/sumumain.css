@@ -213,7 +213,6 @@ section:nth-child(even) {
   /* no default list styles */
   /* short list */
   /* lists with custom bullet */
-  /* image in skillset column */
 }
 .skillset ul {
   list-style: none;
@@ -251,10 +250,6 @@ section:nth-child(even) {
 .skillset .custom-bullet li p {
   padding: 0;
   margin: 0;
-}
-.skillset img {
-  width: 100%;
-  max-width: 400px;
 }
 
 /* container for showcasing projects */
@@ -377,6 +372,11 @@ h3 {
 .icon {
   float: left;
   padding-right: 10px;
+}
+
+/* default image style */
+img {
+  max-width: 100%;
 }
 
 /* page footer */

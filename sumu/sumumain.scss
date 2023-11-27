@@ -78,6 +78,11 @@ h3 {
   padding-right: 10px;
 }
 
+/* default image style */
+img {
+  max-width: 100%;
+}
+
 /* page footer */
 footer {
   background-color: theme.$secondary-color;
