@@ -5,7 +5,6 @@
   grid-template-columns: 25% 40% auto;
 }
 
-/*
 section {
   border-radius: 10px;
   background-color: aliceblue;
@@ -13,7 +12,16 @@ section {
   padding: 20px;
   width: auto;
   height: auto;
-} */
+}
+
+main {
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin: 15px;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
 
 /* Text */
 
