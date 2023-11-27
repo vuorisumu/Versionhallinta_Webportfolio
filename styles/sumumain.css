@@ -303,6 +303,14 @@ p span {
   font-weight: 600;
 }
 
+.indent {
+  padding-left: 20px;
+}
+
+p a {
+  color: var(--accent);
+}
+
 header h1,
 header h1 a {
   font-family: "Courier Prime", monospace;
