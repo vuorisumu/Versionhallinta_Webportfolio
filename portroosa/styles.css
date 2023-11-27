@@ -45,7 +45,7 @@ h3 {
 
   main {
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 2;
   }
 
   .sidebar {
@@ -58,7 +58,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .container {
     grid-template-columns: auto;
   }
