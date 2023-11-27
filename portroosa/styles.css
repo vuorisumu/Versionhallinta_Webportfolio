@@ -5,6 +5,10 @@
   grid-template-columns: 25% 40% auto;
 }
 
+img {
+  width: 50px;
+}
+
 section {
   border-radius: 10px;
   background-color: aliceblue;
