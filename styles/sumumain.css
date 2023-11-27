@@ -193,6 +193,7 @@ header.shrink #nav.active {
 section {
   transition: var(--transition-time);
   padding: 5px 20px;
+  min-height: 80vh;
 }
 
 /* first section */
@@ -232,6 +233,7 @@ section:nth-child(even) {
 .skillset .custom-bullet li {
   background: url("../sumu/img/bullet-placeholder.png") no-repeat;
   padding-left: 30px;
+  margin-top: 10px;
 }
 .skillset .custom-bullet li h3 {
   line-height: 30px;
