@@ -123,6 +123,7 @@ header.shrink #nav.active {
 #nav ul li {
   padding: 6px;
   /* links in navigation */
+  /* active link in navigation */
 }
 #nav ul li a {
   font-family: "Courier Prime", monospace;
@@ -190,6 +191,7 @@ header.shrink #nav.active {
   top: 50%;
 }
 
+/* section base styles */
 section {
   transition: var(--transition-time);
   padding: 5px 20px;
@@ -208,8 +210,10 @@ section:nth-child(even) {
 
 /* skillset column */
 .skillset {
+  /* no default list styles */
   /* short list */
   /* lists with custom bullet */
+  /* image in skillset column */
 }
 .skillset ul {
   list-style: none;
@@ -222,6 +226,7 @@ section:nth-child(even) {
   color: var(--text-color);
   font-weight: 400;
   display: inline-block;
+  /* add separator between list elements */
 }
 .skillset .short-list li:not(:last-child)::after {
   content: "•";
@@ -229,11 +234,14 @@ section:nth-child(even) {
 }
 .skillset .custom-bullet {
   padding-left: 5px;
+  /* list element */
 }
 .skillset .custom-bullet li {
   background: url("../sumu/img/bullet-placeholder.png") no-repeat;
   padding-left: 30px;
   margin-top: 10px;
+  /* titles in custom buller list */
+  /* remove margin and padding from text */
 }
 .skillset .custom-bullet li h3 {
   line-height: 30px;
@@ -249,14 +257,17 @@ section:nth-child(even) {
   max-width: 400px;
 }
 
+/* container for showcasing projects */
 .project-container {
   padding-bottom: 20px;
+  /* container for the image */
   /* self portrait in skillset section */
 }
 .project-container .img-container {
   padding: 10px;
   /* mixes the primary color with 50% transparency */
   background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+  /* image description */
   /* three screenshots side by side */
 }
 .project-container .img-container p {
@@ -267,6 +278,8 @@ section:nth-child(even) {
 .project-container .img-container.mobile-screenshots {
   display: flex;
   flex-wrap: wrap;
+  /* put three pictures side by side */
+  /* image description still takes the whole space */
 }
 .project-container .img-container.mobile-screenshots picture {
   flex: 33%;
@@ -293,24 +306,29 @@ body {
   padding: 0;
 }
 
+/* default text */
 p {
   font-family: "Chakra Petch", sans-serif;
   color: var(--text-color);
   font-weight: 400;
 }
 
+/* important text will be bolded */
 p span {
   font-weight: 600;
 }
 
+/* indented text block */
 .indent {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
+/* link inside a paragraph */
 p a {
   color: var(--accent);
 }
 
+/* header title */
 header h1,
 header h1 a {
   font-family: "Courier Prime", monospace;
@@ -321,6 +339,7 @@ header h1 a {
           text-decoration: 2px underline var(--accent);
 }
 
+/* other big titles */
 main h1 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
@@ -330,12 +349,14 @@ main h1 {
   text-align: center;
 }
 
+/* medium titles */
 h2 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
   font-weight: 700;
 }
 
+/* smaller titles */
 h3 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
@@ -352,6 +373,7 @@ h3 {
   top: -100px;
 }
 
+/* page footer */
 footer {
   background-color: var(--secondary-color);
   text-align: center;

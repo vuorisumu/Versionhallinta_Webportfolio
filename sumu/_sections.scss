@@ -1,6 +1,7 @@
 @use "navigation";
 @use "theme";
 
+/* section base styles */
 section {
   @include theme.transition;
   padding: 5px 20px;
@@ -19,6 +20,7 @@ section:nth-child(even) {
 
 /* skillset column */
 .skillset {
+  /* no default list styles */
   ul {
     list-style: none;
   }
@@ -30,6 +32,7 @@ section:nth-child(even) {
       @include theme.normaltext;
       display: inline-block;
 
+      /* add separator between list elements */
       &:not(:last-child)::after {
         content: "•";
         padding: 0 5px;
@@ -41,16 +44,20 @@ section:nth-child(even) {
   .custom-bullet {
     padding-left: 5px;
 
+    /* list element */
     li {
       background: url("../sumu/img/bullet-placeholder.png") no-repeat;
       padding-left: 30px;
       margin-top: 10px;
+
+      /* titles in custom buller list */
       h3 {
         line-height: 30px;
         padding: 0;
         margin: 0;
       }
 
+      /* remove margin and padding from text */
       p {
         padding: 0;
         margin: 0;
@@ -58,21 +65,25 @@ section:nth-child(even) {
     }
   }
 
+  /* image in skillset column */
   img {
     width: 100%;
     max-width: 400px;
   }
 }
 
+/* container for showcasing projects */
 .project-container {
   padding-bottom: 20px;
 
+  /* container for the image */
   .img-container {
     padding: 10px;
 
     /* mixes the primary color with 50% transparency */
     background-color: color-mix(in srgb, theme.$primary-color, transparent 50%);
 
+    /* image description */
     p {
       text-align: center;
       margin: 5px 0 0 0;
@@ -84,10 +95,12 @@ section:nth-child(even) {
       display: flex;
       flex-wrap: wrap;
 
+      /* put three pictures side by side */
       picture {
         flex: 33%;
       }
 
+      /* image description still takes the whole space */
       p {
         flex: 100%;
       }

@@ -15,22 +15,27 @@ body {
   padding: 0;
 }
 
+/* default text */
 p {
   @include theme.normaltext;
 }
 
+/* important text will be bolded */
 p span {
   font-weight: 600;
 }
 
+/* indented text block */
 .indent {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
+/* link inside a paragraph */
 p a {
   color: theme.$accent;
 }
 
+/* header title */
 header h1,
 header h1 a {
   @include theme.monospacetitle;
@@ -38,6 +43,7 @@ header h1 a {
   text-decoration: 2px underline theme.$accent;
 }
 
+/* other big titles */
 main h1 {
   @include theme.monospacetitle;
   font-size: 22pt;
@@ -45,10 +51,12 @@ main h1 {
   text-align: center;
 }
 
+/* medium titles */
 h2 {
   @include theme.monospacetitle;
 }
 
+/* smaller titles */
 h3 {
   @include theme.monospacetitle;
 }
@@ -64,6 +72,7 @@ h3 {
   }
 }
 
+/* page footer */
 footer {
   background-color: theme.$secondary-color;
   text-align: center;
