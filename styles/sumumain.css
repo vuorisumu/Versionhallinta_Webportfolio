@@ -373,6 +373,12 @@ h3 {
   top: -100px;
 }
 
+/* icons in the same row as text */
+.icon {
+  float: left;
+  padding-right: 10px;
+}
+
 /* page footer */
 footer {
   background-color: var(--secondary-color);

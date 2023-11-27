@@ -72,6 +72,12 @@ h3 {
   }
 }
 
+/* icons in the same row as text */
+.icon {
+  float: left;
+  padding-right: 10px;
+}
+
 /* page footer */
 footer {
   background-color: theme.$secondary-color;
