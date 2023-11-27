@@ -27,7 +27,7 @@ dl {
   }
 
   p {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   :not(h2, dt, img, li, em) {
@@ -40,11 +40,11 @@ dl {
     border-radius: 20px;
     dd {
       box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
-      font-size: 20px;
+      font-size: 17px;
     }
 
     dt:not(:first-of-type) {
-      margin-top: 20px;
+      margin-top: 16px;
     }
     dt {
       font-size: 18px;
@@ -61,7 +61,7 @@ dl {
     padding-left: 40px;
     li {
       padding-top: 10px;
-      font-size: 20px;
+      font-size: 18px;
     }
     em {
       padding-left: 15px;
@@ -118,7 +118,7 @@ header {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 45px;
     padding-bottom: 10px;
   }
 
@@ -183,21 +183,21 @@ footer {
 
   .leftSection {
     h2 {
-      padding-top: 40px;
+      padding-top: 10px;
       padding-bottom: 20px;
-      font-size: 37px;
+      font-size: 35px;
     }
 
     p {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     dl {
       dt {
-        font-size: 22px;
+        font-size: 20px;
       }
       dd {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
@@ -208,11 +208,25 @@ footer {
   }
 }
 
-@media only screen and (min-width: 968px) {
+@media only screen and (min-width: 985px) {
   body > *:not(nav, footer, header) {
     margin: auto;
     width: 60%;
-    color: red;
+  }
+
+  header {
+    width: 60%;
+    margin: auto;
+    padding-top: 150px;
+  }
+
+  #headerBG {
+    position: absolute;
+    background-color: var(--almost-black-shadow);
+    box-shadow: 0px 0px 5px 5px var(--darkbase-color);
+    opacity: 30%;
+    padding-bottom: 370px;
+    width: 100%;
   }
 
   #projects {

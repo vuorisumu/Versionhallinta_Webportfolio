@@ -201,6 +201,12 @@ input:checked + .slider:before {
   height: 61px;
 }
 
+@media only screen and (min-width: 625px) {
+  .switch {
+    right: 30px;
+    top: 20px;
+  }
+}
 .bubble {
   transition: all 0.2s ease-in-out;
   width: 20px;
@@ -372,6 +378,23 @@ input:checked + .slider:before {
   transform: rotate(-35deg);
 }
 
+@media only screen and (min-width: 625px) {
+  .navbar {
+    height: 80px;
+  }
+  .navbar .hamburger-lines {
+    left: 30px;
+    top: 26px;
+  }
+  .navbar-container input[type=checkbox] {
+    left: 40px;
+  }
+  .bubble {
+    margin-left: 27px;
+    margin-top: 23px;
+    transform: translateX(10px) translateY(4px);
+  }
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
@@ -414,7 +437,7 @@ body {
   font-size: 35px;
 }
 .leftSection p {
-  font-size: 20px;
+  font-size: 17px;
 }
 .leftSection :not(h2, dt, img, li, em) {
   background-color: var(--lighter-red-color);
@@ -427,10 +450,10 @@ body {
 }
 .leftSection :not(h2, dt, img, li, em) dd {
   box-shadow: 0px 8px 10px var(--lighter-red-color-shadow);
-  font-size: 20px;
+  font-size: 17px;
 }
 .leftSection :not(h2, dt, img, li, em) dt:not(:first-of-type) {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 .leftSection :not(h2, dt, img, li, em) dt {
   font-size: 18px;
@@ -446,7 +469,7 @@ body {
 }
 .leftSection ul li {
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .leftSection ul em {
   padding-left: 15px;
@@ -474,7 +497,7 @@ header img {
   border-radius: 30px;
 }
 header h1 {
-  font-size: 50px;
+  font-size: 45px;
   padding-bottom: 10px;
 }
 header h3 {
@@ -530,29 +553,41 @@ footer {
     padding-bottom: 20px;
   }
   .leftSection h2 {
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 20px;
-    font-size: 37px;
+    font-size: 35px;
   }
   .leftSection p {
-    font-size: 22px;
+    font-size: 20px;
   }
   .leftSection dl dt {
-    font-size: 22px;
+    font-size: 20px;
   }
   .leftSection dl dd {
-    font-size: 20px;
+    font-size: 18px;
   }
   footer {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 }
-@media only screen and (min-width: 968px) {
+@media only screen and (min-width: 985px) {
   body > *:not(nav, footer, header) {
     margin: auto;
     width: 60%;
-    color: red;
+  }
+  header {
+    width: 60%;
+    margin: auto;
+    padding-top: 150px;
+  }
+  #headerBG {
+    position: absolute;
+    background-color: var(--almost-black-shadow);
+    box-shadow: 0px 0px 5px 5px var(--darkbase-color);
+    opacity: 30%;
+    padding-bottom: 370px;
+    width: 100%;
   }
   #projects {
     margin: auto;

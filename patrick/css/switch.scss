@@ -102,3 +102,10 @@ input:checked + .slider:before {
   width: 85px;
   height: 61px;
 }
+
+@media only screen and (min-width: 625px) {
+  .switch {
+    right: 30px;
+    top: 20px;
+  }
+}
