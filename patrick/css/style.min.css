@@ -438,7 +438,7 @@ input:checked + .slider:before {
     top: 26px;
   }
   .navbar-container input[type=checkbox] {
-    left: 40px;
+    left: 32px;
   }
   .bubble {
     margin-left: 27px;
