@@ -1,17 +1,20 @@
-#projects {
+.project {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
 }
-#projects a {
+.project a {
   text-decoration: none;
   color: inherit;
 }
-#projects h2 {
+
+.prject-title {
   font-size: 35px;
   padding-bottom: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 #project1 {
@@ -74,4 +77,11 @@
 }
 .project-box:hover::before {
   background-color: rgba(58, 29, 29, 0.3);
+}
+
+@media only screen and (min-width: 985px) {
+  #projects {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }/*# sourceMappingURL=box.min.css.map */

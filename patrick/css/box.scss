@@ -1,4 +1,4 @@
-#projects {
+.project {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
@@ -8,12 +8,14 @@
     text-decoration: none;
     color: inherit;
   }
+}
 
-  h2 {
-    font-size: 35px;
-    padding-bottom: 10px;
-    text-align: center;
-  }
+.prject-title {
+  font-size: 35px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 #project1 {
@@ -78,5 +80,15 @@
   padding-bottom: 40px;
   &::before {
     background-color: rgba(58, 29, 29, 0.3);
+  }
+}
+
+@media only screen and (min-width: 625px) {
+}
+
+@media only screen and (min-width: 985px) {
+  #projects {
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }
