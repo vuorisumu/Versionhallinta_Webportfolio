@@ -33,11 +33,12 @@
 }
 
 .prject-title {
-  font-size: 35px;
+  font-size: 42px;
   padding-bottom: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
+  text-decoration: underline;
 }
 
 #project1 {
@@ -532,6 +533,7 @@ body {
 .leftSection h2 {
   padding-left: 40px;
   padding-right: 40px;
+  text-decoration: underline;
 }
 
 header {
@@ -630,11 +632,13 @@ footer {
   body > *:not(nav, footer, header) {
     margin: auto;
     width: 80%;
+    margin-bottom: 50px;
   }
   header {
     width: 65%;
     margin: auto;
     padding-top: 150px;
+    margin-bottom: 50px;
   }
   #headerBG {
     position: absolute;
@@ -646,6 +650,10 @@ footer {
   #projects {
     margin: auto;
     width: 60%;
+    margin-bottom: 50px;
+  }
+  .prject-title {
+    margin-bottom: 20px;
   }
   .leftSection {
     display: flex;
@@ -656,12 +664,27 @@ footer {
   .leftSection h2 {
     padding-right: 60px;
     padding-left: 0px;
+    font-size: 42px;
+  }
+  .leftSection :not(dl, dd, ul, li, em) {
+    max-width: 50%;
+  }
+  .leftSection ul {
+    min-width: 50%;
+    max-width: 50%;
+  }
+  .leftSection em {
+    display: block;
+  }
+  .leftSection dl {
+    max-width: 60%;
   }
   .leftSection:nth-child(odd) {
     flex-direction: row-reverse;
   }
-  .leftSection:nth-child(odd) :not(h2, dt, img, li, em) {
+  .leftSection:nth-child(odd) :not(h2, dt, img, li, ul, dd, em) {
     min-width: 60%;
+    max-width: 60%;
   }
   .leftSection:nth-child(odd) h2 {
     padding-right: 0px;
