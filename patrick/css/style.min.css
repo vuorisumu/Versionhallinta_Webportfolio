@@ -568,6 +568,10 @@ footer {
   text-align: center;
   padding: 20px;
 }
+footer a {
+  font-size: 20px;
+  color: var(--text-color2);
+}
 
 @media only screen and (min-width: 625px) {
   header {
@@ -689,5 +693,10 @@ footer {
   .leftSection:nth-child(odd) h2 {
     padding-right: 0px;
     padding-left: 40px;
+  }
+  #skills,
+  #it-skills,
+  #courses {
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=style.min.css.map */

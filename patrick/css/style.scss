@@ -134,6 +134,11 @@ footer {
   color: var(--text-color2);
   text-align: center;
   padding: 20px;
+
+  a {
+    font-size: 20px;
+    color: var(--text-color2);
+  }
 }
 //tablet sizing
 @media only screen and (min-width: 625px) {
@@ -281,5 +286,11 @@ footer {
       padding-right: 0px;
       padding-left: 40px;
     }
+  }
+
+  #skills,
+  #it-skills,
+  #courses {
+    margin-bottom: 0px;
   }
 }
