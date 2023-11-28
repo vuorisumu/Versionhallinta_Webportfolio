@@ -215,17 +215,17 @@ footer {
   }
 
   header {
-    width: 60%;
+    width: 65%;
     margin: auto;
     padding-top: 150px;
   }
 
   #headerBG {
     position: absolute;
-    background-color: var(--almost-black-shadow);
-    box-shadow: 0px 0px 5px 5px var(--darkbase-color);
-    opacity: 30%;
-    padding-bottom: 370px;
+    background-color: var(--lighter-red-color);
+    // box-shadow: 0px 0px 5px 5px var(--lighter-red-color);
+    opacity: 50%;
+    padding-bottom: 369px;
     width: 100%;
   }
 
