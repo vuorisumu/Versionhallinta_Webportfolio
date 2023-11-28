@@ -21,20 +21,24 @@
   --text-color2: #b75d69;
 }
 
-#projects {
+.project {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
 }
-#projects a {
+.project a {
   text-decoration: none;
   color: inherit;
 }
-#projects h2 {
-  font-size: 35px;
+
+.prject-title {
+  font-size: 42px;
   padding-bottom: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
 }
 
 #project1 {
@@ -99,6 +103,58 @@
   background-color: rgba(58, 29, 29, 0.3);
 }
 
+@media only screen and (min-width: 985px) {
+  #projects {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto auto;
+  }
+  .only-item {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+  }
+  .only-item .project-box {
+    height: 180px;
+    width: 60%;
+    height: 250px;
+  }
+  .project-box {
+    height: 250px;
+  }
+  .project-box .box {
+    height: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .box:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(transparent 50px, rgba(0, 0, 0, 0.8));
+    border-radius: 20px;
+  }
+  .project-box:hover {
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    height: 300px;
+  }
+  .project-box:hover .box {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .project-box:hover::before {
+    background-color: rgba(58, 29, 29, 0.3);
+  }
+  .project-box:hover .box:before {
+    background: linear-gradient(transparent 50px, rgba(0, 0, 0, 0));
+  }
+}
 .featherSun,
 .featherMoon {
   color: #ffe1d5;
@@ -387,7 +443,7 @@ input:checked + .slider:before {
     top: 26px;
   }
   .navbar-container input[type=checkbox] {
-    left: 40px;
+    left: 32px;
   }
   .bubble {
     margin-left: 27px;
@@ -411,7 +467,7 @@ dl {
   margin-bottom: 40px;
 }
 
-.leftSection:nth-child(even) h2 {
+.leftSection:nth-child(odd) h2 {
   text-align: right;
 }
 
@@ -477,6 +533,7 @@ body {
 .leftSection h2 {
   padding-left: 40px;
   padding-right: 40px;
+  text-decoration: underline;
 }
 
 header {
@@ -510,6 +567,10 @@ footer {
   color: var(--text-color2);
   text-align: center;
   padding: 20px;
+}
+footer a {
+  font-size: 20px;
+  color: var(--text-color2);
 }
 
 @media only screen and (min-width: 625px) {
@@ -574,23 +635,68 @@ footer {
 @media only screen and (min-width: 985px) {
   body > *:not(nav, footer, header) {
     margin: auto;
-    width: 60%;
+    width: 80%;
+    margin-bottom: 50px;
   }
   header {
-    width: 60%;
+    width: 65%;
     margin: auto;
     padding-top: 150px;
+    margin-bottom: 50px;
   }
   #headerBG {
     position: absolute;
-    background-color: var(--almost-black-shadow);
-    box-shadow: 0px 0px 5px 5px var(--darkbase-color);
-    opacity: 30%;
-    padding-bottom: 370px;
+    background-color: var(--lighter-red-color);
+    opacity: 50%;
+    padding-bottom: 369px;
     width: 100%;
   }
   #projects {
     margin: auto;
     width: 60%;
+    margin-bottom: 50px;
+  }
+  .prject-title {
+    margin-bottom: 20px;
+  }
+  .leftSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .leftSection h2 {
+    padding-right: 60px;
+    padding-left: 0px;
+    font-size: 42px;
+  }
+  .leftSection :not(dl, dd, ul, li, em) {
+    max-width: 50%;
+  }
+  .leftSection ul {
+    min-width: 50%;
+    max-width: 50%;
+  }
+  .leftSection em {
+    display: block;
+  }
+  .leftSection dl {
+    max-width: 60%;
+  }
+  .leftSection:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .leftSection:nth-child(odd) :not(h2, dt, img, li, ul, dd, em) {
+    min-width: 60%;
+    max-width: 60%;
+  }
+  .leftSection:nth-child(odd) h2 {
+    padding-right: 0px;
+    padding-left: 40px;
+  }
+  #skills,
+  #it-skills,
+  #courses {
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=style.min.css.map */

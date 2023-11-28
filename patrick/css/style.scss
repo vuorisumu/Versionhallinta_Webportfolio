@@ -71,6 +71,7 @@ dl {
   h2 {
     padding-left: 40px;
     padding-right: 40px;
+    text-decoration: underline;
   }
 }
 
@@ -78,7 +79,7 @@ dl {
   margin-bottom: 40px;
 }
 
-.leftSection:nth-child(even) {
+.leftSection:nth-child(odd) {
   h2 {
     text-align: right;
   }
@@ -133,6 +134,11 @@ footer {
   color: var(--text-color2);
   text-align: center;
   padding: 20px;
+
+  a {
+    font-size: 20px;
+    color: var(--text-color2);
+  }
 }
 //tablet sizing
 @media only screen and (min-width: 625px) {
@@ -211,26 +217,80 @@ footer {
 @media only screen and (min-width: 985px) {
   body > *:not(nav, footer, header) {
     margin: auto;
-    width: 60%;
+    width: 80%;
+
+    margin-bottom: 50px;
   }
 
   header {
-    width: 60%;
+    width: 65%;
     margin: auto;
     padding-top: 150px;
+    margin-bottom: 50px;
   }
 
   #headerBG {
     position: absolute;
-    background-color: var(--almost-black-shadow);
-    box-shadow: 0px 0px 5px 5px var(--darkbase-color);
-    opacity: 30%;
-    padding-bottom: 370px;
+    background-color: var(--lighter-red-color);
+    opacity: 50%;
+    padding-bottom: 369px;
     width: 100%;
   }
 
   #projects {
     margin: auto;
     width: 60%;
+    margin-bottom: 50px;
+  }
+
+  .prject-title {
+    margin-bottom: 20px;
+  }
+
+  .leftSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    h2 {
+      padding-right: 60px;
+      padding-left: 0px;
+      font-size: 42px;
+    }
+
+    :not(dl, dd, ul, li, em) {
+      max-width: 50%;
+    }
+
+    ul {
+      min-width: 50%;
+      max-width: 50%;
+    }
+    em {
+      display: block;
+    }
+
+    dl {
+      max-width: 60%;
+    }
+  }
+
+  .leftSection:nth-child(odd) {
+    flex-direction: row-reverse;
+    :not(h2, dt, img, li, ul, dd, em) {
+      min-width: 60%;
+      max-width: 60%;
+    }
+
+    h2 {
+      padding-right: 0px;
+      padding-left: 40px;
+    }
+  }
+
+  #skills,
+  #it-skills,
+  #courses {
+    margin-bottom: 0px;
   }
 }
