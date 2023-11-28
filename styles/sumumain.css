@@ -261,7 +261,7 @@ section:nth-child(even) {
 .project-container .img-container {
   padding: 10px;
   /* mixes the primary color with 50% transparency */
-  background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--secondary-color), transparent 50%);
   /* image description */
   /* three screenshots side by side */
 }
@@ -377,6 +377,18 @@ h3 {
 /* default image style */
 img {
   max-width: 100%;
+}
+
+/* self portrait size */
+.self {
+  aspect-ratio: 1/1;
+  max-width: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* move the image a bit more upwards */
+}
+.self img {
+  margin-top: -7%;
 }
 
 /* page footer */
