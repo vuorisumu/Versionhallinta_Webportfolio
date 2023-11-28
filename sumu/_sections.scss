@@ -6,6 +6,7 @@ section {
   @include theme.transition;
   padding: 5px 20px;
   min-height: 80vh;
+  background-color: theme.$primary-color;
 }
 
 /* first section */
@@ -15,7 +16,12 @@ section:first-child {
 
 /* every other section */
 section:nth-child(even) {
+  // background-color: theme.$secondary-color;
   background-color: theme.$secondary-color;
+  background: linear-gradient(
+    color-mix(in srgb, theme.$secondary-color, theme.$primary-color 50%),
+    theme.$secondary-color
+  );
 }
 
 /* skillset column */
@@ -77,8 +83,8 @@ section:nth-child(even) {
     /* mixes the primary color with 50% transparency */
     background-color: color-mix(
       in srgb,
-      theme.$secondary-color,
-      transparent 50%
+      theme.$secondary-accent,
+      transparent 70%
     );
 
     /* image description */

@@ -78,7 +78,7 @@ header {
       a {
         @include theme.monospacetitle;
         font-weight: 400;
-        color: theme.$accent;
+        color: theme.$secondary-accent;
         text-decoration: none;
         font-size: 1.2em;
       }
@@ -86,7 +86,7 @@ header {
       /* active link in navigation */
       a.active {
         font-weight: 700;
-        color: theme.$secondary-accent;
+        color: theme.$accent;
       }
     }
   }

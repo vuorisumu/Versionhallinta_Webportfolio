@@ -15,23 +15,23 @@ $themebutton-color: var(--themebutton-color);
 
 /* default colors */
 :root {
-  --primary-color: #fffcfa;
-  --secondary-color: #f2ebe6;
-  --text-color: #5f5c5b;
-  --accent: #f59319;
-  --secondary-accent: #cb4e3b;
+  --primary-color: #ffffff;
+  --secondary-color: #ffcf94;
+  --text-color: #3a3b3c;
+  --accent: #cf5390;
+  --secondary-accent: #7f1f9b;
   --transition-time: none;
-  --themebutton-color: #cb4e3b;
+  --themebutton-color: #ffcf94;
 }
 
 /* dark theme variables */
 [data-theme="dark"] {
-  --primary-color: #262224;
-  --secondary-color: #322d2f;
+  --primary-color: #36151d;
+  --secondary-color: #261319;
   --text-color: #fff;
-  --accent: #cb4e3b;
-  --secondary-accent: #f59319;
-  --themebutton-color: #f59319;
+  --accent: #fd6432;
+  --secondary-accent: #ffa159;
+  --themebutton-color: #ffa159;
 }
 
 /* default styles for titles */

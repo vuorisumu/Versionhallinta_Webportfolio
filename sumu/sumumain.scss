@@ -54,6 +54,7 @@ main h1 {
 /* medium titles */
 h2 {
   @include theme.monospacetitle;
+  color: theme.$accent;
 }
 
 /* smaller titles */

@@ -3,23 +3,23 @@
 /* scss variables */
 /* default colors */
 :root {
-  --primary-color: #fffcfa;
-  --secondary-color: #f2ebe6;
-  --text-color: #5f5c5b;
-  --accent: #f59319;
-  --secondary-accent: #cb4e3b;
+  --primary-color: #ffffff;
+  --secondary-color: #ffcf94;
+  --text-color: #3a3b3c;
+  --accent: #cf5390;
+  --secondary-accent: #7f1f9b;
   --transition-time: none;
-  --themebutton-color: #cb4e3b;
+  --themebutton-color: #ffcf94;
 }
 
 /* dark theme variables */
 [data-theme=dark] {
-  --primary-color: #262224;
-  --secondary-color: #322d2f;
+  --primary-color: #36151d;
+  --secondary-color: #261319;
   --text-color: #fff;
-  --accent: #cb4e3b;
-  --secondary-accent: #f59319;
-  --themebutton-color: #f59319;
+  --accent: #fd6432;
+  --secondary-accent: #ffa159;
+  --themebutton-color: #ffa159;
 }
 
 /* default styles for titles */
@@ -130,13 +130,13 @@ header.shrink #nav.active {
   color: var(--secondary-accent);
   font-weight: 700;
   font-weight: 400;
-  color: var(--accent);
+  color: var(--secondary-accent);
   text-decoration: none;
   font-size: 1.2em;
 }
 #nav ul li a.active {
   font-weight: 700;
-  color: var(--secondary-accent);
+  color: var(--accent);
 }
 
 /* menu button */
@@ -196,6 +196,7 @@ section {
   transition: var(--transition-time);
   padding: 5px 20px;
   min-height: 80vh;
+  background-color: var(--primary-color);
 }
 
 /* first section */
@@ -206,6 +207,7 @@ section:first-child {
 /* every other section */
 section:nth-child(even) {
   background-color: var(--secondary-color);
+  background: linear-gradient(color-mix(in srgb, var(--secondary-color), var(--primary-color) 50%), var(--secondary-color));
 }
 
 /* skillset column */
@@ -261,7 +263,7 @@ section:nth-child(even) {
 .project-container .img-container {
   padding: 10px;
   /* mixes the primary color with 50% transparency */
-  background-color: color-mix(in srgb, var(--secondary-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--secondary-accent), transparent 70%);
   /* image description */
   /* three screenshots side by side */
 }
@@ -349,6 +351,7 @@ h2 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
   font-weight: 700;
+  color: var(--accent);
 }
 
 /* smaller titles */
