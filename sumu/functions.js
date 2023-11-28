@@ -105,3 +105,30 @@ function scrollFunction() {
     }
   });
 }
+
+// open project container on click
+document.querySelector(".project-container").addEventListener("click", () => {
+  let current = document.querySelector(".project-container");
+  if (!current.classList.contains("active")) {
+    toggleProjectClasses(current, true);
+  }
+});
+
+// open or close project container by clicking the title
+document.querySelector(".project-title").addEventListener("click", () => {
+  let sib = document.querySelector(".project-title").nextElementSibling;
+  toggleProjectClasses(sib, sib.classList.contains("closed"));
+});
+
+// function for opening and closing the container
+function toggleProjectClasses(element, open) {
+  if (open) {
+    element.style.height = element.scrollHeight + "px";
+    element.classList.add("active");
+    element.classList.remove("closed");
+  } else {
+    element.style.height = "150px";
+    element.classList.add("closed");
+    element.classList.remove("active");
+  }
+}

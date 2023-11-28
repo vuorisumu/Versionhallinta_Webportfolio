@@ -254,18 +254,19 @@ section:nth-child(even) {
   margin: 0;
 }
 
-/* container for showcasing projects */
+/* project container defaults */
 .project-container {
-  padding-bottom: 20px;
+  transition: 0.5s;
+  overflow: hidden;
   /* container for the image */
-  /* self portrait in skillset section */
 }
 .project-container .img-container {
-  padding: 10px;
+  position: relative;
   /* mixes the primary color with 50% transparency */
   background-color: color-mix(in srgb, var(--secondary-accent), transparent 70%);
   /* image description */
   /* three screenshots side by side */
+  /* images in project divs */
 }
 .project-container .img-container p {
   text-align: center;
@@ -284,10 +285,73 @@ section:nth-child(even) {
 .project-container .img-container.mobile-screenshots p {
   flex: 100%;
 }
-.project-container img {
+.project-container .img-container img {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+/* project container when closed */
+.project-container.closed {
+  height: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  /* container for the image */
+}
+.project-container.closed .img-container {
+  transition: 0.5s;
+  /* shine effect graphic */
+  /* images are a bit more transparent  */
+  /* animation keyframe */
+  /* activate animations on hover */
+}
+.project-container.closed .img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  /* shine color */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 75%);
+  display: block;
+  height: 100%;
+  width: 40%;
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+.project-container.closed .img-container img {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+.project-container.closed .img-container:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  /* make images a bit more visible */
+  /* activate the shine animation */
+}
+.project-container.closed .img-container:hover img {
+  opacity: 0.8;
+}
+.project-container.closed .img-container:hover::before {
+  animation: shine 0.8s;
+}
+
+/* project container when open */
+.project-container.active {
+  padding-bottom: 20px;
+  /* container for the image */
+}
+.project-container.active .img-container {
+  padding: 10px;
+}
+
+.project-title {
+  cursor: pointer;
 }
 
 /* smooth scrolling */

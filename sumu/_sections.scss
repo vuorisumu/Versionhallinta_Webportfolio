@@ -72,13 +72,15 @@ section:nth-child(even) {
   }
 }
 
-/* container for showcasing projects */
+/* project container defaults */
 .project-container {
-  padding-bottom: 20px;
+  $animation-time: 0.5s;
+  transition: $animation-time;
+  overflow: hidden;
 
   /* container for the image */
   .img-container {
-    padding: 10px;
+    position: relative;
 
     /* mixes the primary color with 50% transparency */
     background-color: color-mix(
@@ -109,12 +111,91 @@ section:nth-child(even) {
         flex: 100%;
       }
     }
-  }
 
-  /* self portrait in skillset section */
-  img {
-    width: 100%;
-    margin: auto;
-    text-align: center;
+    /* images in project divs */
+    img {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
   }
+}
+
+/* project container when closed */
+.project-container.closed {
+  $animation-time: 0.5s;
+  height: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: $animation-time;
+
+  /* container for the image */
+  .img-container {
+    transition: $animation-time;
+
+    /* shine effect graphic */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80%;
+
+      /* shine color */
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.7) 50%,
+        rgba(255, 255, 255, 0) 75%
+      );
+
+      display: block;
+      height: 100%;
+      width: 40%;
+      transform: skewX(-25deg);
+      z-index: 1;
+    }
+
+    /* images are a bit more transparent  */
+    img {
+      opacity: 0.6;
+      transition: $animation-time;
+    }
+
+    /* animation keyframe */
+    @keyframes shine {
+      100% {
+        left: 125%;
+      }
+    }
+
+    /* activate animations on hover */
+    &:hover {
+      transform: scale(1.1);
+      z-index: 1;
+
+      /* make images a bit more visible */
+      img {
+        opacity: 0.8;
+      }
+
+      /* activate the shine animation */
+      &::before {
+        animation: shine ($animation-time + 0.3s);
+      }
+    }
+  }
+}
+
+/* project container when open */
+.project-container.active {
+  padding-bottom: 20px;
+
+  /* container for the image */
+  .img-container {
+    padding: 10px;
+  }
+}
+
+.project-title {
+  cursor: pointer;
 }
