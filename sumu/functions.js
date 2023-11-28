@@ -107,17 +107,29 @@ function scrollFunction() {
 }
 
 // open project container on click
-document.querySelector(".project-container").addEventListener("click", () => {
-  let current = document.querySelector(".project-container");
-  if (!current.classList.contains("active")) {
-    toggleProjectClasses(current, true);
-  }
+document.querySelectorAll(".project-container").forEach((container) => {
+  container.addEventListener("click", () => {
+    if (!container.classList.contains("active")) {
+      toggleProjectClasses(container, true);
+    }
+  });
 });
 
 // open or close project container by clicking the title
-document.querySelector(".project-title").addEventListener("click", () => {
-  let sib = document.querySelector(".project-title").nextElementSibling;
-  toggleProjectClasses(sib, sib.classList.contains("closed"));
+document.querySelectorAll(".project-title").forEach((title) => {
+  title.addEventListener("click", () => {
+    let sib = title.nextElementSibling;
+    toggleProjectClasses(sib, sib.classList.contains("closed"));
+  });
+});
+
+// minimize the project container
+document.querySelectorAll(".minimize").forEach((minimizeButton) => {
+  minimizeButton.addEventListener("click", () => {
+    let parent = minimizeButton.parentNode;
+    toggleProjectClasses(parent, parent.classList.contains("closed"));
+    event.stopPropagation();
+  });
 });
 
 // function for opening and closing the container

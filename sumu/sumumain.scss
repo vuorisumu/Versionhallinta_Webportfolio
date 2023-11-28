@@ -15,6 +15,16 @@ body {
   padding: 0;
 }
 
+/* conctact section info */
+.center {
+  p {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-left: -15px;
+  }
+}
+
 /* default text */
 p {
   @include theme.normaltext;
@@ -55,6 +65,7 @@ main h1 {
 h2 {
   @include theme.monospacetitle;
   color: theme.$accent;
+  margin-top: 40px;
 }
 
 /* smaller titles */
@@ -73,12 +84,6 @@ h3 {
   }
 }
 
-/* icons in the same row as text */
-.icon {
-  float: left;
-  padding-right: 10px;
-}
-
 /* default image style */
 img {
   max-width: 100%;
@@ -87,7 +92,8 @@ img {
 /* self portrait size */
 .self {
   aspect-ratio: 1/1;
-  max-width: 500px;
+  max-width: 400px;
+  margin: auto;
   border-radius: 50%;
   overflow: hidden;
 
