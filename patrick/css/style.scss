@@ -211,7 +211,7 @@ footer {
 @media only screen and (min-width: 985px) {
   body > *:not(nav, footer, header) {
     margin: auto;
-    width: 60%;
+    width: 80%;
   }
 
   header {
@@ -223,7 +223,6 @@ footer {
   #headerBG {
     position: absolute;
     background-color: var(--lighter-red-color);
-    // box-shadow: 0px 0px 5px 5px var(--lighter-red-color);
     opacity: 50%;
     padding-bottom: 369px;
     width: 100%;
@@ -232,5 +231,28 @@ footer {
   #projects {
     margin: auto;
     width: 60%;
+  }
+
+  .leftSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    h2 {
+      padding-right: 60px;
+      padding-left: 0px;
+    }
+  }
+
+  .leftSection:nth-child(odd) {
+    flex-direction: row-reverse;
+    :not(h2, dt, img, li, em) {
+      min-width: 60%;
+    }
+
+    h2 {
+      padding-right: 0px;
+      padding-left: 40px;
+    }
   }
 }

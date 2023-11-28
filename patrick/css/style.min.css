@@ -105,14 +105,18 @@
 @media only screen and (min-width: 985px) {
   #projects {
     display: grid;
-    gap: 20px;
+    gap: 30px;
     grid-template-columns: auto auto;
   }
   .only-item {
     grid-column: span 2;
+    display: flex;
+    justify-content: center;
   }
   .only-item .project-box {
     height: 180px;
+    width: 60%;
+    height: 250px;
   }
   .project-box {
     height: 250px;
@@ -625,7 +629,7 @@ footer {
 @media only screen and (min-width: 985px) {
   body > *:not(nav, footer, header) {
     margin: auto;
-    width: 60%;
+    width: 80%;
   }
   header {
     width: 65%;
@@ -642,5 +646,25 @@ footer {
   #projects {
     margin: auto;
     width: 60%;
+  }
+  .leftSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .leftSection h2 {
+    padding-right: 60px;
+    padding-left: 0px;
+  }
+  .leftSection:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .leftSection:nth-child(odd) :not(h2, dt, img, li, em) {
+    min-width: 60%;
+  }
+  .leftSection:nth-child(odd) h2 {
+    padding-right: 0px;
+    padding-left: 40px;
   }
 }/*# sourceMappingURL=style.min.css.map */
