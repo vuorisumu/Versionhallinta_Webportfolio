@@ -9,7 +9,7 @@
   --accent: #cf5390;
   --secondary-accent: #7f1f9b;
   --transition-time: none;
-  --themebutton-color: #ffcf94;
+  --themebutton-color: #f5830d;
 }
 
 /* dark theme variables */
@@ -32,7 +32,7 @@
   cursor: pointer;
   width: 60px;
   height: 30px;
-  background-color: color-mix(in srgb, var(--accent), transparent 70%);
+  background-color: color-mix(in srgb, var(--accent), transparent 80%);
   border-radius: 15px;
   border: inset 2px var(--primary-color);
   /* graphic in both sun and moon */
@@ -43,20 +43,20 @@
 #themebutton #sun-moon {
   transition: var(--transition-time);
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 #themebutton.moon #sun-moon {
-  transform: translate(180%, 25%);
+  transform: translate(200%, 29%);
+  outline-offset: 1px;
   background-color: var(--themebutton-color);
   outline: 4px dotted var(--themebutton-color);
-  outline-offset: 2px;
 }
 #themebutton:not(.moon) #sun-moon {
   outline: none;
   background-color: transparent;
-  transform: translate(50%, 0%);
-  box-shadow: -6px 5px 0 5px var(--themebutton-color);
+  transform: translate(50%, 21%);
+  box-shadow: -5px 3px 0 3px var(--themebutton-color);
 }
 #themebutton.hide {
   margin-top: -200px;
