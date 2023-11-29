@@ -315,6 +315,7 @@ section:nth-child(even) {
   color: var(--accent);
 }
 .project-container .img-container {
+  transition: 0.5s;
   /* mixes the primary color with 50% transparency */
   background-color: color-mix(in srgb, var(--secondary-accent), transparent 70%);
   /* image description */
@@ -339,6 +340,7 @@ section:nth-child(even) {
   flex: 100%;
 }
 .project-container .img-container img {
+  transition: 0.5s;
   width: 100%;
   margin: auto;
   text-align: center;
@@ -346,14 +348,12 @@ section:nth-child(even) {
 
 /* project container when closed */
 .project-container.closed {
-  height: 150px;
+  max-height: 80px;
   border-radius: 20px;
   cursor: pointer;
-  transition: 0.5s;
   /* container for the image */
 }
 .project-container.closed .img-container {
-  transition: 0.5s;
   /* shine effect graphic */
   /* images are a bit more transparent  */
   /* animation keyframe */
@@ -374,7 +374,6 @@ section:nth-child(even) {
 }
 .project-container.closed .img-container img {
   opacity: 0.6;
-  transition: 0.5s;
 }
 @keyframes shine {
   100% {
@@ -396,6 +395,7 @@ section:nth-child(even) {
 
 /* project container when open */
 .project-container.active {
+  max-height: 3000px;
   /* container for the image */
 }
 .project-container.active .img-container {
@@ -407,6 +407,72 @@ section:nth-child(even) {
   cursor: pointer;
 }
 
+/* Bigger screen sizes */
+@media only screen and (min-width: 400px) {
+  /* prevent content from getting too big */
+  .content-wrapper {
+    max-width: 600px;
+    margin: auto;
+  }
+  /* closed project container is a bit bigger */
+  .project-container.closed {
+    max-height: 150px;
+  }
+}
+/* desktop view */
+@media only screen and (min-width: 800px) {
+  .exp, .columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px auto;
+    grid-auto-flow: dense;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    justify-items: start;
+  }
+  /* only the last section needs to be big enough */
+  section:not(:last-child) {
+    min-height: auto;
+  }
+  /* prevent content from getting too big */
+  .content-wrapper {
+    max-width: 800px;
+    margin: auto;
+  }
+  /* put content into two columns */
+  .columns {
+    /* move section title to left column */
+    /* continue left column with content */
+    /* put skillset container to the right column*/
+  }
+  .columns h1 {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 20px;
+  }
+  .columns h1 + div {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .columns .skillset {
+    grid-row: 1/3;
+    grid-column: 2;
+    /* make the title bigger to match section title */
+  }
+  .columns .skillset h2 {
+    font-size: 22pt;
+    margin-top: 20px;
+  }
+  /* experience is also in two columns */
+  .exp h1 {
+    grid-column: 1/3;
+    justify-self: center;
+  }
+  /* closed project container is a bit bigger */
+  .project-container.closed {
+    max-height: 250px;
+  }
+}
 /* smooth scrolling */
 html {
   scroll-behavior: smooth !important;
@@ -438,6 +504,7 @@ p {
 /* important text will be bolded */
 p span {
   font-weight: 600;
+  color: var(--secondary-accent);
 }
 
 /* indented text block */

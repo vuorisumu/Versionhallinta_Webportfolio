@@ -33,6 +33,7 @@ p {
 /* important text will be bolded */
 p span {
   font-weight: 600;
+  color: theme.$secondary-accent;
 }
 
 /* indented text block */
