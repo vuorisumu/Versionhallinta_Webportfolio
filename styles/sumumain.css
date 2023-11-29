@@ -3,23 +3,23 @@
 /* scss variables */
 /* default colors */
 :root {
-  --primary-color: #fffcfa;
-  --secondary-color: #f2ebe6;
-  --text-color: #5f5c5b;
-  --accent: #f59319;
-  --secondary-accent: #cb4e3b;
+  --primary-color: #ffffff;
+  --secondary-color: #ffcf94;
+  --text-color: #3a3b3c;
+  --accent: #cf5390;
+  --secondary-accent: #7f1f9b;
   --transition-time: none;
-  --themebutton-color: #cb4e3b;
+  --themebutton-color: #f5830d;
 }
 
 /* dark theme variables */
 [data-theme=dark] {
-  --primary-color: #262224;
-  --secondary-color: #322d2f;
+  --primary-color: #36151d;
+  --secondary-color: #261319;
   --text-color: #fff;
-  --accent: #cb4e3b;
-  --secondary-accent: #f59319;
-  --themebutton-color: #f59319;
+  --accent: #fd6432;
+  --secondary-accent: #ffa159;
+  --themebutton-color: #ffa159;
 }
 
 /* default styles for titles */
@@ -32,7 +32,7 @@
   cursor: pointer;
   width: 60px;
   height: 30px;
-  background-color: color-mix(in srgb, var(--accent), transparent 70%);
+  background-color: color-mix(in srgb, var(--accent), transparent 80%);
   border-radius: 15px;
   border: inset 2px var(--primary-color);
   /* graphic in both sun and moon */
@@ -43,25 +43,33 @@
 #themebutton #sun-moon {
   transition: var(--transition-time);
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 #themebutton.moon #sun-moon {
-  transform: translate(180%, 25%);
+  transform: translate(200%, 29%);
+  outline-offset: 1px;
   background-color: var(--themebutton-color);
   outline: 4px dotted var(--themebutton-color);
-  outline-offset: 2px;
 }
 #themebutton:not(.moon) #sun-moon {
   outline: none;
   background-color: transparent;
-  transform: translate(50%, 0%);
-  box-shadow: -6px 5px 0 5px var(--themebutton-color);
+  transform: translate(50%, 21%);
+  box-shadow: -5px 3px 0 3px var(--themebutton-color);
 }
 #themebutton.hide {
   margin-top: -200px;
 }
 
+@media only screen and (min-width: 800px) {
+  #themebutton {
+    z-index: 200;
+  }
+  #themebutton.hide {
+    margin-top: 0px;
+  }
+}
 /* Fixed full width elements */
 #nav, header {
   position: fixed;
@@ -73,6 +81,7 @@ header {
   transition: var(--transition-time);
   height: 100px;
   top: 0;
+  z-index: 100;
   /* logo banner */
   /* header properties when the header is shrunken */
 }
@@ -91,6 +100,7 @@ header #logo {
 }
 header #logo h1 {
   display: inline-block;
+  font-size: 28pt;
   flex: 1;
   margin: 7px 0 0 0;
   padding-left: 10px;
@@ -123,19 +133,20 @@ header.shrink #nav.active {
 #nav ul li {
   padding: 6px;
   /* links in navigation */
+  /* active link in navigation */
 }
 #nav ul li a {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
   font-weight: 700;
   font-weight: 400;
-  color: var(--accent);
+  color: var(--secondary-accent);
   text-decoration: none;
   font-size: 1.2em;
 }
 #nav ul li a.active {
   font-weight: 700;
-  color: var(--secondary-accent);
+  color: var(--accent);
 }
 
 /* menu button */
@@ -144,7 +155,7 @@ header.shrink #nav.active {
   height: 50px;
   position: relative;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   transition: 0.5s;
   /* all bars in the menu hamburger */
   /* top bar */
@@ -190,9 +201,47 @@ header.shrink #nav.active {
   top: 50%;
 }
 
+@media only screen and (min-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+    flex-wrap: wrap;
+  }
+  header #logo {
+    width: 100%;
+  }
+  header #hamburger {
+    display: none;
+  }
+  header #nav {
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 200px;
+    height: 100px;
+    background-color: transparent;
+    order: 2;
+  }
+  header #nav ul {
+    margin: 0;
+  }
+  header #nav ul li {
+    display: inline-block;
+  }
+  header.shrink #nav {
+    height: 60px;
+  }
+}
+/* section base styles */
 section {
   transition: var(--transition-time);
-  padding: 5px 20px;
+  padding: 5px 20px 30px 20px;
+  min-height: 80vh;
+  background-color: var(--primary-color);
 }
 
 /* first section */
@@ -203,10 +252,12 @@ section:first-child {
 /* every other section */
 section:nth-child(even) {
   background-color: var(--secondary-color);
+  background: linear-gradient(color-mix(in srgb, var(--secondary-color), var(--primary-color) 50%), var(--secondary-color));
 }
 
 /* skillset column */
 .skillset {
+  /* no default list styles */
   /* short list */
   /* lists with custom bullet */
 }
@@ -221,6 +272,7 @@ section:nth-child(even) {
   color: var(--text-color);
   font-weight: 400;
   display: inline-block;
+  /* add separator between list elements */
 }
 .skillset .short-list li:not(:last-child)::after {
   content: "•";
@@ -228,10 +280,14 @@ section:nth-child(even) {
 }
 .skillset .custom-bullet {
   padding-left: 5px;
+  /* list element */
 }
 .skillset .custom-bullet li {
   background: url("../sumu/img/bullet-placeholder.png") no-repeat;
   padding-left: 30px;
+  margin-top: 10px;
+  /* titles in custom buller list */
+  /* remove margin and padding from text */
 }
 .skillset .custom-bullet li h3 {
   line-height: 30px;
@@ -242,20 +298,28 @@ section:nth-child(even) {
   padding: 0;
   margin: 0;
 }
-.skillset img {
-  width: 100%;
-  max-width: 400px;
-}
 
+/* project container defaults */
 .project-container {
-  padding-top: 10px;
-  /* self portrait in skillset section */
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 0;
+  padding-bottom: 10px;
+  /* container for the image */
+}
+.project-container .minimize {
+  float: right;
+  cursor: pointer;
+}
+.project-container .minimize p {
+  color: var(--accent);
 }
 .project-container .img-container {
-  padding: 10px;
   /* mixes the primary color with 50% transparency */
-  background-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--secondary-accent), transparent 70%);
+  /* image description */
   /* three screenshots side by side */
+  /* images in project divs */
 }
 .project-container .img-container p {
   text-align: center;
@@ -265,6 +329,8 @@ section:nth-child(even) {
 .project-container .img-container.mobile-screenshots {
   display: flex;
   flex-wrap: wrap;
+  /* put three pictures side by side */
+  /* image description still takes the whole space */
 }
 .project-container .img-container.mobile-screenshots picture {
   flex: 33%;
@@ -272,10 +338,73 @@ section:nth-child(even) {
 .project-container .img-container.mobile-screenshots p {
   flex: 100%;
 }
-.project-container img {
+.project-container .img-container img {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+/* project container when closed */
+.project-container.closed {
+  height: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  /* container for the image */
+}
+.project-container.closed .img-container {
+  transition: 0.5s;
+  /* shine effect graphic */
+  /* images are a bit more transparent  */
+  /* animation keyframe */
+  /* activate animations on hover */
+}
+.project-container.closed .img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  /* shine color */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 75%);
+  display: block;
+  height: 100%;
+  width: 40%;
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+.project-container.closed .img-container img {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+.project-container.closed .img-container:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  /* make images a bit more visible */
+  /* activate the shine animation */
+}
+.project-container.closed .img-container:hover img {
+  opacity: 0.8;
+}
+.project-container.closed .img-container:hover::before {
+  animation: shine 0.8s;
+}
+
+/* project container when open */
+.project-container.active {
+  /* container for the image */
+}
+.project-container.active .img-container {
+  padding: 10px;
+}
+
+/* the title of each project is also clickable */
+.project-title {
+  cursor: pointer;
 }
 
 /* smooth scrolling */
@@ -291,14 +420,68 @@ body {
   padding: 0;
 }
 
+/* conctact section info */
+.center p {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-left: -15px;
+}
+
+/* default text */
 p {
   font-family: "Chakra Petch", sans-serif;
   color: var(--text-color);
   font-weight: 400;
 }
 
-h1,
-h2,
+/* important text will be bolded */
+p span {
+  font-weight: 600;
+}
+
+/* indented text block */
+.indent {
+  padding-left: 30px;
+}
+
+/* link inside a paragraph */
+p a {
+  color: var(--accent);
+}
+
+/* header title */
+header h1,
+header h1 a {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 7vw;
+  line-height: 20pt;
+  -webkit-text-decoration: 2px underline var(--accent);
+          text-decoration: 2px underline var(--accent);
+}
+
+/* other big titles */
+main h1 {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 22pt;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* medium titles */
+h2 {
+  font-family: "Courier Prime", monospace;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 40px;
+}
+
+/* smaller titles */
 h3 {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
@@ -313,4 +496,39 @@ h3 {
 }
 .anchor:first-of-type {
   top: -100px;
+}
+
+/* default image style */
+img {
+  max-width: 100%;
+}
+
+/* self portrait size */
+.self {
+  aspect-ratio: 1/1;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  /* move the image a bit more upwards */
+}
+.self img {
+  margin-top: -7%;
+}
+
+/* page footer */
+footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 400px) {
+  header h1,
+  header h1 a {
+    font-size: 26pt;
+  }
 }/*# sourceMappingURL=sumumain.css.map */

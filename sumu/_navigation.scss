@@ -18,6 +18,7 @@ header {
   @include theme.transition;
   height: $nav-height;
   top: 0;
+  z-index: 100;
 
   /* logo banner */
   #logo {
@@ -35,6 +36,7 @@ header {
     /* text in logo banner */
     h1 {
       display: inline-block;
+      font-size: 28pt;
       flex: 1;
       margin: 7px 0 0 0;
       padding-left: 10px;
@@ -78,14 +80,15 @@ header {
       a {
         @include theme.monospacetitle;
         font-weight: 400;
-        color: theme.$accent;
+        color: theme.$secondary-accent;
         text-decoration: none;
         font-size: 1.2em;
       }
 
+      /* active link in navigation */
       a.active {
         font-weight: 700;
-        color: theme.$secondary-accent;
+        color: theme.$accent;
       }
     }
   }
@@ -97,7 +100,7 @@ header {
   height: $ham-height;
   position: relative;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   transition: $header-shrink-time;
 
   /* all bars in the menu hamburger */
@@ -146,5 +149,47 @@ header {
   .bar-bot {
     transform: rotate(45deg);
     top: 50%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: theme.$primary-color;
+    flex-wrap: wrap;
+
+    #logo {
+      width: 100%;
+    }
+
+    #hamburger {
+      display: none;
+    }
+
+    #nav {
+      top: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 200px;
+      height: $nav-height;
+      background-color: transparent;
+      order: 2;
+      ul {
+        margin: 0;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+
+    &.shrink {
+      #nav {
+        height: $shrink-height;
+      }
+    }
   }
 }

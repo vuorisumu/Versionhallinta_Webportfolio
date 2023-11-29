@@ -15,23 +15,23 @@ $themebutton-color: var(--themebutton-color);
 
 /* default colors */
 :root {
-  --primary-color: #fffcfa;
-  --secondary-color: #f2ebe6;
-  --text-color: #5f5c5b;
-  --accent: #f59319;
-  --secondary-accent: #cb4e3b;
+  --primary-color: #ffffff;
+  --secondary-color: #ffcf94;
+  --text-color: #3a3b3c;
+  --accent: #cf5390;
+  --secondary-accent: #7f1f9b;
   --transition-time: none;
-  --themebutton-color: #cb4e3b;
+  --themebutton-color: #f5830d;
 }
 
 /* dark theme variables */
 [data-theme="dark"] {
-  --primary-color: #262224;
-  --secondary-color: #322d2f;
+  --primary-color: #36151d;
+  --secondary-color: #261319;
   --text-color: #fff;
-  --accent: #cb4e3b;
-  --secondary-accent: #f59319;
-  --themebutton-color: #f59319;
+  --accent: #fd6432;
+  --secondary-accent: #ffa159;
+  --themebutton-color: #ffa159;
 }
 
 /* default styles for titles */
@@ -56,7 +56,7 @@ $themebutton-color: var(--themebutton-color);
   cursor: pointer;
   width: 60px;
   height: 30px;
-  background-color: color-mix(in srgb, $accent, transparent 70%);
+  background-color: color-mix(in srgb, $accent, transparent 80%);
   border-radius: 15px;
   border: inset 2px $primary-color;
 
@@ -64,28 +64,37 @@ $themebutton-color: var(--themebutton-color);
   #sun-moon {
     @include transition();
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   /* graphic in sun mode */
   &.moon #sun-moon {
-    transform: translate(180%, 25%);
+    transform: translate(200%, 29%);
+    outline-offset: 1px;
     background-color: $themebutton-color;
     outline: 4px dotted $themebutton-color;
-    outline-offset: 2px;
   }
 
   /* graphic in moon mode */
   &:not(.moon) #sun-moon {
     outline: none;
     background-color: transparent;
-    transform: translate(50%, 0%);
-    box-shadow: -6px 5px 0 5px $themebutton-color;
+    transform: translate(50%, 21%);
+    box-shadow: -5px 3px 0 3px $themebutton-color;
   }
 
   /* hide theme change button when menu is not active */
   &.hide {
     margin-top: -200px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #themebutton {
+    z-index: 200;
+    &.hide {
+      margin-top: 0px;
+    }
   }
 }

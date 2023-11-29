@@ -1,9 +1,12 @@
 @use "navigation";
 @use "theme";
 
+/* section base styles */
 section {
   @include theme.transition;
-  padding: 5px 20px;
+  padding: 5px 20px 30px 20px;
+  min-height: 80vh;
+  background-color: theme.$primary-color;
 }
 
 /* first section */
@@ -13,11 +16,17 @@ section:first-child {
 
 /* every other section */
 section:nth-child(even) {
+  // background-color: theme.$secondary-color;
   background-color: theme.$secondary-color;
+  background: linear-gradient(
+    color-mix(in srgb, theme.$secondary-color, theme.$primary-color 50%),
+    theme.$secondary-color
+  );
 }
 
 /* skillset column */
 .skillset {
+  /* no default list styles */
   ul {
     list-style: none;
   }
@@ -29,6 +38,7 @@ section:nth-child(even) {
       @include theme.normaltext;
       display: inline-block;
 
+      /* add separator between list elements */
       &:not(:last-child)::after {
         content: "•";
         padding: 0 5px;
@@ -40,37 +50,54 @@ section:nth-child(even) {
   .custom-bullet {
     padding-left: 5px;
 
+    /* list element */
     li {
       background: url("../sumu/img/bullet-placeholder.png") no-repeat;
       padding-left: 30px;
+      margin-top: 10px;
+
+      /* titles in custom buller list */
       h3 {
         line-height: 30px;
         padding: 0;
         margin: 0;
       }
 
+      /* remove margin and padding from text */
       p {
         padding: 0;
         margin: 0;
       }
     }
   }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-  }
 }
 
+/* project container defaults */
 .project-container {
-  padding-top: 10px;
+  $animation-time: 0.5s;
+  transition: $animation-time;
+  overflow: hidden;
+  z-index: 0;
+  padding-bottom: 10px;
 
+  .minimize {
+    float: right;
+    cursor: pointer;
+    p {
+      color: theme.$accent;
+    }
+  }
+
+  /* container for the image */
   .img-container {
-    padding: 10px;
-
     /* mixes the primary color with 50% transparency */
-    background-color: color-mix(in srgb, theme.$primary-color, transparent 50%);
+    background-color: color-mix(
+      in srgb,
+      theme.$secondary-accent,
+      transparent 70%
+    );
 
+    /* image description */
     p {
       text-align: center;
       margin: 5px 0 0 0;
@@ -82,20 +109,100 @@ section:nth-child(even) {
       display: flex;
       flex-wrap: wrap;
 
+      /* put three pictures side by side */
       picture {
         flex: 33%;
       }
 
+      /* image description still takes the whole space */
       p {
         flex: 100%;
       }
     }
-  }
 
-  /* self portrait in skillset section */
-  img {
-    width: 100%;
-    margin: auto;
-    text-align: center;
+    /* images in project divs */
+    img {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
   }
+}
+
+/* project container when closed */
+.project-container.closed {
+  $animation-time: 0.5s;
+  height: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: $animation-time;
+
+  /* container for the image */
+  .img-container {
+    transition: $animation-time;
+
+    /* shine effect graphic */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80%;
+
+      /* shine color */
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.7) 50%,
+        rgba(255, 255, 255, 0) 75%
+      );
+
+      display: block;
+      height: 100%;
+      width: 40%;
+      transform: skewX(-25deg);
+      z-index: 1;
+    }
+
+    /* images are a bit more transparent  */
+    img {
+      opacity: 0.6;
+      transition: $animation-time;
+    }
+
+    /* animation keyframe */
+    @keyframes shine {
+      100% {
+        left: 125%;
+      }
+    }
+
+    /* activate animations on hover */
+    &:hover {
+      transform: scale(1.1);
+      z-index: 1;
+
+      /* make images a bit more visible */
+      img {
+        opacity: 0.8;
+      }
+
+      /* activate the shine animation */
+      &::before {
+        animation: shine ($animation-time + 0.3s);
+      }
+    }
+  }
+}
+
+/* project container when open */
+.project-container.active {
+  /* container for the image */
+  .img-container {
+    padding: 10px;
+  }
+}
+
+/* the title of each project is also clickable */
+.project-title {
+  cursor: pointer;
 }
