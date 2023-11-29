@@ -62,6 +62,14 @@
   margin-top: -200px;
 }
 
+@media only screen and (min-width: 800px) {
+  #themebutton {
+    z-index: 200;
+  }
+  #themebutton.hide {
+    margin-top: 0px;
+  }
+}
 /* Fixed full width elements */
 #nav, header {
   position: fixed;
@@ -92,6 +100,7 @@ header #logo {
 }
 header #logo h1 {
   display: inline-block;
+  font-size: 28pt;
   flex: 1;
   margin: 7px 0 0 0;
   padding-left: 10px;
@@ -192,6 +201,41 @@ header.shrink #nav.active {
   top: 50%;
 }
 
+@media only screen and (min-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+    flex-wrap: wrap;
+  }
+  header #logo {
+    width: 100%;
+  }
+  header #hamburger {
+    display: none;
+  }
+  header #nav {
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 200px;
+    height: 100px;
+    background-color: transparent;
+    order: 2;
+  }
+  header #nav ul {
+    margin: 0;
+  }
+  header #nav ul li {
+    display: inline-block;
+  }
+  header.shrink #nav {
+    height: 60px;
+  }
+}
 /* section base styles */
 section {
   transition: var(--transition-time);
@@ -412,7 +456,8 @@ header h1 a {
   font-family: "Courier Prime", monospace;
   color: var(--secondary-accent);
   font-weight: 700;
-  font-size: 26pt;
+  font-size: 7vw;
+  line-height: 20pt;
   -webkit-text-decoration: 2px underline var(--accent);
           text-decoration: 2px underline var(--accent);
 }
@@ -479,4 +524,11 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+@media only screen and (min-width: 400px) {
+  header h1,
+  header h1 a {
+    font-size: 26pt;
+  }
 }/*# sourceMappingURL=sumumain.css.map */

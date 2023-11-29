@@ -89,3 +89,12 @@ $themebutton-color: var(--themebutton-color);
     margin-top: -200px;
   }
 }
+
+@media only screen and (min-width: 800px) {
+  #themebutton {
+    z-index: 200;
+    &.hide {
+      margin-top: 0px;
+    }
+  }
+}
