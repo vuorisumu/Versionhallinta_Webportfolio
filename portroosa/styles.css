@@ -9,6 +9,10 @@ img {
   width: 50px;
 }
 
+body {
+  background-color: antiquewhite;
+}
+
 header {
   display: flex;
   justify-content: space-between;
