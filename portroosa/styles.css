@@ -24,6 +24,9 @@ header {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: large;
   color: black;
+
+  outline-style: solid;
+  outline-color: darkcyan;
 }
 
 section {
