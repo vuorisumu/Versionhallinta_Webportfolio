@@ -41,6 +41,7 @@ section:nth-child(even) {
       /* add separator between list elements */
       &:not(:last-child)::after {
         content: "•";
+        color: theme.$accent;
         padding: 0 5px;
       }
     }
@@ -52,7 +53,7 @@ section:nth-child(even) {
 
     /* list element */
     li {
-      background: url("../sumu/img/bullet-placeholder.png") no-repeat;
+      background: url("../sumu/img/bullet.png") no-repeat;
       padding-left: 30px;
       margin-top: 10px;
 

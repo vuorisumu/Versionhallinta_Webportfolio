@@ -83,6 +83,7 @@ header {
   top: 0;
   z-index: 100;
   /* logo banner */
+  /* logo image styles */
   /* header properties when the header is shrunken */
 }
 header #logo {
@@ -105,12 +106,25 @@ header #logo h1 {
   margin: 7px 0 0 0;
   padding-left: 10px;
 }
+header .logoimg {
+  height: 50px;
+  width: 50px;
+  background-image: url(../sumu/img/logo.png);
+  background-size: cover;
+  margin-left: 10px;
+  margin-right: -10px;
+}
 header.shrink {
   height: 60px;
   /* active navigation while header is shrunken */
 }
 header.shrink #nav.active {
   top: 60px;
+}
+
+/* different colored logo on dark mode */
+[data-theme=dark] .logoimg {
+  background-image: url(../sumu/img/logodark.png);
 }
 
 /* navigation container */
@@ -276,6 +290,7 @@ section:nth-child(even) {
 }
 .skillset .short-list li:not(:last-child)::after {
   content: "•";
+  color: var(--accent);
   padding: 0 5px;
 }
 .skillset .custom-bullet {
@@ -283,7 +298,7 @@ section:nth-child(even) {
   /* list element */
 }
 .skillset .custom-bullet li {
-  background: url("../sumu/img/bullet-placeholder.png") no-repeat;
+  background: url("../sumu/img/bullet.png") no-repeat;
   padding-left: 30px;
   margin-top: 10px;
   /* titles in custom buller list */
@@ -568,6 +583,15 @@ h3 {
 /* default image style */
 img {
   max-width: 100%;
+}
+
+/* banner image container */
+.hero {
+  margin: -7px -20px 10px -20px;
+  max-height: 450px;
+  overflow: hidden;
+  display: grid;
+  align-content: stretch;
 }
 
 /* self portrait size */

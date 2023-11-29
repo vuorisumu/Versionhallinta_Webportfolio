@@ -43,6 +43,16 @@ header {
     }
   }
 
+  /* logo image styles */
+  .logoimg {
+    height: $ham-height;
+    width: $ham-height;
+    background-image: url(../sumu/img/logo.png);
+    background-size: cover;
+    margin-left: 10px;
+    margin-right: -10px;
+  }
+
   /* header properties when the header is shrunken */
   &.shrink {
     height: $shrink-height;
@@ -52,6 +62,11 @@ header {
       top: $shrink-height;
     }
   }
+}
+
+/* different colored logo on dark mode */
+[data-theme="dark"] .logoimg {
+  background-image: url(../sumu/img/logodark.png);
 }
 
 /* navigation container */
