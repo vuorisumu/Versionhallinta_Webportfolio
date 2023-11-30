@@ -59,6 +59,7 @@ $themebutton-color: var(--themebutton-color);
   background-color: color-mix(in srgb, $accent, transparent 80%);
   border-radius: 15px;
   border: inset 2px $primary-color;
+  margin-right: 15px;
 
   /* graphic in both sun and moon */
   #sun-moon {
@@ -93,6 +94,8 @@ $themebutton-color: var(--themebutton-color);
 @media only screen and (min-width: 800px) {
   #themebutton {
     z-index: 200;
+    order: 3;
+    margin-right: 15px;
     &.hide {
       margin-top: 0px;
     }
