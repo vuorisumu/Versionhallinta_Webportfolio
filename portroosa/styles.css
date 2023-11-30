@@ -27,7 +27,7 @@ header {
   padding: auto;
   outline-style: solid;
 
-  /* Text settins */
+  /* Text settings */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: large;
@@ -38,14 +38,18 @@ header {
   background-color: azure;
 }
 
+/* Section box settings */
 section {
-  border-radius: 10px;
-  border: 1px solid indigo;
-  background-color: aliceblue;
+  /* Content display settings */
+  border-radius: 10px; /* Rounded corners */
   margin: 15px;
   padding: 20px;
   width: auto;
   height: auto;
+
+  /* Colors */
+  border: 1px solid indigo;
+  background-color: aliceblue;
 }
 
 main {
