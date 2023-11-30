@@ -23,11 +23,27 @@ main {
 main .hublink {
   flex: 100%;
 }
+main .hublink#anni {
+  background-color: green;
+  color: #fff;
+}
+main .hublink#patrick {
+  background-color: blue;
+  color: #fff;
+}
+main .hublink#roosa {
+  background-color: yellow;
+  color: #fff;
+}
+main .hublink#sumu {
+  background-color: black;
+  color: #fff;
+}
 
 /* Footer */
 /* Bigger screens */
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   main .hublink {
-    flex: 33%;
+    flex: 25%;
   }
 }/*# sourceMappingURL=main.css.map */

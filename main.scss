@@ -18,6 +18,22 @@ main {
 
   .hublink {
     flex: 100%;
+
+    &#anni {
+      @include linkbutton(green);
+    }
+
+    &#patrick {
+      @include linkbutton(blue);
+    }
+
+    &#roosa {
+      @include linkbutton(yellow);
+    }
+
+    &#sumu {
+      @include linkbutton(black);
+    }
   }
 }
 
@@ -27,8 +43,8 @@ footer {
 }
 
 /* Bigger screens */
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   main .hublink {
-    flex: 33%;
+    flex: 25%;
   }
 }

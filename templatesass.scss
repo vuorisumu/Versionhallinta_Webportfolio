@@ -10,5 +10,9 @@ $primary-color: rgb(75, 75, 120);
 }
 
 /* Mixins */
+@mixin linkbutton($bgcolor: $primary-color) {
+  background-color: $bgcolor;
+  color: #fff;
+}
 
 /* SCSS */
