@@ -13,11 +13,13 @@ h1 {
 /* Content of the page  */
 main {
   @extend %fullwidth;
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  gap: 20px;
   .hublink {
-    flex: 100%;
+    padding: 20px;
+    a {
+      color: #fff;
+    }
 
     &#anni {
       @include linkbutton(green);
@@ -42,9 +44,15 @@ footer {
   @extend %fullwidth;
 }
 
+@media only screen and (min-width: 500px) {
+  main {
+    grid-template-columns: auto auto;
+  }
+}
+
 /* Bigger screens */
 @media only screen and (min-width: 800px) {
-  main .hublink {
-    flex: 25%;
+  main {
+    grid-template-columns: auto auto auto auto;
   }
 }

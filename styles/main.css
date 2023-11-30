@@ -17,33 +17,37 @@ h1 {
 
 /* Content of the page  */
 main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 20px;
 }
 main .hublink {
-  flex: 100%;
+  padding: 20px;
+}
+main .hublink a {
+  color: #fff;
 }
 main .hublink#anni {
   background-color: green;
-  color: #fff;
 }
 main .hublink#patrick {
   background-color: blue;
-  color: #fff;
 }
 main .hublink#roosa {
   background-color: yellow;
-  color: #fff;
 }
 main .hublink#sumu {
   background-color: black;
-  color: #fff;
 }
 
 /* Footer */
+@media only screen and (min-width: 500px) {
+  main {
+    grid-template-columns: auto auto;
+  }
+}
 /* Bigger screens */
 @media only screen and (min-width: 800px) {
-  main .hublink {
-    flex: 25%;
+  main {
+    grid-template-columns: auto auto auto auto;
   }
 }/*# sourceMappingURL=main.css.map */
