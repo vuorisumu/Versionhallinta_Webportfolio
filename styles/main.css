@@ -1,3 +1,73 @@
+/* Light switch styles */
+#switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* All parts of light switch*/
+  /* Bulb */
+  /* Rest of the graphic */
+  /* Smoothen the border */
+  /* Smoothen the border even more */
+  /* Shine on the back of the lightbulb */
+}
+#switch .light {
+  display: block;
+}
+#switch .b1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffeb80;
+  margin-bottom: -4px;
+  box-shadow: inset -3px -5px 3px 3px #ffc385;
+}
+#switch .b2,
+#switch .b3,
+#switch .b4 {
+  width: 24px;
+  height: 8px;
+  left: 50%;
+  position: relative;
+  margin-left: -12px;
+  background-color: #d2d2d2;
+  box-shadow: inset 0px -2px 2px 1px;
+}
+#switch .b3 {
+  border-radius: 0 0 5px 5px;
+}
+#switch .b4 {
+  width: 18px;
+  margin-left: -9px;
+  border-radius: 0 0 8px 8px;
+}
+#switch::before {
+  content: "";
+  display: block;
+  height: 70px;
+  z-index: -5;
+  width: 70px;
+  isolation: isolate;
+  position: absolute;
+  top: -10px;
+  left: -12px;
+  background: radial-gradient(white 0%, transparent 70%);
+}
+
+/* Lights turned off */
+.lightsoff {
+  /* Recolor the bulb */
+  /* Recolor the rest */
+}
+.lightsoff .b1 {
+  background-color: #9d9f91;
+  box-shadow: inset -3px -5px 3px 3px #707070;
+}
+.lightsoff .b2,
+.lightsoff .b3,
+.lightsoff .b4 {
+  background-color: gray;
+}
+
 /* Variables */
 /* Extends */
 footer, main, header {
@@ -7,12 +77,27 @@ footer, main, header {
   text-align: center;
 }
 
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 /* Mixins */
 /* SCSS */
+/* Full width */
+/* Full width body */
+body {
+  display: grid;
+  align-content: space-between;
+  overflow: hidden;
+}
+
 /* Page header */
 /* Page title */
 h1 {
   color: rgb(75, 75, 120);
+  grid-column: 1/-1;
 }
 
 /* Content of the page  */
@@ -40,12 +125,13 @@ main .hublink#sumu {
 }
 
 /* Footer */
+/* Bigger screen */
 @media only screen and (min-width: 500px) {
   main {
     grid-template-columns: auto auto;
   }
 }
-/* Bigger screens */
+/* Even bigger screens */
 @media only screen and (min-width: 800px) {
   main {
     grid-template-columns: auto auto auto auto;

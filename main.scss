@@ -1,4 +1,18 @@
+@use "switch";
 @import "templatesass.scss";
+
+/* Full width */
+html {
+  @extend %resetmargins;
+}
+
+/* Full width body */
+body {
+  @extend %resetmargins;
+  display: grid;
+  align-content: space-between;
+  overflow: hidden;
+}
 
 /* Page header */
 header {
@@ -8,6 +22,7 @@ header {
 /* Page title */
 h1 {
   color: $primary-color;
+  grid-column: 1/-1;
 }
 
 /* Content of the page  */
@@ -44,13 +59,14 @@ footer {
   @extend %fullwidth;
 }
 
+/* Bigger screen */
 @media only screen and (min-width: 500px) {
   main {
     grid-template-columns: auto auto;
   }
 }
 
-/* Bigger screens */
+/* Even bigger screens */
 @media only screen and (min-width: 800px) {
   main {
     grid-template-columns: auto auto auto auto;
