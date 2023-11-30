@@ -9,12 +9,9 @@ html {
 /* Full width body */
 body {
   @extend %resetmargins;
-  display: grid;
-  align-content: space-between;
-  padding: 0 20px;
-  overflow: hidden;
   background: linear-gradient($background, $secondary-background);
   transition: $transition-time;
+  overflow: hidden;
 }
 
 /* Dark background color */
@@ -33,9 +30,20 @@ body {
   }
 }
 
+/* Wrap the content inside a div */
+.page-wrapper {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: space-between;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
 /* Page header */
 header {
   @extend %fullwidth;
+  overflow: hidden;
 }
 
 /* Page title */
@@ -50,10 +58,19 @@ main {
   display: grid;
   gap: 20px;
 
+  a {
+    color: $textcolor;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+  }
+
   .hublink {
     padding: 20px;
-    a {
-      color: $textcolor;
+    transition: $transition-time;
+
+    p {
+      opacity: 0.9;
     }
 
     &#anni {
@@ -70,6 +87,11 @@ main {
 
     &#sumu {
       @include linkbutton($sumu);
+    }
+
+    &:hover {
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+      transform: translate(0, -5px);
     }
   }
 }
