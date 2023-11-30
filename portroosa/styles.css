@@ -17,20 +17,25 @@ body {
   background-image: url(cork.png);
 }
 
+/* Header settings */
 header {
+  /* Content display settings */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Content on both sides */
   align-items: center;
-  border-radius: 10px;
+  border-radius: 10px; /* Rounded corners */
   padding: auto;
-  background-color: azure;
+  outline-style: solid;
+
+  /* Text settins */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: large;
   color: black;
 
-  outline-style: solid;
+  /* Colors */
   outline-color: darkcyan;
+  background-color: azure;
 }
 
 section {
