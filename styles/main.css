@@ -195,6 +195,10 @@ h1 {
   grid-column: 1/-1;
 }
 
+p {
+  color: var(--text);
+}
+
 /* Content of the page  */
 main {
   display: grid;
@@ -203,12 +207,13 @@ main {
 main a {
   color: var(--text);
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui;
   font-size: 14pt;
 }
 main .hublink {
   padding: 20px;
   transition: var(--transition-time);
+  border-radius: 0 20px 0 20px;
 }
 main .hublink p {
   opacity: 0.9;
@@ -236,10 +241,19 @@ main .hublink:hover {
   main {
     grid-template-columns: auto auto;
   }
+  .hublink {
+    border-radius: 0 20px 0 20px;
+  }
+  .hublink#patrick, .hublink#roosa {
+    border-radius: 20px 0 20px 0;
+  }
 }
 /* Even bigger screens */
 @media only screen and (min-width: 800px) {
   main {
     grid-template-columns: auto auto auto auto;
+  }
+  .hublink#patrick, .hublink#roosa {
+    border-radius: 0 20px 0 20px;
   }
 }/*# sourceMappingURL=main.css.map */
