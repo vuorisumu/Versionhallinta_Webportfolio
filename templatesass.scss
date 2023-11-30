@@ -1,5 +1,17 @@
 /* Variables */
+$background: var(--background);
+$textcolor: var(--text);
 $primary-color: rgb(75, 75, 120);
+
+:root {
+  --background: #fff;
+  --text: #a1a1a1;
+}
+
+[data-theme="dark"] {
+  --background: #000;
+  --text: #aaaaaa;
+}
 
 /* Extends */
 %fullwidth {

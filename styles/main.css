@@ -3,12 +3,19 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  /* Same animation time in whole bulb */
   /* All parts of light switch*/
   /* Bulb */
   /* Rest of the graphic */
   /* Smoothen the border */
   /* Smoothen the border even more */
   /* Shine on the back of the lightbulb */
+  /* Lights off */
+}
+#switch * {
+  transition: 0.2s;
 }
 #switch .light {
   display: block;
@@ -52,23 +59,31 @@
   left: -12px;
   background: radial-gradient(white 0%, transparent 70%);
 }
-
-/* Lights turned off */
-.lightsoff {
+#switch.lightsoff {
   /* Recolor the bulb */
   /* Recolor the rest */
 }
-.lightsoff .b1 {
+#switch.lightsoff .b1 {
   background-color: #9d9f91;
   box-shadow: inset -3px -5px 3px 3px #707070;
 }
-.lightsoff .b2,
-.lightsoff .b3,
-.lightsoff .b4 {
+#switch.lightsoff .b2,
+#switch.lightsoff .b3,
+#switch.lightsoff .b4 {
   background-color: gray;
 }
 
 /* Variables */
+:root {
+  --background: #fff;
+  --text: #a1a1a1;
+}
+
+[data-theme=dark] {
+  --background: #000;
+  --text: #aaaaaa;
+}
+
 /* Extends */
 footer, main, header {
   width: 100%;

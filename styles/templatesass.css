@@ -1,4 +1,14 @@
 /* Variables */
+:root {
+  --background: #fff;
+  --text: #a1a1a1;
+}
+
+[data-theme=dark] {
+  --background: #000;
+  --text: #aaaaaa;
+}
+
 /* Extends */
 /* Mixins */
 /* SCSS *//*# sourceMappingURL=templatesass.css.map */

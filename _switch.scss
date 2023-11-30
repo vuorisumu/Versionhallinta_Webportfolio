@@ -3,6 +3,13 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  /* Same animation time in whole bulb */
+  & * {
+    transition: 0.2s;
+  }
 
   /* All parts of light switch*/
   .light {
@@ -57,20 +64,20 @@
     left: -12px;
     background: radial-gradient(white 0%, transparent 70%);
   }
-}
 
-/* Lights turned off */
-.lightsoff {
-  /* Recolor the bulb */
-  .b1 {
-    background-color: #9d9f91;
-    box-shadow: inset -3px -5px 3px 3px #707070;
-  }
+  /* Lights off */
+  &.lightsoff {
+    /* Recolor the bulb */
+    .b1 {
+      background-color: #9d9f91;
+      box-shadow: inset -3px -5px 3px 3px #707070;
+    }
 
-  /* Recolor the rest */
-  .b2,
-  .b3,
-  .b4 {
-    background-color: gray;
+    /* Recolor the rest */
+    .b2,
+    .b3,
+    .b4 {
+      background-color: gray;
+    }
   }
 }

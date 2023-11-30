@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <!-- Change if language is other than English
         American English = "en-US" (if you want to be specific),
         Finnish = "fi" -->
@@ -43,6 +43,26 @@
     <footer>
         <p>2023</p>
     </footer>
+
+    <script type="text/javascript">
+        const bulb = document.getElementById("switch");
+        let darkTheme = false;
+
+        bulb.addEventListener("click", () => {
+            let themeName = darkTheme ? "light" : "dark";
+            setTheme(themeName);
+        });
+
+        // theme change function
+        function setTheme(themeName) {
+            document.documentElement.setAttribute("data-theme", themeName);
+            localStorage.setItem("theme", themeName);
+            darkTheme = themeName === "dark";
+            darkTheme
+                ? bulb.classList.add("lightsoff")
+                : bulb.classList.remove("lightsoff");
+        }
+    </script>
 </body>
 
 </html>
