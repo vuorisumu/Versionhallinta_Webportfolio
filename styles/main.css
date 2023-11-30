@@ -203,6 +203,8 @@ p {
 main {
   display: grid;
   gap: 20px;
+  max-width: 300px;
+  margin: auto;
 }
 main a {
   color: var(--text);
@@ -211,7 +213,7 @@ main a {
   font-size: 14pt;
 }
 main .hublink {
-  padding: 20px;
+  padding: 10px;
   transition: var(--transition-time);
   border-radius: 0 20px 0 20px;
 }
@@ -240,6 +242,7 @@ main .hublink:hover {
 @media only screen and (min-width: 500px) {
   main {
     grid-template-columns: auto auto;
+    max-width: 500px;
   }
   .hublink {
     border-radius: 0 20px 0 20px;
@@ -252,6 +255,7 @@ main .hublink:hover {
 @media only screen and (min-width: 800px) {
   main {
     grid-template-columns: auto auto auto auto;
+    max-width: 800px;
   }
   .hublink#patrick, .hublink#roosa {
     border-radius: 0 20px 0 20px;
