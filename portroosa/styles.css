@@ -6,11 +6,12 @@
   grid-template-columns: 25% 40% auto;
 }
 
+/* General image settings */
 img {
   width: 50px;
 }
 
-/*General website body settings*/
+/* General website body settings */
 body {
   background-color: antiquewhite;
   background-image: url(cork.png);
