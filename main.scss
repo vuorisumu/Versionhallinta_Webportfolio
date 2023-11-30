@@ -12,6 +12,8 @@ body {
   display: grid;
   align-content: space-between;
   overflow: hidden;
+  background-color: $background;
+  transition: $transition-time;
 }
 
 /* Page header */
@@ -21,7 +23,7 @@ header {
 
 /* Page title */
 h1 {
-  color: $primary-color;
+  color: $textcolor;
   grid-column: 1/-1;
 }
 

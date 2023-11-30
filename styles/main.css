@@ -55,9 +55,8 @@
   width: 70px;
   isolation: isolate;
   position: absolute;
-  top: -10px;
-  left: -12px;
-  background: radial-gradient(white 0%, transparent 70%);
+  top: -19px;
+  left: -16px;
 }
 #switch.lightsoff {
   /* Recolor the bulb */
@@ -77,6 +76,7 @@
 :root {
   --background: #fff;
   --text: #a1a1a1;
+  --transition-time: 0s;
 }
 
 [data-theme=dark] {
@@ -106,12 +106,14 @@ body {
   display: grid;
   align-content: space-between;
   overflow: hidden;
+  background-color: var(--background);
+  transition: var(--transition-time);
 }
 
 /* Page header */
 /* Page title */
 h1 {
-  color: rgb(75, 75, 120);
+  color: var(--text);
   grid-column: 1/-1;
 }
 

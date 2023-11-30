@@ -45,9 +45,44 @@
     </footer>
 
     <script type="text/javascript">
+        // Assigns transition time only after load
+        document.addEventListener("DOMContentLoaded", function () {
+            let root = document.querySelector(":root");
+            setTimeout(function () {
+                root.style.setProperty("--transition-time", "0.2s");
+            }, 300);
+        });
+
+        // call theme check on page load
+        window.onload = function () {
+            checkTheme();
+        };
+
+        // theme change variables
         const bulb = document.getElementById("switch");
         let darkTheme = false;
 
+        // check if theme preference has already been set
+        function checkTheme() {
+            // if this is not the first time on this site
+            const prevTheme = localStorage.getItem("theme");
+            if (prevTheme) {
+                setTheme(prevTheme);
+                return;
+            }
+
+            // first time on site but prefers dark theme
+            const darkThemePreference = window.matchMedia("(prefers-color-scheme: dark)");
+            if (darkThemePreference.matches) {
+                setTheme("dark");
+                return;
+            }
+
+            // set default theme
+            setTheme("light");
+        }
+
+        // click on the lightbulb
         bulb.addEventListener("click", () => {
             let themeName = darkTheme ? "light" : "dark";
             setTheme(themeName);

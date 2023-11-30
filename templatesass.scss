@@ -1,15 +1,21 @@
 /* Variables */
 $background: var(--background);
+$secondary-background: var(--secondary-background);
 $textcolor: var(--text);
 $primary-color: rgb(75, 75, 120);
+$transition-time: var(--transition-time);
 
 :root {
-  --background: #fff;
+  --transition-time: 0s;
+
+  --background: #ffffff;
+  --secondary-background: #fff;
   --text: #a1a1a1;
 }
 
 [data-theme="dark"] {
   --background: #000;
+  --secondary-background: #000;
   --text: #aaaaaa;
 }
 

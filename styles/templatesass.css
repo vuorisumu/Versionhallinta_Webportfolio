@@ -1,11 +1,14 @@
 /* Variables */
 :root {
-  --background: #fff;
+  --transition-time: 0s;
+  --background: #ffffff;
+  --secondary-background: #fff;
   --text: #a1a1a1;
 }
 
 [data-theme=dark] {
   --background: #000;
+  --secondary-background: #000;
   --text: #aaaaaa;
 }
 
