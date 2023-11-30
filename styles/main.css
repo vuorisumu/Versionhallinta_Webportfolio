@@ -1,7 +1,5 @@
 /* Variables */
 /* Extends */
-/* Mixins */
-/* SCSS */
 footer, main, header {
   width: 100%;
   padding: 0;
@@ -9,10 +7,15 @@ footer, main, header {
   text-align: center;
 }
 
+/* Mixins */
+/* SCSS */
+/* Page header */
+/* Page title */
 h1 {
   color: rgb(75, 75, 120);
 }
 
+/* Content of the page  */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -21,6 +24,8 @@ main .hublink {
   flex: 100%;
 }
 
+/* Footer */
+/* Bigger screens */
 @media only screen and (min-width: 700px) {
   main .hublink {
     flex: 33%;
