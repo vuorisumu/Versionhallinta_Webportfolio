@@ -52,14 +52,18 @@ section {
   background-color: aliceblue;
 }
 
+/* Main box settings*/
 main {
-  border-radius: 10px;
-  border: 1px solid indigo;
-  background-color: aliceblue;
+  /* Content display settings */
+  border-radius: 10px; /* Rounded corners */
   margin: 15px;
   padding: 20px;
   width: auto;
   height: auto;
+
+  /* Colors */
+  border: 1px solid indigo;
+  background-color: aliceblue;
 }
 
 /* Text */
@@ -72,8 +76,6 @@ div {
 h3 {
   font-size: 1.5em;
 }
-
-/* Images */
 
 /* Different screensizes */
 
