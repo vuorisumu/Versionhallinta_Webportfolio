@@ -135,11 +135,9 @@ document.querySelectorAll(".minimize").forEach((minimizeButton) => {
 // function for opening and closing the container
 function toggleProjectClasses(element, open) {
   if (open) {
-    element.style.height = element.scrollHeight + "px";
     element.classList.add("active");
     element.classList.remove("closed");
   } else {
-    element.style.height = "150px";
     element.classList.add("closed");
     element.classList.remove("active");
   }

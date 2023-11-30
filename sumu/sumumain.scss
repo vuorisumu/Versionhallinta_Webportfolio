@@ -23,6 +23,11 @@ body {
     gap: 10px;
     margin-left: -15px;
   }
+
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+  }
 }
 
 /* default text */
@@ -33,6 +38,7 @@ p {
 /* important text will be bolded */
 p span {
   font-weight: 600;
+  color: theme.$secondary-accent;
 }
 
 /* indented text block */
@@ -81,13 +87,22 @@ h3 {
 
   /* first section needs bigger anchor */
   &:first-of-type {
-    top: -(navigation.$nav-height);
+    top: -(navigation.$nav-height - 40px);
   }
 }
 
 /* default image style */
 img {
   max-width: 100%;
+}
+
+/* banner image container */
+.hero {
+  margin: -7px -20px 10px -20px;
+  max-height: 450px;
+  overflow: hidden;
+  display: grid;
+  align-content: stretch;
 }
 
 /* self portrait size */
@@ -114,6 +129,7 @@ footer {
   padding: 20px;
 }
 
+/* bigger window size */
 @media only screen and (min-width: 400px) {
   header h1,
   header h1 a {
