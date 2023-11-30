@@ -1,10 +1,40 @@
+/* Variables */
+:root {
+  --background: #dbfff9;
+  --secondary-background: #9ca2ff;
+  --darkcolor: #261fa6;
+  --secondary-darkcolor: #090123;
+  --text: #a1a1a1;
+  --transition-time: 0s;
+}
+
+[data-theme=dark] {
+  --text: #aaaaaa;
+}
+
+/* Extends */
+header, main, footer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+html, body, #darkbg {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/* Mixins */
+/* SCSS */
 /* Light switch styles */
 #switch {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: var(--transition-time);
   /* Same animation time in whole bulb */
   /* All parts of light switch*/
   /* Bulb */
@@ -15,7 +45,7 @@
   /* Lights off */
 }
 #switch * {
-  transition: 0.2s;
+  transition: var(--transition-time);
 }
 #switch .light {
   display: block;
@@ -74,13 +104,15 @@
 
 /* Variables */
 :root {
-  --background: #fff;
+  --background: #dbfff9;
+  --secondary-background: #9ca2ff;
+  --darkcolor: #261fa6;
+  --secondary-darkcolor: #090123;
   --text: #a1a1a1;
   --transition-time: 0s;
 }
 
 [data-theme=dark] {
-  --background: #000;
   --text: #aaaaaa;
 }
 
@@ -92,7 +124,7 @@ footer, main, header {
   text-align: center;
 }
 
-body, html {
+#darkbg, body, html {
   padding: 0;
   margin: 0;
   height: 100%;
@@ -106,8 +138,22 @@ body {
   display: grid;
   align-content: space-between;
   overflow: hidden;
-  background-color: var(--background);
+  background: linear-gradient(var(--background), var(--secondary-background));
   transition: var(--transition-time);
+}
+
+/* Dark background color */
+#darkbg {
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(var(--darkcolor), var(--secondary-darkcolor));
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition-time);
+  /* Fade in the color */
+}
+#darkbg.lightsoff {
+  opacity: 1;
 }
 
 /* Page header */

@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="darkbg"></div>
     <header>
         <div id="switch">
             <span class="light b1"></span>
@@ -60,6 +61,7 @@
 
         // theme change variables
         const bulb = document.getElementById("switch");
+        const darkbg = document.getElementById("darkbg");
         let darkTheme = false;
 
         // check if theme preference has already been set
@@ -96,6 +98,10 @@
             darkTheme
                 ? bulb.classList.add("lightsoff")
                 : bulb.classList.remove("lightsoff");
+
+            darkTheme
+                ? darkbg.classList.add("lightsoff")
+                : darkbg.classList.remove("lightsoff");
         }
     </script>
 </body>

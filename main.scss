@@ -12,8 +12,24 @@ body {
   display: grid;
   align-content: space-between;
   overflow: hidden;
-  background-color: $background;
+  background: linear-gradient($background, $secondary-background);
   transition: $transition-time;
+}
+
+/* Dark background color */
+#darkbg {
+  @extend %resetmargins;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient($darkcolor, $secondary-darkcolor);
+  opacity: 0;
+  z-index: -1;
+  transition: $transition-time;
+
+  /* Fade in the color */
+  &.lightsoff {
+    opacity: 1;
+  }
 }
 
 /* Page header */
@@ -32,6 +48,7 @@ main {
   @extend %fullwidth;
   display: grid;
   gap: 20px;
+
   .hublink {
     padding: 20px;
     a {
