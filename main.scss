@@ -11,6 +11,7 @@ body {
   @extend %resetmargins;
   display: grid;
   align-content: space-between;
+  padding: 0 20px;
   overflow: hidden;
   background: linear-gradient($background, $secondary-background);
   transition: $transition-time;
@@ -39,7 +40,7 @@ header {
 
 /* Page title */
 h1 {
-  color: $textcolor;
+  color: $titlecolor;
   grid-column: 1/-1;
 }
 
@@ -52,23 +53,23 @@ main {
   .hublink {
     padding: 20px;
     a {
-      color: #fff;
+      color: $textcolor;
     }
 
     &#anni {
-      @include linkbutton(green);
+      @include linkbutton($anni);
     }
 
     &#patrick {
-      @include linkbutton(blue);
+      @include linkbutton($patrick);
     }
 
     &#roosa {
-      @include linkbutton(yellow);
+      @include linkbutton($roosa);
     }
 
     &#sumu {
-      @include linkbutton(black);
+      @include linkbutton($sumu);
     }
   }
 }
