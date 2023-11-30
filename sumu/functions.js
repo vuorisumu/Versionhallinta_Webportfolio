@@ -135,23 +135,10 @@ document.querySelectorAll(".minimize").forEach((minimizeButton) => {
 // function for opening and closing the container
 function toggleProjectClasses(element, open) {
   if (open) {
-    // element.style.height = element.scrollHeight + "px";
     element.classList.add("active");
     element.classList.remove("closed");
   } else {
-    // element.style.height = "150px";
     element.classList.add("closed");
     element.classList.remove("active");
   }
 }
-
-/*
-window.addEventListener("resize", () => {
-  let openProjects = document.getElementsByClassName("project-container");
-  for (let i = 0; i < openProjects.length; i++) {
-    if (openProjects[i].classList.contains("active")) {
-      openProjects[i].style.height = openProjects[i].scrollHeight + "px";
-      console.log(openProjects[i].scrollHeight);
-    }
-  }
-});*/

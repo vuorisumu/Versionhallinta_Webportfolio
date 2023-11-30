@@ -225,6 +225,8 @@ header.shrink #nav.active {
   }
   header #logo {
     width: 100%;
+    z-index: 3;
+    background-color: transparent;
   }
   header #hamburger {
     display: none;
@@ -508,6 +510,10 @@ body {
   gap: 10px;
   margin-left: -15px;
 }
+.center h2 {
+  text-align: center;
+  margin-top: 25px;
+}
 
 /* default text */
 p {
@@ -577,7 +583,7 @@ h3 {
   /* first section needs bigger anchor */
 }
 .anchor:first-of-type {
-  top: -100px;
+  top: -60px;
 }
 
 /* default image style */
@@ -617,6 +623,7 @@ footer {
   padding: 20px;
 }
 
+/* bigger window size */
 @media only screen and (min-width: 400px) {
   header h1,
   header h1 a {

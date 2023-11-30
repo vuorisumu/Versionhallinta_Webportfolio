@@ -23,6 +23,11 @@ body {
     gap: 10px;
     margin-left: -15px;
   }
+
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+  }
 }
 
 /* default text */
@@ -82,7 +87,7 @@ h3 {
 
   /* first section needs bigger anchor */
   &:first-of-type {
-    top: -(navigation.$nav-height);
+    top: -(navigation.$nav-height - 40px);
   }
 }
 
@@ -124,6 +129,7 @@ footer {
   padding: 20px;
 }
 
+/* bigger window size */
 @media only screen and (min-width: 400px) {
   header h1,
   header h1 a {
